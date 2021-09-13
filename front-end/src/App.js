@@ -17,11 +17,12 @@ import ConnexionPage from './views/Connexion';
 import Signup from './views/Signup';
 import Login from './views/Login';
 import LoginAdmin from './views/LoginAdmin';
-import QuestionPage from './views/Formulaire';
-import ConnexionAdminPage from './views/ConnexionAdmin';
+import QuestionPage from './views/formulaire/Formulaire';
 import SignupAdmin from './views/SignupAdmin';
-import Modification from './views/Modification';
+import Modification from './views/formulaire/Modification';
 import Navbar from './components/Navbar';
+import Professionnel from './views/Professionnel';
+import EditTeam from './views/team/EditTeam';
 
 // import './assets/styles/Home.css';
 
@@ -54,7 +55,7 @@ function App() {
         <Route path="/participer" exact component={Participer} />
         <Route path="/contact" exact component={ContactPage} />
         <Route path="/connexion" exact component={ConnexionPage} />
-        {/* <Route path="/professionnels" exact component={ConnexionAdminPage} /> */}
+        <Route path="/espace-professionnel" exact component={Professionnel} />
         <Route path="/connexion/signup" exact component={Signup} />
         <Route path="/connexion/signup-admin" exact component={SignupAdmin} />
         {/* <Route path="/connexion/login" exact component={Login} /> */}
@@ -63,6 +64,7 @@ function App() {
         </Route>
         <Route path="/logged/formulaire" exact component={QuestionPage} />
         <Route path="/modification" exact component={Modification} />
+        <Route path="/edit-team" exact component={EditTeam} />
         <Route path="/connexion/login">
           <Login connectUser={() => setUserConnected(true)} />
         </Route>

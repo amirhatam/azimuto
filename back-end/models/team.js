@@ -3,9 +3,10 @@ const mongoose = require("mongoose")
 const teamSchema = new mongoose.Schema({
 
     name: { type: String, required: true, unique: true },
+    post: String,
     description: String,
     image: String,
-    role: { type: Number, required: true },
+    // role: { type: Number, required: true },
     created: { type: Date, default: Date.now }
 })
 

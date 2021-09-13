@@ -2,8 +2,8 @@ import React from "react";
 import { MDBContainer,MDBView, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter,MDBMask } from 'mdbreact';
 import { useState, useEffect } from "react";
 import axios from "axios"
-import EditQuestion from "../components/EditQuestion";
-import ListQuestions from "../components/ListQuestions";
+import EditQuestion from "./EditQuestion";
+import ListQuestions from "./ListQuestions";
 
 const Modification = () => {
     const [questions, setQuestions] = useState([])

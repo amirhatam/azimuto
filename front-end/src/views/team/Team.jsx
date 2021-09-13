@@ -1,11 +1,11 @@
 import React from "react";
 import { MDBRow, MDBCol, MDBCardBody, MDBMask, MDBView } from "mdbreact";
-import Manon from "../assets/images/Team/MANON.png"
-import Berangere from "../assets/images/Team/BERANGERE.png"
-import Gwenhael from "../assets/images/Team/GWENHAEL.png"
-import Laurie from "../assets/images/Team/LAURIE.png"
-import CATHERINE from "../assets/images/Team/CATHERINE.png"
-import VERONIQUE from "../assets/images/Team/VERONIQUE.png"
+import Manon from "../../assets/images/Team/MANON.png"
+import Berangere from "../../assets/images/Team/BERANGERE.png"
+import Gwenhael from "../../assets/images/Team/GWENHAEL.png"
+import Laurie from "../../assets/images/Team/LAURIE.png"
+import CATHERINE from "../../assets/images/Team/CATHERINE.png"
+import VERONIQUE from "../../assets/images/Team/VERONIQUE.png"
 
 
 const TeamPage = () => {

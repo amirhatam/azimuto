@@ -1,9 +1,14 @@
 const express = require("express")
 const router = express.Router()
-const { addnewTeam, getTeamById, deleteTeam, updateTeam } = require("../controllers/teamController")
+const {getTeam, addnewTeam, getTeamById, deleteTeam, updateTeam } = require("../controllers/teamController")
+const multer = require('multer');
 
- 
-router.post('/', addnewTeam)
+
+const upload = multer({ dest: 'public/uploads/' });
+
+
+router.get('/', getTeam )
+router.post('/', upload.single("image"), addnewTeam)
 router.get("/:id", getTeamById)
 router.delete('/:id/deleteteam', deleteTeam)
 router.patch('/:id/updateteam', updateTeam)
