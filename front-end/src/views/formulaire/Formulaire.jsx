@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MDBFormInline, MDBBtn, MDBMask, MDBView, MDBRow, MDBCol } from 'mdbreact';
+import { MDBFormInline, MDBBtn,MDBView } from 'mdbreact';
 import axios from "axios";
 import Radio from "./Radio";
 import TextareaPage from "./TextareaPage";
@@ -43,18 +43,13 @@ const QuestionPage = () => {
         }
     }
 
-
     const userReponse = async (body) => {
         try {
             await axios.post("http://localhost:8080/answers", response)
-
-
         } catch (err) {
             console.log(err)
         }
     }
-
-
 
     useEffect(() => {
         Form()
@@ -76,18 +71,14 @@ const QuestionPage = () => {
                                 if (elem.type === "multiple") {
                                     return (
 
-
                                         <MDBFormInline className=" justify-content-center  ">
-
 
                                             <Radio
                                                 changeAnswerText={changeCollection}
                                                 value={e}
                                                 id={elem._id}
                                             />
-
                                         </MDBFormInline>
-
                                     )
                                 }
 

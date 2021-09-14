@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBContainer,MDBView, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter,MDBMask } from 'mdbreact';
+import {MDBView, MDBBtn} from 'mdbreact';
 import { useState, useEffect } from "react";
 import axios from "axios"
 import EditQuestion from "./EditQuestion";
@@ -10,6 +10,7 @@ const Modification = () => {
     const [editingId, setEditingId] = useState("")
     const [views, setViews] = useState("List")
     const [deletId, setDeletId] = useState("")
+  
 
     useEffect(async () => {
         try {
