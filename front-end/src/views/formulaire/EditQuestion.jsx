@@ -1,5 +1,5 @@
 import React from 'react'
-import { MDBContainer, MDBView, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from 'mdbreact';
+import {  MDBView, MDBBtn } from 'mdbreact';
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
