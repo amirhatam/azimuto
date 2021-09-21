@@ -38,7 +38,7 @@ const Modification = () => {
     }
     console.log("deletId", deletId)
     if (views === "List") {
-        return <ListQuestions setEditingId={setEditingId} questions={questions} setViews={setViews} setDeletId={setDeletId} setViews={setViews} />
+        return <ListQuestions setEditingId={setEditingId} questions={questions} setViews={setViews} setDeletId={setDeletId} />
     } else if (views === "Edit") {
         return <EditQuestion editingId={editingId} setEditingId={setEditingId} setQuestions={setQuestions} setViews={setViews} />
     } else if (views === "Delete") {

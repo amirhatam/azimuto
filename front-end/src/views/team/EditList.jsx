@@ -1,5 +1,5 @@
 import React from 'react'
-import { MDBView, MDBBtn } from 'mdbreact';
+import { MDBView, MDBBtn, MDBContainer } from 'mdbreact';
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
@@ -26,9 +26,8 @@ function EditTeam(props) {
     }
     return (
         <MDBView className="purple-slight">
-
-            <div className="container my-5 ">
-                <section className="mb-5" style={{ marginTop: "15vmax" }}>
+            <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
+                <div >
                     <div className="text-center my-5">
                         <MDBBtn size="lg" color='cyan' rounded href="/edit-team">Go back</MDBBtn>
                     </div>
@@ -48,8 +47,8 @@ function EditTeam(props) {
                     <div>
                         <MDBBtn color="cyan" rounded onClick={modifTeam}>Confirmer</MDBBtn>
                     </div>
-                </section>
-            </div>
+                </div>
+            </MDBContainer>
         </MDBView>
     )
 }

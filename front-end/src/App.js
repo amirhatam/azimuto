@@ -18,11 +18,13 @@ import Signup from './views/Signup';
 import Login from './views/Login';
 import LoginAdmin from './views/LoginAdmin';
 import QuestionPage from './views/formulaire/Formulaire';
-import SignupAdmin from './views/SignupAdmin';
 import Modification from './views/formulaire/Modification';
 import Navbar from './components/Navbar';
 import Professionnel from './views/Professionnel';
 import EditTeam from './views/team/EditTeam';
+import ChiffresCles from './views/chiffresCles/ChiffresCles';
+import EditMission from './views/mission-civique/EditMission';
+import Partenaires from './views/partenaires/Partenaires';
 
 // import './assets/styles/Home.css';
 
@@ -55,19 +57,22 @@ function App() {
         <Route path="/participer" exact component={Participer} />
         <Route path="/contact" exact component={ContactPage} />
         <Route path="/connexion" exact component={ConnexionPage} />
-        <Route path="/espace-professionnel" exact component={Professionnel} />
         <Route path="/connexion/signup" exact component={Signup} />
-        <Route path="/connexion/signup-admin" exact component={SignupAdmin} />
-        {/* <Route path="/connexion/login" exact component={Login} /> */}
         <Route path="/connexion/loginadmin">
           <LoginAdmin connectUser={() => setUserConnected(true)} />
         </Route>
         <Route path="/logged/formulaire" exact component={QuestionPage} />
-        <Route path="/modification" exact component={Modification} />
-        <Route path="/edit-team" exact component={EditTeam} />
         <Route path="/connexion/login">
+        <Route path="/modification" exact component={Modification} />
           <Login connectUser={() => setUserConnected(true)} />
         </Route>
+        <Route path="/EP" exact component={Professionnel} />
+        <Route path="/edit-team" exact component={EditTeam} />
+        <Route path="/chiffres-cles" exact component={ChiffresCles} />
+        <Route path="/mission-civique" exact component={EditMission} />
+        <Route path="/partenaires" exact component={Partenaires} />
+
+
         {/* <Route path="/signup" component={} />
           <Route path="/admin">
             <Admin disconnectUser={} />

@@ -11,8 +11,6 @@ const usersRoutes  = require("./routes/userRoutes")
 
 const levelsRoutes  = require("./routes/levelStudyRoutes")
 
-const partnersRoutes = require("./routes/partnersRoutes")
-
 const programRoutes = require("./routes/programRoutes")
 
 const questionsRoutes = require("./routes/questionsRoutes")
@@ -20,6 +18,14 @@ const questionsRoutes = require("./routes/questionsRoutes")
 const adminRoutes = require("./routes/adminRoutes")
 
 const teamRoutes = require("./routes/teamRoutes")
+
+const chiffresRoutes = require("./routes/chiffresRoutes")
+
+const civiqueRoutes = require("./routes/civiqueRoutes")
+
+const partenairesRoutes = require("./routes/partenairesRoutes")
+
+const rapportageRoutes = require("./routes/rapportageRoutes")
 
 const answersRoutes = require("./routes/answersRoutes")
 const { port, mongoURL } = require('./utils/config')
@@ -50,7 +56,6 @@ app.use("/user", authRoutes)
 
 app.use("/users", usersRoutes)
 
-
 app.use("/program", programRoutes)
 
 app.use("/questions", questionsRoutes)
@@ -63,13 +68,15 @@ app.use("/levels", levelsRoutes)
 
 app.use("/teams", teamRoutes)
 
-//app.use("/", teamRoutes) génere un problème
+app.use("/chiffres-cles", chiffresRoutes)
+
+app.use("/civique", civiqueRoutes)
 
 app.use("/answers", answersRoutes)
 
-// app.use("/", teamRoutes)
+app.use("/partenaires", partenairesRoutes)
 
-app.use("/", partnersRoutes)
+app.use("/rapportage", rapportageRoutes)
 
 
 app.listen(port, () => {

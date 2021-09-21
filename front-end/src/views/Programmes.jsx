@@ -10,11 +10,9 @@ import {
     MDBCardTitle,
     MDBCardText,
     MDBCardGroup,
-    MDBCarousel,
-    MDBCarouselInner,
-    MDBCarouselItem
 } from 'mdbreact';
 import React from 'react';
+
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 
@@ -28,15 +26,13 @@ import LogoCardinaux from "../assets/images/cardinaux.png"
 import CarnetDeBord from "../assets/images/CarnetDeBord.jpg"
 import Lisa from "../assets/images/Lisa.jpg"
 import Amane from "../assets/images/Amane.jpg"
+import NosChiffres from './chiffresCles/NosChiffres';
 
 
 const Programmes = () => {
-
     return (
         <div>
-
             <MDBView >
-
                 <MDBView className="purple-slight ">
                     <section className="mb-5" style={{ marginTop: "15vmax" }}>
                         <MDBMask />
@@ -279,137 +275,10 @@ const Programmes = () => {
                     </MDBContainer>
                 </MDBView>
 
-
-
-                <MDBView className="purple-slight">
-                    <MDBMask className='rgba-purple-slight ' />
-                    <MDBContainer>
-
-                        <MDBCardBody className="mt-5 pb-0">
-                            <h4 className='display-6 text-center font-weight-bold mt-5 pt-md-3 pt-3'>NOS CHIFFRES CLÉS</h4>
-                        </MDBCardBody>
-                        <MDBCarousel activeItem={1} length={2} slide={true} showControls={false} showIndicators={true} multiItem>
-                            <MDBCarouselInner>
-                                <MDBRow className="my-5 text-center">
-                                    <MDBCarouselItem itemId="1">
-                                        <MDBRow>
-                                            <MDBCol lg="4" md="12" className="mb-lg-0 my-5">
-                                                <MDBCard style={{ height: "400px" }} className="">
-                                                    <div className="aqua-gradient rounded-top">
-                                                        <h2
-                                                            className="font-weight-bold option white-text p-5 mb-0"
-                                                        >
-                                                            900
-                                                        </h2>
-                                                    </div>
-                                                    <MDBCardBody className="h3 font-weight-light px-5 my-5 ">
-                                                        C’est le nombre de jeunes accompagnés par Azimuto !
-                                                    </MDBCardBody>
-                                                </MDBCard>
-                                            </MDBCol>
-
-                                            <MDBCol lg="4" md="12" className="mb-lg-0 my-5">
-                                                <MDBCard style={{ height: "400px" }} className="">
-                                                    <div className="peach-gradient rounded-top ">
-                                                        <h2
-                                                            className="font-weight-bold option white-text p-5 mb-0"
-                                                        >
-                                                            2
-                                                        </h2>
-                                                    </div>
-                                                    <MDBCardBody className="h3 font-weight-light px-5 my-5 ">
-                                                        C’est le nombre de programmes de remobilisation scolaire réalisés !
-                                                    </MDBCardBody>
-                                                </MDBCard>
-                                            </MDBCol>
-                                            <MDBCol lg="4" md="12" className="mb-lg-0 my-5">
-                                                <MDBCard style={{ height: "400px" }} className="">
-                                                    <div className="purple-gradient rounded-top">
-                                                        <h2
-                                                            className="font-weight-bold option white-text p-5 mb-0"
-                                                        >
-                                                            31
-                                                        </h2>
-                                                    </div>
-                                                    <MDBCardBody className="h3 font-weight-light px-5 my-5 ">
-                                                        C’est le nombre de classes accompagnées !
-                                                    </MDBCardBody>
-                                                </MDBCard>
-
-                                            </MDBCol>
-                                        </MDBRow>
-                                    </MDBCarouselItem>
-
-                                    <MDBCarouselItem itemId="2">
-                                        <MDBRow>
-                                            <MDBCol lg="4" md="12" className="mb-lg-0 my-5">
-                                                <MDBCard style={{ height: "400px" }} className="">
-                                                    <div className="aqua-gradient rounded-top">
-                                                        <h2
-                                                            className="font-weight-bold option white-text p-5 mb-0"
-                                                        >
-                                                            93%
-                                                        </h2>
-                                                    </div>
-                                                    <MDBCardBody className="h3 font-weight-light px-5 my-5 ">
-                                                        C’est le pourcentage de jeunes déclarant connaître leur forces à la fin des parcours Azimuto !
-                                                    </MDBCardBody>
-                                                </MDBCard>
-                                            </MDBCol>
-
-                                            <MDBCol lg="4" md="12" className="mb-lg-0 my-5">
-                                                <MDBCard style={{ height: "400px" }} className="">
-                                                    <div className="peach-gradient rounded-top ">
-                                                        <h2
-                                                            className="font-weight-bold option white-text p-5 mb-0"
-                                                        >
-                                                            7
-                                                        </h2>
-                                                    </div>
-                                                    <MDBCardBody className="h3 font-weight-light px-5 my-5 ">
-                                                        C’est le nombre de membres de l’équipe s’engageant pour la jeunesse !
-                                                    </MDBCardBody>
-                                                </MDBCard>
-                                            </MDBCol>
-                                            <MDBCol lg="4" md="12" className="mb-lg-0 my-5">
-                                                <MDBCard style={{ height: "400px" }} className="">
-                                                    <div className="purple-gradient rounded-top">
-                                                        <h2
-                                                            className="font-weight-bold option white-text p-5 mb-0"
-                                                        >
-                                                            700
-                                                        </h2>
-                                                    </div>
-                                                    <MDBCardBody className="h3 font-weight-light px-5 my-5 ">
-                                                        C’est le nombre d’heures d’ateliers réalisé par Azimuto depuis sa création !
-                                                    </MDBCardBody>
-                                                </MDBCard>
-                                            </MDBCol>
-                                        </MDBRow>
-                                    </MDBCarouselItem>
-                                </MDBRow>
-                            </MDBCarouselInner>
-                        </MDBCarousel>
-                    </MDBContainer>
-                </MDBView>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                <NosChiffres />
 
             </MDBView>
-        </div>
+        </div >
 
     );
 }
