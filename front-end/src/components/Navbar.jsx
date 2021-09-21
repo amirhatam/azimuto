@@ -1,21 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
     MDBNavbar,
-    MDBCol,
-    Link,
     MDBNavbarBrand,
     MDBNavbarNav,
     MDBNavItem,
     MDBNavLink,
     MDBNavbarToggler,
     MDBCollapse,
-    MDBMask,
-    MDBRow,
-    MDBFormInline,
     MDBBtn,
-    MDBView,
     MDBContainer,
-    MDBIcon
 } from 'mdbreact';
 import '../assets/styles/Home.css';
 import Logo from "../assets/images/Logo.png"

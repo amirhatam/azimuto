@@ -1,5 +1,4 @@
 const teamModel = require("../models/team")
-const mongoose = require("mongoose")
 
 const express = require("express")
 const cors = require("cors")
@@ -91,6 +90,8 @@ const updateTeam = async (req, res) => {
     try {
         const Idteam = req.params.id
         const data = req.body
+        console.log("Idteam",Idteam)
+        console.log("data",data)
         const teamUpdate = await teamModel.updateOne({ _id: Idteam }, data)
         console.log("teamupdate", teamUpdate)
         res.json({

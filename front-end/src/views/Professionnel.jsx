@@ -1,10 +1,8 @@
-import { MDBContainer, MDBCardImage, MDBCol, MDBCardTitle, MDBBtn, MDBCard, MDBCardBody, MDBView, MDBCardText, Link, MDBRow } from 'mdbreact';
+import { MDBContainer, MDBCol, MDBCardTitle, MDBBtn, MDBCard, MDBCardBody, MDBView, MDBRow } from 'mdbreact';
 
 
 const Professionnel = () => {
-
     return (
-
         <MDBView className="purple-slight ">
             <div className="container my-5 ">
                 <section className="" style={{ marginTop: "15vmax"}}>
@@ -21,8 +19,8 @@ const Professionnel = () => {
                             <MDBCol className="col-6 my-5 text-center">
                                 <MDBCard>
                                     <MDBCardBody>
-                                        <MDBCardTitle className="my-5">Nos chiffre clés</MDBCardTitle>
-                                        <MDBBtn href="#">Click</MDBBtn>
+                                        <MDBCardTitle className="my-5">Nos chiffres clés</MDBCardTitle>
+                                        <MDBBtn href="/chiffres-cles">Click</MDBBtn>
                                     </MDBCardBody>
                                 </MDBCard>
                             </MDBCol>
@@ -30,7 +28,7 @@ const Professionnel = () => {
                                 <MDBCard>
                                     <MDBCardBody>
                                         <MDBCardTitle className="my-5">Mission de service civique</MDBCardTitle>
-                                        <MDBBtn href="#">Click</MDBBtn>
+                                        <MDBBtn href="/mission-civique">Click</MDBBtn>
                                     </MDBCardBody>
                                 </MDBCard>
                             </MDBCol>
@@ -38,11 +36,19 @@ const Professionnel = () => {
                                 <MDBCard>
                                     <MDBCardBody>
                                         <MDBCardTitle className="my-5">Nos partenaires</MDBCardTitle>
-                                        <MDBBtn href="#">Click</MDBBtn>
+                                        <MDBBtn href="/partenaires">Click</MDBBtn>
                                     </MDBCardBody>
                                 </MDBCard>
                             </MDBCol>
-                            <MDBCol className="col-6 offset-3 my-5 text-center">
+                            <MDBCol className="col-6 my-5 text-center">
+                                <MDBCard>
+                                    <MDBCardBody>
+                                        <MDBCardTitle className="my-5">Rapportage</MDBCardTitle>
+                                        <MDBBtn href="/modification">Click</MDBBtn>
+                                    </MDBCardBody>
+                                </MDBCard>
+                            </MDBCol>
+                            <MDBCol className="col-6 my-5 text-center">
                                 <MDBCard>
                                     <MDBCardBody>
                                         <MDBCardTitle className="my-5">Formulaire des questions</MDBCardTitle>
