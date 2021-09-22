@@ -33,7 +33,9 @@ const addNewRapportage = async (req, res) => {
         const date = new Date().toISOString().slice(0, 10).replace(/-/g, "");
         const newPdfName = date + "_" + req.file.originalname
 
-        const addRapportage = await rapportageModel.create({ pdf, description: newPdfName })
+        const data = {pdf : newPdfName, description}
+
+        const addRapportage = await rapportageModel.create(data)
 
         fs.renameSync(req.file.path, path.join(req.file.destination, newPdfName));
 
@@ -74,16 +76,16 @@ const updateRapportage = async (req, res) => {
         const dateNow = new Date().toISOString().slice(0, 10).replace(/-/g, "");
         const newPdfName = dateNow + "_" + req.file.originalname
 
-        const data = { pdf, description: newPdfName }
+        const data = { pdf: newPdfName, description }
 
-        const updateRapportage = await rapportageModel.updateOne({ _id: rapportage }, data)
+        const rapportageUpdate = await rapportageModel.updateOne({ _id: rapportage }, data)
 
         fs.renameSync(req.file.path, path.join(req.file.destination, newPdfName));
 
 
         res.json({
             message: "Rapportage was updated",
-            updateRapportage
+            rapportageUpdate
         })
     } catch (err) {
         console.error(err);

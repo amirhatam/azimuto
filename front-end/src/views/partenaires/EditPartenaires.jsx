@@ -1,6 +1,6 @@
 import React from 'react'
 import { MDBView, MDBBtn, MDBContainer } from 'mdbreact';
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
 
 

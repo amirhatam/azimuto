@@ -44,7 +44,7 @@ const Professionnel = () => {
                                 <MDBCard>
                                     <MDBCardBody>
                                         <MDBCardTitle className="my-5">Rapportage</MDBCardTitle>
-                                        <MDBBtn href="/modification">Click</MDBBtn>
+                                        <MDBBtn href="/rapportage">Click</MDBBtn>
                                     </MDBCardBody>
                                 </MDBCard>
                             </MDBCol>

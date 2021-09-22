@@ -24,7 +24,8 @@ import Professionnel from './views/Professionnel';
 import EditTeam from './views/team/EditTeam';
 import ChiffresCles from './views/chiffresCles/ChiffresCles';
 import EditMission from './views/mission-civique/EditMission';
-import Partenaires from './views/partenaires/Partenaires';
+import PartenairesEP from './views/partenaires/PartenairesEP';
+import RapportageEP from './views/rapportage/RapportageEP';
 
 // import './assets/styles/Home.css';
 
@@ -70,7 +71,8 @@ function App() {
         <Route path="/edit-team" exact component={EditTeam} />
         <Route path="/chiffres-cles" exact component={ChiffresCles} />
         <Route path="/mission-civique" exact component={EditMission} />
-        <Route path="/partenaires" exact component={Partenaires} />
+        <Route path="/partenaires" exact component={PartenairesEP} />
+        <Route path="/rapportage" exact component={RapportageEP} />
 
 
         {/* <Route path="/signup" component={} />
