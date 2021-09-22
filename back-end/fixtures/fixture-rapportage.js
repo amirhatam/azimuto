@@ -18,16 +18,16 @@ const addRapportage = async () => {
         await rapportageModel.insertMany([
 
             {
-                pdf: "Notre plaquette",
-                description: "20210921_Plaquette.pdf",
+                pdf: "20210921_Plaquette.pdf",
+                description: "Notre plaquette",
             },
             {
-                pdf: "Notre catalogue d’ateliers",
-                description: "20210921_Catalogue.pdf",
+                pdf: "20210921_Catalogue.pdf",
+                description: "Notre catalogue d’ateliers",
             },
             {
-                pdf: "Notre dernier rapport d’activité",
-                description: "20210921_Rapport.pdf",
+                pdf: "20210921_Rapport.pdf",
+                description: "Notre dernier rapport d’activité",
             }
 
         ])

@@ -9,7 +9,7 @@ router.get('/', getRapportage)
 router.post('/', upload.single("pdf"), addNewRapportage )
 router.get("/:id", findRapportageById)
 router.delete('/:id/deleteRapportage',deleteRapportage)
-router.patch('/:id/updateRapportage',upload.single("image"),updateRapportage)
+router.patch('/:id/updateRapportage',upload.single("pdf"),updateRapportage)
 
 
 router.all("*", (req, res) => {
