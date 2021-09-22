@@ -9,15 +9,12 @@ import {
     Link,
     MDBCardBody
 } from 'mdbreact';
+import Rapportage from './rapportage/Rapportage';
 import '../assets/styles/Home.css';
 import LogoAzi from "../assets/images/Home-1.jpg"
 import LogoBouee from "../assets/images/Bouee.png"
 import LogoBoussole from "../assets/images/Boussole.png"
 import LogoCardinaux from "../assets/images/cardinaux.png"
-import Rapport from "../assets/PDF/Rapport.pdf"
-import Plaquette from "../assets/PDF/Plaquette.pdf"
-import Catalogue from "../assets/PDF/Catalogue.pdf"
-
 
 
 const Home = () => {
@@ -170,84 +167,12 @@ const Home = () => {
                             <Link to="/?" className=" nav-link active b-Right"> Je candidate au parcours </Link>
 
                         </MDBBtn>
-
                     </MDBCardBody>
-
-
                 </MDBRow>
             </MDBCardBody>
 
-            <MDBView className="purple-slight">
-                <MDBMask className='rgba-purple-slight' />
-                <MDBCardBody className="text-center mb-5 " >
-                    <h2 className="h1-responsive font-weight-bold my-5 ">
-                        AVEC AZIMUTO, ENVIE DE...
-                    </h2>
-                    <MDBRow >
-                        <MDBView hover rounded className=" offset-1 col-5 z-depth-1-half mb-5">
+            <Rapportage/>
 
-                            <h4 className="h4-responsive font-weight-bold m-5 ">
-                                D’en savoir plus ?
-                            </h4>
-
-                            <div className=" justify-content-between  ">
-                                <a href={Rapport} className="light-blue-text" target="_blank">
-                                    <h6 className="font-weight-bold">
-                                        <MDBIcon icon="file-pdf" className="pr-2" />
-                                        Notre dernier rapport d’activité
-                                    </h6>
-                                </a>
-                                <a href={Plaquette} className="light-blue-text" target="_blank">
-                                    <h6 className="font-weight-bold">
-                                        <MDBIcon icon="file-pdf" className="pr-2" />
-                                        Notre plaquette
-                                    </h6>
-                                </a>
-                                <a href={Catalogue} className="light-blue-text" target="_blank">
-                                    <h6 className="font-weight-bold mb-5">
-                                        <MDBIcon icon="file-pdf" className="pr-2" />
-                                        Notre catalogue d’ateliers
-                                    </h6>
-                                </a>
-
-                            </div>
-                            <MDBBtn outline color='purple' className="mb-5 btn-rounded " >
-                                <MDBIcon icon='user' className='mr-2 ' />
-                                <Link to="/Contact" className=" nav-link active b-Right ">Nous rencontrer </Link>
-
-                            </MDBBtn>
-
-                        </MDBView>
-                        <MDBView hover rounded className=" col-5 z-depth-1-half mb-5 ml-4">
-
-                            <h4 className="h4-responsive font-weight-bold m-5 ">
-                                De contribuer à notre action ?
-                            </h4>
-
-                            <div className=" justify-content-between  ">
-                                <h6 className="font-weight-bold">
-                                    Devenir bénévole ou partenaire
-                                </h6>
-
-                                <h6 className="font-weight-bold">
-                                    Faire un don
-                                </h6>
-
-                                <h6 className="font-weight-bold mb-5">
-                                    Rejoindre notre équipe
-                                </h6>
-
-                            </div>
-
-                            <MDBBtn outline color='purple' className="mb-5 btn-rounded " >
-                                <MDBIcon icon='user' className='mr-2 ' />
-                                <Link to="/participer" className=" nav-link active b-Right ">Rejoindre la communauté </Link>
-
-                            </MDBBtn>
-                        </MDBView>
-                    </MDBRow>
-                </MDBCardBody>
-            </MDBView>
         </div>
     );
 }
