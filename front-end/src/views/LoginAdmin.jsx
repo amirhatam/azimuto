@@ -37,8 +37,8 @@ const LoginAdmin = (props) => {
 
         console.log("localStorage :", localStorage.getItem("token"));
 
-        // history.push("/modification")
-        history.push("/espace-professionnel")
+        history.push("/modification")
+        // history.push("/espace-professionnel")
       }
     } catch (error) {
       // alert("Email or password incorrect")
@@ -86,8 +86,8 @@ const LoginAdmin = (props) => {
 
                         <MDBBtn outline color='purple' className="mb-5 btn-rounded " >
                           <MDBIcon icon='user' className='mr-2 ' />
-                          {/* <Link to="/modification"  onClick={validLoginAdmin} className=" nav-link active b-Right ">Login Admin</Link> */}
-                          <Link to="/EP"  onClick={validLoginAdmin} className=" nav-link active b-Right ">Login Admin</Link>
+                          <Link to="/modification"  onClick={validLoginAdmin} className=" nav-link active b-Right ">Login Admin</Link>
+                          {/* <Link to="/EP"  onClick={validLoginAdmin} className=" nav-link active b-Right ">Login Admin</Link> */}
                         </MDBBtn>
 
                         {/* <MDBBtn to="/modification" color="cyan" type="submit" onClick={validLoginAdmin}>

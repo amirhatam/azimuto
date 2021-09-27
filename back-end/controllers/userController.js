@@ -4,8 +4,9 @@ const userModel = require("../models/user")
 const getUsers = async (req, res) => {
     try {
         const name = req.body
-        const users = await userModel.create(name)
-    
+        const users = await userModel.find(name)
+
+      console.log("users",users);
         res.json(users)
 
     } catch (err) {

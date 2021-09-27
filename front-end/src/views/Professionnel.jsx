@@ -5,8 +5,11 @@ const Professionnel = () => {
     return (
         <MDBView className="purple-slight ">
             <div className="container my-5 ">
-                <section className="" style={{ marginTop: "15vmax"}}>
+                <section className="" style={{ marginTop: "15vmax" }}>
                     <MDBContainer>
+                        <h2 className="h1-responsive font-weight-bold my-5 text-center">
+                        L'espace Professionnel
+                        </h2>
                         <MDBRow>
                             <MDBCol className="col-6 my-5 text-center" >
                                 <MDBCard>

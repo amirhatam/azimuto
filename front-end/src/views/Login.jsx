@@ -14,7 +14,6 @@ import {
 import { useHistory } from "react-router-dom";
 import axios from 'axios'
 
-
 const Login = (props) => {
   let history = useHistory()
 
@@ -23,34 +22,47 @@ const Login = (props) => {
 
   const validLogin = async () => {
     try {
-      console.log("je suis validLogin", validLogin)
+      // console.log("je suis validLogin", validLogin)
       const response = await axios.post("http://localhost:8080/user/login", { email: email, password: password })
-      console.log("Login User response", response)
+      // console.log("Login User response", response)
 
       if (response.data.error) {
 
         alert("Email or password incorrect")
-
       } else {
-        const token = response.data.token
-        // const email = response.data.validUser.email
 
-        console.log("token", token)
+        const token = response.data.token
+        const email = response.data.validUser.email
+        const firstName = response.data.validUser.firstName
+        const lastName = response.data.validUser.lastName
+        const userId = response.data.validUser._id
+        // console.log("token", token)
         // console.log("email :", email)
 
         localStorage.setItem("token", `${token}`)
+
+        localStorage.setItem("firstName", `${firstName}`)
+        localStorage.setItem("lastName", `${lastName}`)
+        localStorage.setItem("userId", `${userId}`)
+        localStorage.setItem("email", `${email}`)
 
         props.connectUser()
 
         console.log("localStorage :", localStorage.getItem("token"));
 
         history.push("/logged/formulaire")
+
       }
     } catch (error) {
       // alert("Email or password incorrect")
       console.error("error :", error)
     }
   }
+  
+  useEffect(() => {
+   
+  }, [])
+
   return (
     <MDBFormInline className=" purple-slight">
       <div className="container my-5 ">
@@ -74,13 +86,13 @@ const Login = (props) => {
                       </div>
 
                       <div className="text-center py-4 mt-3">
-                      
 
-                        <MDBBtn onClick = {validLogin} outline color='purple' className="mb-5 btn-rounded " >
+
+                        <MDBBtn onClick={validLogin} outline color='purple' className="mb-5 btn-rounded " >
                           <MDBIcon icon='user' className='mr-2 ' />
                           <Link to="/logged/formulaire" className=" nav-link active b-Right ">Se connecter </Link>
                         </MDBBtn>
-                      
+
                       </div>
                     </>
                   </MDBCardBody>

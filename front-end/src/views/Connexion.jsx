@@ -1,7 +1,15 @@
-import React from "react";
 import { MDBRow, MDBCol, MDBCardBody, MDBBtn, MDBView, MDBMask, Link, MDBIcon } from "mdbreact";
+import React, { useEffect } from 'react';
 
 const ConnexionPage = () => {
+
+
+
+
+  useEffect(() => {
+   
+  }, [])
+
   return (
     <MDBView className="purple-slight text-center">
       <div className="container my-5" >
