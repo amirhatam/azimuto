@@ -1,12 +1,32 @@
 import React from "react";
 import '../assets/styles/Footer.css';
+import { useState, useEffect } from "react";
+import axios from 'axios'
 
-import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon, MDBNavbarBrand } from "mdbreact";
-import Plaquette from "../assets/PDF/Plaquette.pdf"
+import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBNavbarBrand } from "mdbreact";
 import Logo from "../assets/images/Logo.png"
 
 
+
 const FooterPage = () => {
+  const [rapportage, setRapportage] = useState([])
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await axios.get("http://localhost:8080/rapportage")
+        if (response.status === 200) {
+          setRapportage(response.data.rapportage[0])
+        }
+        
+        
+      } catch (err) {
+        console.error(err);
+      }
+    })();
+  }, [])
+  
+
   return (
 
     <MDBFooter className="bg-info text-white font-small pt-4 ">
@@ -53,11 +73,14 @@ const FooterPage = () => {
               <li className="list-unstyled">
                 <a href="/connexion/loginadmin">Professionnels</a>
               </li>
-              <a href={Plaquette} className="light-white-text" target="_blank">
+
+              <a href={`http://localhost:8080/uploads/${rapportage.pdf}`} className="light-white-text" target="_blank">
                 <h6 className="font-weight-bold">
-                  Notre plaquette
+                  {rapportage.description}
                 </h6>
               </a>
+
+
             </ul>
           </MDBCol>
         </MDBRow>
@@ -67,7 +90,7 @@ const FooterPage = () => {
           &copy; {new Date().getFullYear()} Copyright: <a href="https://www.Azimuto.com"> Azimuto.com </a>
         </MDBContainer>
       </div>
-    </MDBFooter>
+    </MDBFooter >
   );
 }
 

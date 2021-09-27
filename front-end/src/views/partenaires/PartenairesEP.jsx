@@ -60,10 +60,12 @@ const Partenaires = (props) => {
         return (
             <MDBView className="purple-slight">
                 <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
+                <h4 className='display-6 text-center font-weight-bold my-5 pt-md-3 pt-3'>
+                            NOS PARTENAIRES </h4>
                     <MDBRow >
                         {partenaires.map(e => {
                             return <>
-                                <MDBCol lg="4" md="12" className=" mb-5 mx-0 px-0 align-self-center" style={{textAlign: "-webkit-center" }}>
+                                <MDBCol lg="4" md="12" className=" my-5 mx-0 px-0 align-self-center" style={{textAlign: "-webkit-center" }}>
                                     <div style={{width: "60%" }}>
                                         <a href={`${e.url}`} target="_blank">
                                             <img

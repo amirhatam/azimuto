@@ -26,6 +26,7 @@ const Modification = () => {
         }
     }, [])
 
+
     const deleteQuestion = async () => {
         try {
             const response = await axios.delete(`http://localhost:8080/questions/${deletId}`)

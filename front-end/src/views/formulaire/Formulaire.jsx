@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { MDBFormInline, MDBBtn,MDBView } from 'mdbreact';
+import { MDBFormInline, MDBBtn, MDBView, MDBRow, MDBCol, MDBContainer, MDBCard } from 'mdbreact';
 import axios from "axios";
 import Radio from "./Radio";
 import TextareaPage from "./TextareaPage";
 
 
-const QuestionPage = () => {
+const QuestionPage = (props) => {
 
     const [radioBox, setRadioBox] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
     const [textBox, setTextBox] = useState([1]);
@@ -14,11 +14,12 @@ const QuestionPage = () => {
 
     const [response, setResponses] = useState([]);
 
+    const [usersData, setusersData] = useState([]);
+
 
     const changeCollection = (data) => {
         const newFilterResponses = response.filter((elem) => {
-
-            return elem.id !== data.id
+            return elem.question !== data.question
         })
         const newResponses = [...newFilterResponses, data]
 
@@ -26,7 +27,7 @@ const QuestionPage = () => {
             newResponses
         )
     }
-    console.log("response", response)
+    // console.log("response", response)
 
     const Form = async (body) => {
         try {
@@ -35,13 +36,29 @@ const QuestionPage = () => {
             const questionsMap = response.data.questionFound.map((elem) => {
                 return elem
             });
-
             setQuestions(questionsMap)
 
         } catch (err) {
             console.log(err)
         }
     }
+
+    const User = async () => {
+        try {
+            const response = await axios.get("http://localhost:8080/users")
+            const usersMap = response.data.map((elem) => {
+                return elem;
+            })
+            setusersData(usersMap)
+
+        } catch (err) {
+            console.error(err);
+        }
+    }
+
+    // console.log("users data",usersData);
+
+
 
     const userReponse = async (body) => {
         try {
@@ -53,58 +70,82 @@ const QuestionPage = () => {
 
     useEffect(() => {
         Form()
+        User()
     }, [])
     return (
-        <MDBFormInline className="d-block  purple-slight">
+        <MDBView className="purple-slight">
+            {/* <MDBFormInline className="d-block "> */}
+            <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
+                <div className="text-center mb-5">
+                    <h1 className="mb-5" >Questionnaire</h1>
+                    <h3>{localStorage.firstName} {localStorage.lastName} bienvenue dans votre espace personnel  </h3>
+                </div>
+                <MDBRow >
+                    {questions.map((elem, index) => {
+                        return (
+                            <>
+                                {index === 19 && <h2 className="text-danger text-center my-5">NE PAS RÉPONDRE À CES QUESTIONS AVANT D'AVOIR FINI LE PARCOURS AVEC AZIMUTO</h2>}
+                                <MDBView className="my-5">
 
-            <form >
-                <h1 className="text-center mb-5" style={{ paddingTop: "15vmax" }}>Questionnaire</h1>
-                {questions.map((elem, index) => {
-                    return (
-                        <>
-                            {index === 19 && <h2 className="text-danger text-center my-5">NE PAS RÉPONDRE À CES QUESTIONS AVANT D'AVOIR FINI LE PARCOURS AVEC AZIMUTO</h2>}
-                            <MDBView className=" text-center ">
+                                    <MDBCard testimonial >
+                                        <MDBView className=" text-center ">
 
-                                <h3 className="mt-5" >{elem.description}</h3>
-                            </MDBView>
-                            {radioBox.map((e) => {
-                                if (elem.type === "multiple") {
-                                    return (
-
-                                        <MDBFormInline className=" justify-content-center  ">
-
-                                            <Radio
-                                                changeAnswerText={changeCollection}
-                                                value={e}
-                                                id={elem._id}
-                                            />
-                                        </MDBFormInline>
-                                    )
-                                }
-
-                            })}
-                            {textBox.map((e) => {
-                                if (elem.type === "texte") {
-                                    return (
-                                        <MDBView className=" container justify-content-center mb-5 ">
-
-                                            <TextareaPage value={e} id={elem._id} changeAnswerText={changeCollection} />
+                                            <h3 className="mt-5 px-5" >{elem.description}</h3>
                                         </MDBView>
-                                    )
-                                }
-                            })}
-                        </>
-                    );
-                })}
 
-            </form>
-            <MDBView className="col-12 text-center mt-5">
-                <MDBBtn onClick={userReponse} className="col-2" color="purple">
-                    Enregistrer
-                </MDBBtn>
-            </MDBView>
+                                        <MDBRow className=" block-example border border-light mx-5 mb-5">
+                                            <MDBCol className="" md='1' >
+                                            </MDBCol>
 
-        </MDBFormInline>
+                                            {radioBox.map((e) => {
+                                                if (elem.type === "multiple") {
+                                                    return (
+                                                        <MDBCol className="my-5 px-0" md='1' >
+                                                            <MDBFormInline className="justify-content-center ">
+                                                                <Radio
+                                                                    changeAnswerText={changeCollection}
+                                                                    value={e}
+                                                                    id={elem._id}
+                                                                    description={elem.description}
+                                                                />
+                                                                <span className="h5 mb-1">{e}</span>
+                                                            </MDBFormInline>
+                                                        </MDBCol>
+
+                                                    )
+                                                }
+                                            })}
+                                        </MDBRow>
+                                        {textBox.map((e) => {
+                                            if (elem.type === "texte") {
+                                                return (
+                                                    <MDBView className=" container justify-content-center mb-5 ">
+
+                                                        <TextareaPage
+                                                            value={e}
+                                                            id={elem._id}
+                                                            changeAnswerText={changeCollection}
+                                                            description={elem.description}
+                                                        />
+                                                    </MDBView>
+                                                )
+                                            }
+                                        })}
+                                    </MDBCard>
+                                </MDBView>
+                            </>
+                        );
+                    })}
+                </MDBRow>
+                <MDBView className="col-12 text-center mt-5">
+                    <MDBBtn onClick={userReponse} className="col-2" color="purple">
+                        Enregistrer
+                    </MDBBtn>
+                </MDBView>
+            </MDBContainer>
+
+            {/* </MDBFormInline> */}
+        </MDBView>
 
     );
 

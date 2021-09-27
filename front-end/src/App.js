@@ -43,7 +43,8 @@ function App() {
   }, [])
 
   const logout = () => {
-    localStorage.removeItem("token")
+    // localStorage.removeItem("token")
+    localStorage.clear();
     setUserConnected(false)
   }
 
@@ -63,8 +64,8 @@ function App() {
           <LoginAdmin connectUser={() => setUserConnected(true)} />
         </Route>
         <Route path="/logged/formulaire" exact component={QuestionPage} />
-        <Route path="/connexion/login">
         <Route path="/modification" exact component={Modification} />
+        <Route path="/connexion/login">
           <Login connectUser={() => setUserConnected(true)} />
         </Route>
         <Route path="/EP" exact component={Professionnel} />

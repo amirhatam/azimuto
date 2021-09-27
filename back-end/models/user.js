@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
     birthday: { type: Date },
     sex: String,
     institution: String,
-    image: String,
+    // image: String,
     programs: {
         type: mongoose.Types.ObjectId,
         ref: "Program"

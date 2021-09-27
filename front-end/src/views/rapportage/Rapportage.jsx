@@ -51,7 +51,7 @@ const Rapportage = () => {
                             return <>
                                 <MDBRow center>
                                     <MDBCol size="4" className="d-flex my-2">
-                                        <a href={e.pdf} className="h2 " target="_blank">
+                                        <a href={`http://localhost:8080/uploads/${e.pdf}`} className="h2 " target="_blank">
                                             <MDBIcon icon="file-pdf" className="pr-3 " />
                                         </a>
                                         <h6 className="font-weight-bold text-start">
