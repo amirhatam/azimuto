@@ -1,5 +1,5 @@
 import React from 'react'
-import {  MDBView, MDBBtn } from 'mdbreact';
+import { MDBView, MDBBtn, MDBIcon, MDBContainer } from 'mdbreact';
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
@@ -22,17 +22,23 @@ function EditQuestion(props) {
     }
     return (
         <MDBView className="purple-slight">
+            <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
 
-            <div className="container my-5 ">
+                <div className="text-center my-5 ">
+                    <h2 className="h1-responsive font-weight-bold text-center  pr-5 mb-5">
+                        <a href="/modification" className="h2 px-2"><MDBIcon icon="angle-left" /> </a> Liste des questions
+                    </h2>
+                </div>
+                <div className="container my-5 ">
 
-                <section className="mb-5" style={{ marginTop: "15vmax" }}>
                     <div>
                         <input type="text" id="example1" className="form-control form-control-lg" onChange={(e) => setDescription(e.target.value)} />
                         <MDBBtn color="cyan" rounded onClick={modifQuestion}>Confirmer</MDBBtn>
                     </div>
-                </section>
 
-            </div>
+                </div>
+            </MDBContainer>
+
         </MDBView>
     )
 }

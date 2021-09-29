@@ -67,7 +67,7 @@ const Navbar = (props) => {
                             <MDBNavItem>
                                 <MDBBtn rounded className='btn-purple'>
                                     {/* <MDBIcon icon='user' className=' mr-2' />  */}
-                                    {props.userConnected
+                                    {props.userConnected || props.adminConnected
                                         ?
                                         <MDBNavLink className='loco-con text-light' to="/" onClick={props.logout}>Se déconnecter</MDBNavLink>
                                         :
@@ -79,37 +79,6 @@ const Navbar = (props) => {
                     </MDBCollapse>
                 </MDBContainer>
 
-
-
-
-
-                {/* <div className="container-fluid">
-                    <Link to="/" className="navbar-brand">Azimuto</Link>
-
-                    <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <Link to="/" className="nav-link active">Accueil</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/qui-sommes-nous" className="nav-link active">Qui sommes-nous ?</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/nos-programmes" className="nav-link active">Nos Programmes</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/participer" className="nav-link active">Participer</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/Contact" className="nav-link active">Contact</Link>
-                            </li>
-
-                        </ul>
-
-
-                    </div>
-                </div>
-               */}
             </MDBNavbar>
 
 

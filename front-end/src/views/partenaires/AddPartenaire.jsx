@@ -1,5 +1,5 @@
 import React from 'react'
-import { MDBContainer, MDBView, MDBBtn } from 'mdbreact';
+import { MDBContainer, MDBView, MDBBtn, MDBIcon } from 'mdbreact';
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
@@ -39,8 +39,11 @@ const AddPartenaire = (props) => {
                     {/* {props.userAdded
                         ? <h2>User a été ajouté correctement!</h2>
                         : <> */}
-                    <div className="text-center my-5">
-                        <MDBBtn size="lg" color='cyan' rounded href="/partenaires">Go back</MDBBtn>
+                    
+                    <div className="text-center my-5 ">
+                        <h2 className="h1-responsive font-weight-bold text-center  pr-5 mb-5">
+                            <a href="/partenaires" className="h2 px-2"><MDBIcon icon="angle-left" /> </a> NOS PARTENAIRES
+                        </h2>
                     </div>
 
                     <h2>Ajouter une nouvelle personne</h2>

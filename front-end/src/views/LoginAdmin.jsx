@@ -25,17 +25,17 @@ const LoginAdmin = (props) => {
         // alert("Email or password incorrect")
 
       } else {
-        const token = response.data.token
+        const tokenAdmin = response.data.token
         // const email = response.data.validUser.email
 
-        console.log("token", token)
+        console.log("tokenAdmin", tokenAdmin)
         // console.log("email :", email)
 
-        localStorage.setItem("token", `${token}`)
+        localStorage.setItem("tokenAdmin", `${tokenAdmin}`)
 
         props.connectUser()
 
-        console.log("localStorage :", localStorage.getItem("token"));
+        console.log("localStorage :", localStorage.getItem("tokenAdmin"));
 
         history.push("/modification")
         // history.push("/espace-professionnel")

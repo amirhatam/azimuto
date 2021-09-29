@@ -5,7 +5,7 @@ import {
     MDBView,
     MDBContainer,
     MDBBtn,
-
+    MDBIcon
 } from 'mdbreact';
 import { useState, useEffect } from 'react'
 import axios from 'axios'
@@ -25,8 +25,8 @@ const EditMission = () => {
                     setCivique(response.data.civiqueFound)
                 }
                 (response.data.civiqueFound).map(e => {
-                //   console.log(e);
-                   return setEditingId(e._id)
+                    //   console.log(e);
+                    return setEditingId(e._id)
                 })
 
             } catch (err) {
@@ -48,32 +48,47 @@ const EditMission = () => {
         }
     }
 
-    if (civique.length === 0) {
-        return <p>Loading ...</p>
-    } else {
+    if (!localStorage.tokenAdmin) {
         return (
-            <MDBView className="purple-slight">
-                <MDBContainer className="mb-5" style={{ marginTop: "10vmax" }}>
-                    <MDBRow >
-                        <MDBCol md='12' className='mb-5 text-center '>
-                            <MDBCol md='12' className='mb-4 text-center'>
-                                <h4 className='display-6 font-weight-bold my-5 pt-md-3 pt-3'>
-                                    MISSION DE SERVICE CIVIQUE </h4>
-                            </MDBCol>
-                            <div>
-                                <h3>{civique[0].url}</h3>
-                            </div>
-                            <div>
-                                <input type="text" onChange={(event) => setUrl(event.target.value)}  className="form-control my-5" name="name" placeholder="" />
-                            </div>
-                            <div>
-                                <MDBBtn color="cyan" rounded onClick={editUrl}>Modifier</MDBBtn>
-                            </div>
-                        </MDBCol>
-                    </MDBRow>
+            <MDBView className="purple-slight ">
+                <MDBContainer className="text-center mb-5" style={{ marginTop: "17vmax", height: "200px" }}>
+                    <h1 className="h1 mb-0"><MDBIcon far icon="frown" /></h1>
+                    <h3 className="h1-responsive font-weight-bold mb-5">
+                        Page Not Found !
+                    </h3>
                 </MDBContainer>
             </MDBView>
-        );
+        )
+    } else {
+        if (civique.length === 0) {
+            return <p>Loading ...</p>
+        } else {
+            return (
+                <MDBView className="purple-slight">
+                    <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
+                        <div className="text-center my-5 ">
+                            <h2 className="h1-responsive font-weight-bold text-center  pr-5 mb-5">
+                                <a href="/EP" className="h2 px-2"><MDBIcon icon="angle-left" /> </a> MISSION DE SERVICE CIVIQUE
+                            </h2>
+                        </div>
+                        <MDBRow >
+                            <MDBCol md='12' className='mb-5 text-center '>
+
+                                <div>
+                                    <h3>{civique[0].url}</h3>
+                                </div>
+                                <div>
+                                    <input type="text" onChange={(event) => setUrl(event.target.value)} className="form-control my-5" name="name" placeholder="" />
+                                </div>
+                                <div>
+                                    <MDBBtn color="cyan" rounded onClick={editUrl}>Modifier</MDBBtn>
+                                </div>
+                            </MDBCol>
+                        </MDBRow>
+                    </MDBContainer>
+                </MDBView>
+            );
+        }
     }
 }
 export default EditMission
