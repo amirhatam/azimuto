@@ -5,6 +5,7 @@ import {
     MDBView,
     MDBContainer,
     MDBBtn,
+    MDBIcon
 } from 'mdbreact';
 import { useState, useEffect } from 'react'
 import axios from 'axios'
@@ -35,66 +36,85 @@ const Partenaires = (props) => {
         })();
     }, []);
 
-    console.log("partenaires", partenaires);
+    // console.log("partenaires", partenaires);
 
 
-    if (views === "Add") {
-        return <AddPartenaire
-            setViews={setViews}
-            setPartenaires={setPartenaires}
-        />
-    } else if (views === "Edit") {
-        return <EditPartenaires
-            setViews={setViews}
-            editingId={editingId}
-            setEditingId={setEditingId}
-            setPartenaires={setPartenaires}
-        />
-    } else if (views === "Delete") {
-        return <DeletePartenaire
-        setViews={setViews}
-        setPartenaires={setPartenaires}
-        deleteId={deleteId}
-        />
-    } else if (views === "List") {
+
+    if (!localStorage.tokenAdmin) {
         return (
-            <MDBView className="purple-slight">
-                <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
-                <h4 className='display-6 text-center font-weight-bold my-5 pt-md-3 pt-3'>
-                            NOS PARTENAIRES </h4>
-                    <MDBRow >
-                        {partenaires.map(e => {
-                            return <>
-                                <MDBCol lg="4" md="12" className=" my-5 mx-0 px-0 align-self-center" style={{textAlign: "-webkit-center" }}>
-                                    <div style={{width: "60%" }}>
-                                        <a href={`${e.url}`} target="_blank">
-                                            <img
-                                                src={`http://localhost:8080/uploads/${e.image}`}
-                                                className="mx-0  mb-md-0 mb-4 rounded z-depth-1 img-fluid"
-                                                tag="img"
-                                                alt={`https://www.${e.url}`}
-                                                
-                                            />
-                                        </a>
-                                        <MDBRow center>
-                                            <MDBCol className="px-0" size="4">
-                                                <MDBBtn size="sm" outline color='purple' className="btn-rounded btn-1 my-3 px-3" onClick={(elem) => { setEditingId(e._id); setViews("Edit") }} >Editer</MDBBtn >
-                                            </MDBCol>
-                                            <MDBCol className="px-0" size="4">
-                                                <MDBBtn size="sm" outline color='purple' className="btn-rounded btn-1 my-3 px-3" onClick={(elem) => { setDeleteId(e._id); setViews("Delete") }} >Effacer</MDBBtn >
-                                            </MDBCol>
-                                        </MDBRow>
-                                    </div>
-                                </MDBCol>
-                            </>
-                        })}
-                        <MDBCol lg="12" md="12" className="my-5 text-center">
-                            <MDBBtn size="lg" color='cyan' rounded onClick={(e) => { setViews("Add") }}>Ajouter</MDBBtn >
-                        </MDBCol>
-                    </MDBRow>
+            <MDBView className="purple-slight ">
+                <MDBContainer className="text-center mb-5" style={{ marginTop: "17vmax", height: "200px" }}>
+                    <h1 className="h1 mb-0"><MDBIcon far icon="frown" /></h1>
+                    <h3 className="h1-responsive font-weight-bold mb-5">
+                        Page Not Found !
+                    </h3>
                 </MDBContainer>
             </MDBView>
-        );
+        )
+    } else {
+
+        if (views === "Add") {
+            return <AddPartenaire
+                setViews={setViews}
+                setPartenaires={setPartenaires}
+            />
+        } else if (views === "Edit") {
+            return <EditPartenaires
+                setViews={setViews}
+                editingId={editingId}
+                setEditingId={setEditingId}
+                setPartenaires={setPartenaires}
+            />
+        } else if (views === "Delete") {
+            return <DeletePartenaire
+                setViews={setViews}
+                setPartenaires={setPartenaires}
+                deleteId={deleteId}
+            />
+        } else if (views === "List") {
+            return (
+                <MDBView className="purple-slight">
+                    <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
+
+                        <div className="text-center my-5 ">
+                            <h2 className="h1-responsive font-weight-bold text-center  pr-5 mb-5">
+                                <a href="/EP" className="h2 px-2"><MDBIcon icon="angle-left" /> </a> NOS PARTENAIRES
+                            </h2>
+                        </div>
+                        <MDBRow >
+                            {partenaires.map(e => {
+                                return <>
+                                    <MDBCol lg="4" md="12" className=" my-5 mx-0 px-0 align-self-center" style={{ textAlign: "-webkit-center" }}>
+                                        <div style={{ width: "60%" }}>
+                                            <a href={`${e.url}`} target="_blank">
+                                                <img
+                                                    src={`http://localhost:8080/uploads/${e.image}`}
+                                                    className="mx-0  mb-md-0 mb-4 rounded z-depth-1 img-fluid"
+                                                    tag="img"
+                                                    alt={`https://www.${e.url}`}
+
+                                                />
+                                            </a>
+                                            <MDBRow center>
+                                                <MDBCol className="px-0" size="4">
+                                                    <MDBBtn size="sm" outline color='purple' className="btn-rounded btn-1 my-3 px-3" onClick={(elem) => { setEditingId(e._id); setViews("Edit") }} >Editer</MDBBtn >
+                                                </MDBCol>
+                                                <MDBCol className="px-0" size="4">
+                                                    <MDBBtn size="sm" outline color='purple' className="btn-rounded btn-1 my-3 px-3" onClick={(elem) => { setDeleteId(e._id); setViews("Delete") }} >Effacer</MDBBtn >
+                                                </MDBCol>
+                                            </MDBRow>
+                                        </div>
+                                    </MDBCol>
+                                </>
+                            })}
+                            <MDBCol lg="12" md="12" className="my-5 text-center">
+                                <MDBBtn size="lg" color='cyan' rounded onClick={(e) => { setViews("Add") }}>Ajouter</MDBBtn >
+                            </MDBCol>
+                        </MDBRow>
+                    </MDBContainer>
+                </MDBView>
+            );
+        }
     }
 }
 export default Partenaires

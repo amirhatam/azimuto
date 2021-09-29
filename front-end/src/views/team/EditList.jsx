@@ -1,5 +1,5 @@
 import React from 'react'
-import { MDBView, MDBBtn, MDBContainer } from 'mdbreact';
+import { MDBView, MDBBtn, MDBContainer, MDBIcon } from 'mdbreact';
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
@@ -27,10 +27,13 @@ function EditTeam(props) {
     return (
         <MDBView className="purple-slight">
             <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
+                <div className="text-center my-5 ">
+                    <h2 className="h1-responsive font-weight-bold text-center  pr-5 mb-5">
+                        <a href="/edit-team" className="h2 px-2"><MDBIcon icon="angle-left" /> </a> Liste de bénévoles
+                    </h2>
+                </div>
                 <div >
-                    <div className="text-center my-5">
-                        <MDBBtn size="lg" color='cyan' rounded href="/edit-team">Go back</MDBBtn>
-                    </div>
+
                     <div className="mb-3">
                         <label className="form-label">Nom </label>
                         <input type="text" onChange={(event) => setNameUser(event.target.value)} className="form-control" name="name" placeholder="Nom d'user" />

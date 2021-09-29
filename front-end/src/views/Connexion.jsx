@@ -1,4 +1,4 @@
-import { MDBRow, MDBCol, MDBCardBody, MDBBtn, MDBView, MDBMask, Link, MDBIcon } from "mdbreact";
+import { MDBRow, MDBCol, MDBCardBody, MDBBtn, MDBView, MDBMask, MDBIcon } from "mdbreact";
 import React, { useEffect } from 'react';
 
 const ConnexionPage = () => {
@@ -38,9 +38,8 @@ const ConnexionPage = () => {
 
                 <h4 className="font-weight-bold mb-3">Tu as déjà un compte ? Connecte-toi vite ici !</h4>
 
-                <MDBBtn outline color='purple' className="mb-5 btn-rounded " >
-                  <MDBIcon icon='user' className='mr-2 ' />
-                  <Link to="/connexion/login" className=" nav-link active b-Right ">Me Connecter </Link>
+                <MDBBtn href="/connexion/login" outline color='purple' className="rounded-pill mb-5 " >
+                  <MDBIcon icon='user' className='mr-2 ' /> Me Connecter
                 </MDBBtn>
 
               </MDBCardBody>
@@ -61,9 +60,8 @@ const ConnexionPage = () => {
 
                 <h4 className="font-weight-bold mb-3">C'est la première fois que tu viens ? Clique ici</h4>
 
-                <MDBBtn outline color='purple' className="mb-5 btn-rounded " >
-                  <MDBIcon icon='user' className='mr-2 ' />
-                  <Link to="/connexion/signup" className=" nav-link active b-Right ">Créer mon compte </Link>
+                <MDBBtn  href="/connexion/signup" outline color='purple' className="rounded-pill mb-5"  >
+                  <MDBIcon icon='user' className='mr-2 ' /> Créer mon compte
                 </MDBBtn>
 
               </MDBCardBody>

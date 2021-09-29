@@ -24,7 +24,7 @@ const Login = (props) => {
     try {
       // console.log("je suis validLogin", validLogin)
       const response = await axios.post("http://localhost:8080/user/login", { email: email, password: password })
-      // console.log("Login User response", response)
+      console.log("Login User response", response)
 
       if (response.data.error) {
 

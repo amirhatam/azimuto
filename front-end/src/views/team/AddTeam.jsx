@@ -1,5 +1,5 @@
 import React from 'react'
-import { MDBContainer, MDBView, MDBBtn } from 'mdbreact';
+import { MDBContainer, MDBView, MDBIcon, MDBBtn } from 'mdbreact';
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
@@ -15,10 +15,10 @@ const AddTeam = (props) => {
         try {
             const newUserForm = new FormData()
 
-            newUserForm.append("name",nameUser)
-            newUserForm.append("post",postUser)
-            newUserForm.append("description",description)
-            newUserForm.append("image",imageUser)
+            newUserForm.append("name", nameUser)
+            newUserForm.append("post", postUser)
+            newUserForm.append("description", description)
+            newUserForm.append("image", imageUser)
 
             const response = await axios.post("http://localhost:8080/teams", newUserForm)
             const responseData = await axios.get("http://localhost:8080/teams")
@@ -41,40 +41,43 @@ const AddTeam = (props) => {
                     {/* {props.userAdded
                         ? <h2>User a été ajouté correctement!</h2>
                         : <> */}
-                            <div className="text-center my-5">
-                                <MDBBtn size="lg" color='cyan' rounded href="/edit-team">Go back</MDBBtn>
-                            </div>
+                   
+                    <div className="text-center my-5 ">
+                        <h2 className="h1-responsive font-weight-bold text-center  pr-5 mb-5">
+                            <a href="/edit-team" className="h2 px-2"><MDBIcon icon="angle-left" /> </a> Liste de bénévoles
+                        </h2>
+                    </div>
 
-                            <h2>Ajouter une nouvelle personne</h2>
+                    <h2>Ajouter une nouvelle personne</h2>
 
-                            <div className="mb-3">
-                                <label className="form-label">Nom </label>
-                                <input type="text" onChange={(event) => setNameUser(event.target.value)} className="form-control" name="name" placeholder="Nom d'user" />
-                            </div>
-                            <div className="mb-3">
-                                <label className="form-label">Post </label>
-                                <input type="text" onChange={(event) => setPostUser(event.target.value)} className="form-control" name="name" placeholder="Post d'user" />
-                            </div>
-                            <div className="mb-3">
-                                <label className="form-label">Description </label>
-                                <textarea rows="8" onChange={(event) => setDescription(event.target.value)} className="form-control" name="name" placeholder="Description" />
-                            </div>
+                    <div className="mb-3">
+                        <label className="form-label">Nom </label>
+                        <input type="text" onChange={(event) => setNameUser(event.target.value)} className="form-control" name="name" placeholder="Nom d'user" />
+                    </div>
+                    <div className="mb-3">
+                        <label className="form-label">Post </label>
+                        <input type="text" onChange={(event) => setPostUser(event.target.value)} className="form-control" name="name" placeholder="Post d'user" />
+                    </div>
+                    <div className="mb-3">
+                        <label className="form-label">Description </label>
+                        <textarea rows="8" onChange={(event) => setDescription(event.target.value)} className="form-control" name="name" placeholder="Description" />
+                    </div>
 
-                            <div className="mb-3">
-                                <label for="formFile" className="form-label">Image d'user</label>
-                                <input type="file" onChange={(event) => setImageUser(event.target.files[0])} className="form-control" name="image" />
-                            </div>
+                    <div className="mb-3">
+                        <label for="formFile" className="form-label">Image d'user</label>
+                        <input type="file" onChange={(event) => setImageUser(event.target.files[0])} className="form-control" name="image" />
+                    </div>
 
-                            <div className="mb-3">
-                                <button className="btn btn-primary" onClick={send}>Envoyer</button>
-                            </div>
-                        {/* </>
+                    <div className="mb-3">
+                        <MDBBtn color="cyan" rounded onClick={send}>Envoyer</MDBBtn>
+                    </div>
+                    {/* </>
                     } */}
                 </div>
             </MDBContainer>
         </MDBView>
     )
-    
+
 }
 
 export default AddTeam

@@ -1,5 +1,5 @@
 import React from 'react'
-import { MDBContainer, MDBView, MDBBtn } from 'mdbreact';
+import { MDBContainer, MDBView, MDBBtn, MDBIcon } from 'mdbreact';
 import axios from 'axios'
 
 const DeleteRapportage = (props) => {
@@ -19,8 +19,11 @@ const DeleteRapportage = (props) => {
     return (
         <MDBView className="purple-slight">
             <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
-                <div className="text-center my-5">
-                    <MDBBtn size="lg" color='cyan' rounded href="/rapportage" className="mb-5">Go back</MDBBtn>
+
+                <div className="text-center my-5 ">
+                    <h2 className="h1-responsive font-weight-bold text-center  pr-5 mb-5">
+                        <a href="/rapportage" className="h2 px-2"><MDBIcon icon="angle-left" /> </a> NOS PARTENAIRES
+                    </h2>
                 </div>
 
                 <div >

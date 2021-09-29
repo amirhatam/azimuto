@@ -1,5 +1,5 @@
 import React from 'react'
-import { MDBContainer, MDBView, MDBBtn } from 'mdbreact';
+import { MDBContainer, MDBView, MDBBtn,MDBIcon } from 'mdbreact';
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
@@ -21,14 +21,16 @@ const DeleteTeam = (props) => {
     return (
         <MDBView className="purple-slight">
             <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
-                    <div className="text-center my-5">
-                        <MDBBtn size="lg" color='cyan' rounded href="/edit-team">Go back</MDBBtn>
-                    </div>
+                <div className="text-center my-5 ">
+                    <h2 className="h1-responsive font-weight-bold text-center  pr-5 mb-5">
+                        <a href="/edit-team" className="h2 px-2"><MDBIcon icon="angle-left" /> </a> Liste de bénévoles
+                    </h2>
+                </div>
 
-                    <div >
-                        <h2>Es que vous êtes sur de suprimmer la bénévoles ?</h2>
-                        <MDBBtn color="cyan" rounded onClick={deleteUser}>Confirmer</MDBBtn>
-                    </div>
+                <div >
+                    <h2 className="my-5">Es que vous êtes sur de suprimmer la bénévoles ?</h2>
+                    <MDBBtn color="cyan" rounded onClick={deleteUser}>Confirmer</MDBBtn>
+                </div>
             </MDBContainer>
         </MDBView>
     )

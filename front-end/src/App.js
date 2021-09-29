@@ -26,19 +26,23 @@ import ChiffresCles from './views/chiffresCles/ChiffresCles';
 import EditMission from './views/mission-civique/EditMission';
 import PartenairesEP from './views/partenaires/PartenairesEP';
 import RapportageEP from './views/rapportage/RapportageEP';
+import LesEtudiants from './views/etudiants/LesEtudiants';
 
-// import './assets/styles/Home.css';
 
 
 function App() {
 
   const [userConnected, setUserConnected] = useState(false)
+  const [adminConnected, setAdminConnected] = useState(false)
 
   useEffect(() => {
     const token = localStorage.getItem("token") || false
+    const tokenAdmin = localStorage.getItem("tokenAdmin") || false
 
     if (token) {
       setUserConnected(true)
+    } else if (tokenAdmin) {
+      setAdminConnected(true)
     }
   }, [])
 
@@ -46,8 +50,8 @@ function App() {
     // localStorage.removeItem("token")
     localStorage.clear();
     setUserConnected(false)
+    setAdminConnected(false)
   }
-
 
   return (
     <BrowserRouter>
@@ -74,7 +78,7 @@ function App() {
         <Route path="/mission-civique" exact component={EditMission} />
         <Route path="/partenaires" exact component={PartenairesEP} />
         <Route path="/rapportage" exact component={RapportageEP} />
-
+        <Route path="/etudiants" exact component={LesEtudiants} />
 
         {/* <Route path="/signup" component={} />
           <Route path="/admin">
@@ -82,12 +86,11 @@ function App() {
           </Route> */}
       </Switch>
 
-      <Navbar logout={logout} userConnected={userConnected} />
+      <Navbar logout={logout} userConnected={userConnected} adminConnected={adminConnected} />
       <Footer />
     </BrowserRouter>
 
   );
 }
-
 export default App;
 

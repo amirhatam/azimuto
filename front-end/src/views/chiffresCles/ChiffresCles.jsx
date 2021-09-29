@@ -10,7 +10,7 @@ const ChiffresCles = (props) => {
     const [chiffre, setChiffre] = useState([]);
     const [views, setViews] = useState("List")
     const [editingId, setEditingId] = useState([]);
-  
+
 
 
     useEffect(() => {
@@ -39,42 +39,60 @@ const ChiffresCles = (props) => {
     // }
 
 
-   if (views === "Edit") {
-        return <EditChiffreCles editingId={editingId} setEditingId={setEditingId} setChiffre={setChiffre} setViews={setViews} />
-    }else {
+    if (!localStorage.tokenAdmin) {
+        return (
+            <MDBView className="purple-slight ">
+                <MDBContainer className="text-center mb-5" style={{ marginTop: "17vmax", height: "200px" }}>
+                    <h1 className="h1 mb-0"><MDBIcon far icon="frown" /></h1>
+                    <h3 className="h1-responsive font-weight-bold mb-5">
+                        Page Not Found !
+                    </h3>
+                </MDBContainer>
+            </MDBView>
+        )
+    } else {
 
+        if (views === "Edit") {
+            return <EditChiffreCles editingId={editingId} setEditingId={setEditingId} setChiffre={setChiffre} setViews={setViews} />
+        } else {
+
+        }
+
+        return (
+            <MDBView className="purple-slight">
+
+                <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
+                    <div className="text-center my-5 ">
+                        <h2 className="h1-responsive font-weight-bold text-center  pr-5 mb-5">
+                            <a href="/EP" className="h2 px-2"><MDBIcon icon="angle-left" /> </a> Nos Chiffres Clés
+                        </h2>
+                    </div>
+
+                    <MDBRow>
+                        {chiffre.map(e => {
+                            return <>
+                                <MDBCol className="my-5" md='4' >
+                                    <MDBCard testimonial style={{ height: "20vmax" }}>
+                                        <MDBCardBody >
+                                            <h4 className='card-title '>{e.rapport}</h4>
+                                            <hr />
+                                            <p>
+                                                <MDBIcon icon='quote-left' /> {e.detail} <MDBIcon icon='quote-right' />
+                                            </p>
+                                        </MDBCardBody>
+                                        <div className="text-center my-5">
+                                            <MDBBtn size="lg" outline color='purple' className="btn-rounded btn-1" onClick={(elem) => { setEditingId(e._id); setViews("Edit") }}>Editer</MDBBtn >
+                                        </div>
+                                    </MDBCard>
+                                </MDBCol>
+                            </>
+                        })
+
+                        }
+                    </MDBRow>
+                </MDBContainer>
+            </MDBView >
+        )
     }
-
-    return (
-        <MDBView className="purple-slight">
-
-            <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
-                <h1 className="my-5 text-center font-weight-bold">Nos Chiffres Clés</h1>
-
-                <MDBRow>
-                    {chiffre.map(e => {
-                        return <>
-                            <MDBCol className="my-5" md='4' >
-                                <MDBCard testimonial style={{ height: "20vmax" }}>
-                                    <MDBCardBody >
-                                        <h4 className='card-title '>{e.rapport}</h4>
-                                        <hr />
-                                        <p>
-                                            <MDBIcon icon='quote-left' /> {e.detail} <MDBIcon icon='quote-right' />
-                                        </p>
-                                    </MDBCardBody>
-                                    <div className="text-center my-5">
-                                        <MDBBtn size="lg" outline color='purple' className="btn-rounded btn-1" onClick={(elem) => { setEditingId(e._id); setViews("Edit") }}>Editer</MDBBtn >
-                                    </div>
-                                </MDBCard>
-                            </MDBCol>
-                        </>
-                    })
-
-                    }
-                </MDBRow>
-            </MDBContainer>
-        </MDBView >
-    )
 }
 export default ChiffresCles

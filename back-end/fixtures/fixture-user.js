@@ -14,8 +14,11 @@ mongoose.connect("mongodb://localhost:27017/azimutoDB", (err) => {
 
 const addUser = async () => {
 
-    const password = "Amir123@"
-    const passwordHache = bcryptjs.hashSync(password)
+    const passwordAmir = "Amir123@"
+    const passwordHacheAmir = bcryptjs.hashSync(passwordAmir)
+
+    const passwordRocio = "Rocio123@"
+    const passwordHacheRocio = bcryptjs.hashSync(passwordRocio)
 
     try {
 
@@ -30,11 +33,23 @@ const addUser = async () => {
         await userModel.insertMany([
             {
                 email: "amirhatam@gmail.com",
-                password: passwordHache,
+                password: passwordHacheAmir,
                 firstName: "Amir",
                 lastName: "Hatam",
                 birthday: "1999-01-01",
                 sex: "Men",
+                institution: "Konexio",
+                // image: "test",
+                lvlstudy: levelStudy._id,
+                programs: programAzimuto._id
+            },
+            {
+                email: "rocioarias@gmail.com",
+                password: passwordHacheRocio,
+                firstName: "Rocio",
+                lastName: "Arias",
+                birthday: "1999-01-01",
+                sex: "Woman",
                 institution: "Konexio",
                 // image: "test",
                 lvlstudy: levelStudy._id,

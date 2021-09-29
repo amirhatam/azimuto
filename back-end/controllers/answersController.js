@@ -1,40 +1,40 @@
 const answerModel = require("../models/answers")
-const mongoose = require('mongoose')
 
 
-// const getAnswer = async (req, res) => {
-//     try {
-        
-//         const answerFound = await answerModel.find()
+const getAnswer = async (req, res) => {
+    try {
+        const answer = req.body
+        const answerFound = await answerModel.find(answer)
 
-//         res.json({
-//             message : "Answer ok",
-//             answerFound})
-//     } catch (err) {
-//         console.log(err)
+        res.json({
+            message: "Answer ok",
+            answerFound
+        })
+    } catch (err) {
+        console.log(err)
 
-//         res.status(500).json({ errorMessage: "There was a problem :(" })
-//     }
-// }
-        
- const createAnswer = async (req, res) => {
-     try {
-        
-         const answers = req.body
-         const answerCreate = await answerModel.create(answers)
+        res.status(500).json({ errorMessage: "There was a problem :(" })
+    }
+}
 
-         res.json({
-            message : "New Answer",
-            answerCreate 
+const createAnswer = async (req, res) => {
+    try {
+
+        const answers = req.body
+        const answerCreate = await answerModel.create(answers)
+
+        res.json({
+            message: "New Answer",
+            answerCreate
         })
 
-     } catch (err) {
-        
-            console.log(err)
-            res.status(500).json({ errorMessage: "There was a problem :(" })
-        }
+    } catch (err) {
+
+        console.log(err)
+        res.status(500).json({ errorMessage: "There was a problem :(" })
     }
-         
-module.exports = { createAnswer }
+}
+
+module.exports = { getAnswer, createAnswer }
 
 // 
