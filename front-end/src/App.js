@@ -27,6 +27,7 @@ import EditMission from './views/mission-civique/EditMission';
 import PartenairesEP from './views/partenaires/PartenairesEP';
 import RapportageEP from './views/rapportage/RapportageEP';
 import LesEtudiants from './views/etudiants/LesEtudiants';
+import Parcour from './views/parcour/Parcour';
 
 
 
@@ -47,7 +48,6 @@ function App() {
   }, [])
 
   const logout = () => {
-    // localStorage.removeItem("token")
     localStorage.clear();
     setUserConnected(false)
     setAdminConnected(false)
@@ -79,11 +79,9 @@ function App() {
         <Route path="/partenaires" exact component={PartenairesEP} />
         <Route path="/rapportage" exact component={RapportageEP} />
         <Route path="/etudiants" exact component={LesEtudiants} />
+        <Route path="/parcour" exact component={Parcour} />
 
-        {/* <Route path="/signup" component={} />
-          <Route path="/admin">
-            <Admin disconnectUser={} />
-          </Route> */}
+      
       </Switch>
 
       <Navbar logout={logout} userConnected={userConnected} adminConnected={adminConnected} />

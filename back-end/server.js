@@ -27,6 +27,8 @@ const partenairesRoutes = require("./routes/partenairesRoutes")
 
 const rapportageRoutes = require("./routes/rapportageRoutes")
 
+const parcourRoutes = require("./routes/parcourRoutes")
+
 const answersRoutes = require("./routes/answersRoutes")
 const { port, mongoURL } = require('./utils/config')
 
@@ -77,6 +79,8 @@ app.use("/answers", answersRoutes)
 app.use("/partenaires", partenairesRoutes)
 
 app.use("/rapportage", rapportageRoutes)
+
+app.use("/parcour", parcourRoutes)
 
 
 app.listen(port, () => {

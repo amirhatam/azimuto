@@ -69,12 +69,20 @@ const Professionnel = () => {
                                 <MDBCol className="col-6 my-5 text-center">
                                     <MDBCard>
                                         <MDBCardBody>
+                                            <MDBCardTitle className="my-5">Parcour</MDBCardTitle>
+                                            <MDBBtn href="/parcour">Click</MDBBtn>
+                                        </MDBCardBody>
+                                    </MDBCard>
+                                </MDBCol>
+                                <MDBCol className="col-6 my-5 text-center">
+                                    <MDBCard>
+                                        <MDBCardBody>
                                             <MDBCardTitle className="my-5">Formulaire des questions</MDBCardTitle>
                                             <MDBBtn href="/modification">Click</MDBBtn>
                                         </MDBCardBody>
                                     </MDBCard>
                                 </MDBCol>
-                                <MDBCol className="col-8 offset-2 my-5 text-center">
+                                <MDBCol className="col-6  my-5 text-center">
                                     <MDBCard>
                                         <MDBCardBody>
                                             <MDBCardTitle className="my-5">Étudiants</MDBCardTitle>

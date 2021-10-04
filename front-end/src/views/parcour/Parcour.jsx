@@ -5,26 +5,27 @@ import {
     MDBView,
     MDBContainer,
     MDBBtn,
-    MDBIcon
+    MDBIcon,
+    
 } from 'mdbreact';
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 
-const EditMission = () => {
+const Parcour = () => {
 
-    const [civique, setCivique] = useState([]);
+    const [parcour, setParcour] = useState([]);
     const [url, setUrl] = useState("");
     const [editingId, setEditingId] = useState("");
 
     useEffect(() => {
         (async () => {
             try {
-                const response = await axios.get("http://localhost:8080/civique")
+                const response = await axios.get("http://localhost:8080/parcour")
                 if (response.status === 200) {
-                    setCivique(response.data.civiqueFound)
+                    setParcour(response.data.parcourFound)
                 }
-                (response.data.civiqueFound).map(e => {
+                (response.data.parcourFound).map(e => {
                     //   console.log(e);
                     return setEditingId(e._id)
                 })
@@ -34,19 +35,20 @@ const EditMission = () => {
             }
         })();
     }, []);
-    console.log("editingId", editingId);
 
     const editUrl = async () => {
         try {
-            const response = await axios.patch(`http://localhost:8080/civique/${editingId}/updateCivique`, { url: url })
+            const response = await axios.patch(`http://localhost:8080/parcour/${editingId}/updateParcour`, { url: url })
             setEditingId("")
 
-            const responseData = await axios.get("http://localhost:8080/civique")
-            setCivique(responseData.data.civiqueFound)
+            const responseData = await axios.get("http://localhost:8080/parcour")
+            setParcour(responseData.data.parcourFound)
         } catch (err) {
             console.error(err);
         }
     }
+
+
 
     if (!localStorage.tokenAdmin) {
         return (
@@ -60,7 +62,7 @@ const EditMission = () => {
             </MDBView>
         )
     } else {
-        if (civique.length === 0) {
+        if (parcour.length === 0) {
             return <p>Loading ...</p>
         } else {
             return (
@@ -68,14 +70,14 @@ const EditMission = () => {
                     <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
                         <div className="text-center my-5 ">
                             <h2 className="h1-responsive font-weight-bold text-center  pr-5 mb-5">
-                                <a href="/EP" className="h2 px-2"><MDBIcon icon="angle-left" /> </a> MISSION DE SERVICE CIVIQUE
+                                <a href="/EP" className="h2 px-2"><MDBIcon icon="angle-left" /> </a> Parcour
                             </h2>
                         </div>
                         <MDBRow >
                             <MDBCol md='12' className='mb-5 text-center '>
 
                                 <div>
-                                <a href={civique[0].url} target="_blank">{civique[0].url}</a>
+                                    <a target='_blank' href={parcour[0].url} >{parcour[0].url}</a>
                                 </div>
                                 <div>
                                     <input type="text" onChange={(event) => setUrl(event.target.value)} className="form-control my-5" name="name" placeholder="" />
@@ -87,8 +89,9 @@ const EditMission = () => {
                         </MDBRow>
                     </MDBContainer>
                 </MDBView>
-            );
+            )
         }
     }
 }
-export default EditMission
+
+export default Parcour

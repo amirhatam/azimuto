@@ -51,7 +51,7 @@ const MissionCivique = () => {
                                 </MDBBtn>
                             </MDBCol>
                             <div>
-                                <a href={civique[0].url}>Entrer</a>
+                                <a href={civique[0].url}  target="_blank">Entrer</a>
                             </div>
                         </MDBCol>
                     </MDBRow>

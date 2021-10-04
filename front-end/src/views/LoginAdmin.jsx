@@ -37,7 +37,7 @@ const LoginAdmin = (props) => {
 
         console.log("localStorage :", localStorage.getItem("tokenAdmin"));
 
-        history.push("/modification")
+        history.push("/EP")
         // history.push("/espace-professionnel")
       }
     } catch (error) {
@@ -86,7 +86,7 @@ const LoginAdmin = (props) => {
 
                         <MDBBtn outline color='purple' className="mb-5 btn-rounded " >
                           <MDBIcon icon='user' className='mr-2 ' />
-                          <Link to="/modification"  onClick={validLoginAdmin} className=" nav-link active b-Right ">Login Admin</Link>
+                          <Link /* to="/modification"  */ onClick={validLoginAdmin} className=" nav-link active b-Right ">Login Admin</Link>
                           {/* <Link to="/EP"  onClick={validLoginAdmin} className=" nav-link active b-Right ">Login Admin</Link> */}
                         </MDBBtn>
 
