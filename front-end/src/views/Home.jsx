@@ -22,7 +22,7 @@ const Home = () => {
     return (
         <div >
             <MDBView src='https://mdbcdn.b-cdn.net/img/Photos/Others/gradient2.png'>
-                <MDBMask className='rgba-purple-slight' />
+                <MDBMask className='rgba-red-slight' />
                 <MDBContainer
                     style={{ height: '100%', width: '100%' }}
                     className='d-flex justify-content-center align-items-center pt-0 mt-5'

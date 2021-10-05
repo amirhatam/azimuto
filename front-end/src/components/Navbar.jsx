@@ -11,7 +11,7 @@ import {
     MDBContainer,
 } from 'mdbreact';
 import '../assets/styles/Home.css';
-import Logo from "../assets/images/Logo.png"
+import Logo from "../assets/images/Logo2.png"
 
 
 const Navbar = (props) => {
@@ -27,7 +27,8 @@ const Navbar = (props) => {
         <div  >
 
             <MDBNavbar
-                color='secondary-color'
+                // color='secondary-color'
+                color='#ef8552 orange'
                 light
                 expand='md'
                 fixed='top'
@@ -65,7 +66,7 @@ const Navbar = (props) => {
                         </MDBNavbarNav>
                         <MDBNavbarNav right>
                             <MDBNavItem>
-                                <MDBBtn rounded className='btn-purple'>
+                                <MDBBtn rounded  className='btn-blue'>
                                     {/* <MDBIcon icon='user' className=' mr-2' />  */}
                                     {props.userConnected || props.adminConnected
                                         ?
