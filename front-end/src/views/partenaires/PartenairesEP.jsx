@@ -86,7 +86,7 @@ const Partenaires = (props) => {
                                 return <>
                                     <MDBCol lg="4" md="12" className=" my-5 mx-0 px-0 align-self-center" style={{ textAlign: "-webkit-center" }}>
                                         <div style={{ width: "60%" }}>
-                                            <a href={`${e.url}`} target="_blank">
+                                            <MDBBtn href={`${e.url}`} target="_blank" className="rounded-circle p-0">
                                                 <img
                                                     src={`http://localhost:8080/uploads/${e.image}`}
                                                     className="mx-0  mb-md-0 mb-4 rounded z-depth-1 img-fluid"
@@ -94,7 +94,7 @@ const Partenaires = (props) => {
                                                     alt={`https://www.${e.url}`}
 
                                                 />
-                                            </a>
+                                            </MDBBtn>
                                             <MDBRow center>
                                                 <MDBCol className="px-0" size="4">
                                                     <MDBBtn size="sm" outline color='purple' className="btn-rounded btn-1 my-3 px-3" onClick={(elem) => { setEditingId(e._id); setViews("Edit") }} >Editer</MDBBtn >

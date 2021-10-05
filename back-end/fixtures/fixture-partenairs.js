@@ -18,12 +18,72 @@ const addPartenaires = async () => {
         await partenairesModel.insertMany([
 
             {
-                url: "Azimuto, c'est pour moi faciliter la levée des barrières sociales pour les jeunes de tous les horizons en les accompagnant à devenir acteurs de leurs parcours. Formée en sciences politiques et en participation citoyenne, j’ai évolué professionnellement dans le champ de l'Économie Sociale et Solidaire et de l’innovation sociale à l’accompagnement des jeunes.Mes valeurs phares : Émancipation, Justice et Bienveillance !",
-                image: "/Manon%20Maug%C3%A9-Imbault_20210912.png",
+                url: "http://www.apoyourbano.org/",
+                image: "20210920_ApoyoUrbano.png",
             },
             {
-                url: "Azimuto, c’est pour moi offrir un espace de ressources aux jeunes pour leur permettre de se connaître, d’ouvrir leur esprit et leur conscience d’eux-mêmes afin qu’ils s’autorisent avec faire des choix alignés.Mes valeurs phares : Authenticité - Action - Responsabilisation Apprendre à mettre beaucoup de soi dans ce que l’on fait invite à l’exploration. Offrir le plus beaux des voyages à cette jeunesse.",
-                image: "/Gwenhael%20Massa_20210913.png",
+                url: "https://www.caf.fr/allocataires/caf-de-la-seine-saint-denis/coordonnees",
+                image: "20210920_caf_93.png",
+            },
+            {
+                url: "https://inseinesaintdenis.fr/",
+                image: "20210920_INSSD.png",
+            },
+            {
+                url: "https://evora-montreuil.webcollege.seinesaintdenis.fr/",
+                image: "20210920_CesariaEvora.png",
+            },
+            {
+                url: "https://hello-charly.com/",
+                image: "20210920_HelloCharly.png",
+            },
+            {
+                url: "https://explorjob.com/",
+                image: "20210920_ExplorJob.png",
+            },
+            {
+                url: "http://eiffel-gagny.org/",
+                image: "20210920_GustaveEiffel.png",
+            },
+            {
+                url: "https://www.cite-sciences.fr/fr/accueil/",
+                image: "20210921_cite.png",
+            },
+            {
+                url: "https://www.cressidf.org/",
+                image: "20210920_logocress.png",
+            },
+            {
+                url: "https://makesense.org/",
+                image: "20210920_MakesenseDark.png",
+            },
+            {
+                url: "https://www.montreuil.fr/",
+                image: "20210921_montreuil.png",
+            },
+            {
+                url: "https://moidans10ans.fr/",
+                image: "20210921_MoiDans10Ans.png",
+            },
+            {
+                url: "http://www.lephares.coop/",
+                image: "20210920_Phares.png",
+            },
+            {
+                url: "https://www.lespremieres.com/fr",
+                image: "20210920_premieres.png",
+            },
+            {
+                url: "http://www.robinsdesvilles.org/",
+                image: "20210920_RobinsVilles.png",
+            },
+            {
+                url: "https://seinesaintdenis.fr/",
+                image: "20210920_ssd.png",
+            },
+            {
+                url: "https://www.ticketforchange.org/",
+                image: "20210920_TFC.png",
             }
 
         ])
