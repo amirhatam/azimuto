@@ -1,57 +1,44 @@
 import {
-    MDBMask,
     MDBRow,
     MDBCol,
     MDBBtn,
     MDBView,
     MDBContainer,
-    MDBIcon,
-    Link,
-    MDBCardBody
+    MDBCardBody,
 } from 'mdbreact';
 import Rapportage from './rapportage/Rapportage';
 import '../assets/styles/Home.css';
-import LogoAzi from "../assets/images/Home-1.jpg"
 import LogoBouee from "../assets/images/Bouee.png"
 import LogoBoussole from "../assets/images/Boussole.png"
 import LogoCardinaux from "../assets/images/cardinaux.png"
+import HomeCarousel from '../components/HomeCarousel';
 
 
 const Home = () => {
 
     return (
-        <div >
-            <MDBView src='https://mdbcdn.b-cdn.net/img/Photos/Others/gradient2.png'>
-                <MDBMask className='rgba-red-slight' />
+        <MDBView className="bgc-light">
+            <MDBView className="pb-5">
                 <MDBContainer
-                    style={{ height: '100%', width: '100%' }}
-                    className='d-flex justify-content-center align-items-center pt-0 mt-5'
+                    style={{ marginTop: "20vmax" }}
+                    className='d-flex justify-content-center align-items-center pt-0 pb-5 '
                 >
-                    <MDBCol lg="7">
-                        <MDBRow >
-                            <MDBCol lg="12" >
-                                <img
-                                    src={LogoAzi}
-                                    alt=""
-                                    className="img-fluid rounded z-depth-1"
-                                />
-                            </MDBCol>
-                        </MDBRow>
+                    <MDBCol lg="7" >
+                        <HomeCarousel/>
                     </MDBCol>
                     <MDBCol lg="7">
                         <MDBRow>
                             <MDBCol md='12' className='mb-4 text-center'>
-                                <h4 className='display-6 font-weight-bold mb-0 pt-md-3 pt-3'>
-                                    Azimuto en une phrase :</h4>
-                                <h5 className='AziPhrase pt-md-5 pt-sm-2 pt-5 pb-md-5 pb-sm-3 pb-5 '>
+                                <h4 className='display-6 text-start font-weight-bold mb-0 pt-md-3 pt-3'>
+                                    Azimuto :</h4>
+                                <h5 className='text-start text-justify lh-base py-4'>
                                     Une pédagogie innovante pour accompagner les
                                     professionnels de l'éducation dans un enjeu qui
                                     nous tient à coeur, l'orientation des jeunes en
                                     développant leur capacité de choisir.
                                 </h5>
-                                <MDBBtn outline color='purple' className="btn-rounded btn-1" >
-                                    <MDBIcon className="pr-2" icon='book' />
-                                    <Link to="/nos-programmes" className=" nav-link active b-Right">Découvrir nos ateliers</Link>
+                                <MDBBtn href="/nos-programmes" color='amber' className="rounded-pill py-3 px-4" >
+                                    Découvrir nos ateliers
                                 </MDBBtn>
                             </MDBCol>
                         </MDBRow>
@@ -59,121 +46,122 @@ const Home = () => {
                 </MDBContainer>
             </MDBView>
 
-            <MDBView className="purple-slight">
-                <MDBMask className='rgba-purple-slight' />
-                <MDBCardBody className="text-center my-5" >
-                    <h2 className="h1-responsive font-weight-bold my-5 ">
-                        POURQUOI AZIMUTO ?
-                    </h2>
-                    <p className="h5-responsive dark-grey-text mx-auto mb-5 w-75 ">
-                        Azimuto est né d'un constat, l'orientation subie des jeunes ne les aide pas à trouver leur place dans
-                        la société. Au moment des premiers grands choix, on ne connaît que très rarement ses forces et ses
+            <MDBView className="bgc-darker"  >
+                <MDBContainer>
+                    <MDBCardBody className="text-center  "  >
+                        <h2 className="h1-responsive font-weight-bold my-5 ">
+                            POURQUOI AZIMUTO ?
+                        </h2>
+                        <p className="h5-responsive text-justify lh-lg dark-grey-text mx-auto mb-5 w-75 ">
+                            Azimuto est né d'un constat, l'orientation subie des jeunes ne les aide pas à trouver leur place dans
+                            la société. Au moment des premiers grands choix, on ne connaît que très rarement ses forces et ses
 
-                        aspirations.
+                            aspirations.
 
-                        Il y a de grandes chances pour se tromper ou tout simplement ne pas oser.
+                            Il y a de grandes chances pour se tromper ou tout simplement ne pas oser.
 
-                        A travers l'orientation l'enjeu est de trouver sa place dans une société en devenir et nous sommes
+                            A travers l'orientation l'enjeu est de trouver sa place dans une société en devenir et nous sommes
 
-                        convaincues que savoir choisir s’apprend
-                    </p>
-
-                    <MDBBtn outline color='purple' className="btn-rounded " >
-                        <MDBIcon icon='user' className='mr-2 ' />
-                        <Link to="/qui-sommes-nous" className=" nav-link active b-Right"> Notre mission </Link>
-
-                    </MDBBtn>
-
-                </MDBCardBody>
-            </MDBView>
-
-            <MDBCardBody className="text-center purple-slight" >
-                <h2 className="h1-responsive font-weight-bold my-5 ">
-                    NOS PARCOURS :
-                </h2>
-                <li className="h3-responsive font-weight-bold my-5 ">
-                    PROFESSIONNEL.LE.S DE L'ÉDUCATION ET DE LA JEUNESSE ?
-                </li>
-                <p className="h5-responsive dark-grey-text mx-auto mb-5 w-75 ">
-                    Nos parcours collectifs de connaissance de soi permettent de devenir acteur de son parcours afin de
-
-                    trouver sa place dans la société pour y contribuer positivement.
-                </p>
-                <MDBRow className="justify-content-center ">
-                    <MDBCol lg="5" md="12">
-                        <img
-                            className="img-fluid p-5"
-                            src={LogoBouee}
-                            alt=""
-                        />
-                        <h5 className="font-weight-bold  mb-3 p-0 text-center">
-                            <h5 className="font-weight-light d-inline">LE</h5>PARCOURS
-                            COLLÈGE/LYCÉE :
-                            <h5 className="font-weight-light my-3">ATELIERS COLLECTIFS </h5>
-                        </h5>
-                    </MDBCol>
-
-                    <MDBCol lg="5" md="12">
-                        <img
-                            className="img-fluid "
-                            src={LogoBoussole}
-                            alt=""
-                        />
-                        <h5 className="font-weight-bold  mb-3 p-0 text-center">
-                            <h5 className="font-weight-light d-inline">LE</h5> PROGRAMME DE
-                            REMOBILISATION
-                            <h5 className="font-weight-light my-3"> SCOLAIRE</h5>
-                        </h5>
-                    </MDBCol>
-
-                    <MDBCol className="mt-5" lg="3" md="5">
-
-                        <MDBBtn outline color='purple' className="btn-rounded" >
-                            <MDBIcon icon='user' className='mr-2 ' />
-                            <Link to="/qui-sommes-nous" className=" nav-link active b-Right "> Nous faire intervenir </Link>
-                        </MDBBtn>
-                    </MDBCol>
-                    <li className="h3-responsive font-weight-bold mt-5 ">
-                        JEUNE DE 15 à 25 ans EN RECHERCHE d’inspiration ?
-                    </li>
-
-                    <MDBCol lg="3" md="5">
-
-                        <img
-                            className="img-fluid "
-                            src={LogoCardinaux}
-                            alt=""
-                        />
-                    </MDBCol>
-                    <MDBCardBody className="text-center mb-5 " >
-
-                        <MDBView hover rounded className="offset-3 col-6 z-depth-1-half mb-5">
-
-                            <h4 className="h4-responsive font-weight-bold m-5 ">
-                                LE PARCOURS TOUS AZIMUTS
-                                <h4 className="font-weight-light my-3">DURANT LES VACANCES SCOLAIRES</h4>
-                            </h4>
-
-                        </MDBView>
-                        <p className="h5-responsive dark-grey-text mx-auto mb-5 w-75 ">
-                            Un parcours de 3 jours pour identifier tes forces, tes envies et définir ton projet d’avenir tout en
-                            découvrant les opportunités d’un secteur : l'Économie Sociale et Solidaire !
-                            Des ateliers réalisés en présentiel en Seine Saint Denis.
-                            Pré-inscris-toi ici pour connaître la prochaine date !
+                            convaincues que savoir choisir s’apprend.
                         </p>
 
-                        <MDBBtn outline color='purple' className="btn-rounded " >
-                            <MDBIcon icon='user' className='mr-2 ' />
-                            <Link to="/?" className=" nav-link active b-Right"> Je candidate au parcours </Link>
-
+                        <MDBBtn href="/qui-sommes-nous" color='cyan' className=" rounded-pill mb-5 px-4" >
+                            Notre mission
                         </MDBBtn>
+
                     </MDBCardBody>
-                </MDBRow>
-            </MDBCardBody>
+                </MDBContainer>
+            </MDBView>
 
-            <Rapportage/>
+            <MDBView>
+                <MDBContainer>
+                    <MDBCardBody className="text-center pt-5" >
+                        <h2 className="h1-responsive font-weight-bold my-5 ">
+                            NOS PARCOURS :
+                        </h2>
+                        <li className="h3-responsive font-weight-bold mb-1 ">
+                            Professionnel.le.s de l'éducation et de la jeunesse ?
+                        </li>
+                        <p className="h5-responsive dark-grey-text mx-auto mb-5 w-75 ">
+                            Nos parcours collectifs de connaissance de soi permettent de devenir acteur de son parcours afin de
 
-        </div>
+                            trouver sa place dans la société pour y contribuer positivement.
+                        </p>
+                        <MDBRow className="justify-content-center">
+                            <MDBCol lg="5" md="12" className="px-0" >
+                                <img
+                                    className=" rounded mx-auto d-block mb-3"
+                                    src={LogoBouee}
+                                    alt=""
+                                    style={{ width: "150px" }}
+                                />
+
+                                <h5 className="font-weight-bold  mb-3 p-0 text-center">
+                                    <h5 className="font-weight-light d-inline">LE </h5> PARCOURS
+                                    COLLÈGE/LYCÉE :
+                                    <h5 className="font-weight-light my-2">ATELIERS COLLECTIFS </h5>
+                                </h5>
+                            </MDBCol>
+
+                            <MDBCol lg="5" md="12">
+                                <img
+                                    className="rounded mx-auto d-block mb-3"
+                                    src={LogoBoussole}
+                                    alt=""
+                                    style={{ width: "150px" }}
+                                />
+                                <h5 className="font-weight-bold  mb-3 p-0 text-center">
+                                    <h5 className="font-weight-light d-inline">LE</h5> PROGRAMME DE
+                                    REMOBILISATION
+                                    <h5 className="font-weight-light my-2"> SCOLAIRE</h5>
+                                </h5>
+                            </MDBCol>
+
+                            <MDBCol className="mt-5" lg="3" md="5">
+
+                                <MDBBtn href="/qui-sommes-nous" color='amber' className=" rounded-pill mb-5 py-3 px-4" >
+                                    Nous faire intervenir
+                                </MDBBtn>
+                            </MDBCol>
+                            <li className="h3-responsive font-weight-bold">
+                                Jeune de 15 à 25 ans en recherche d’inspiration  ?
+                            </li>
+
+                            <MDBCol lg="2" md="5">
+
+                                <img
+                                    className="img-fluid mt-2"
+                                    src={LogoCardinaux}
+                                    alt=""
+                                />
+                            </MDBCol>
+                            <MDBCardBody className="text-center mb-5 " >
+
+                                <MDBView hover rounded className="mx-auto d-block col-6 mb-2">
+                                    <h4 className="h4-responsive font-weight-bold m-5 ">
+                                        LE PARCOURS TOUS AZIMUTS
+                                        <h4 className="font-weight-light my-3">DURANT LES VACANCES SCOLAIRES</h4>
+                                    </h4>
+
+                                </MDBView>
+                                <p className="h5-responsive text-justify dark-grey-text mx-auto mb-5 w-75 ">
+                                    Un parcours de 3 jours pour identifier tes forces, tes envies et définir ton projet d’avenir tout en
+                                    découvrant les opportunités d’un secteur : l'Économie Sociale et Solidaire !
+                                    Des ateliers réalisés en présentiel en Seine Saint Denis.
+                                    Pré-inscris-toi ici pour connaître la prochaine date !
+                                </p>
+
+                                <MDBBtn href="/connexion/signup" color='amber' className="rounded-pill py-3 px-4" >
+                                    Je candidate au parcours
+                                </MDBBtn>
+                            </MDBCardBody>
+                        </MDBRow>
+                    </MDBCardBody>
+                </MDBContainer>
+            </MDBView>
+            
+            <Rapportage />
+        </MDBView>
     );
 }
 

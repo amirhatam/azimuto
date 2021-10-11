@@ -58,51 +58,43 @@ const Login = (props) => {
       console.error("error :", error)
     }
   }
-  
+
   useEffect(() => {
-   
+
   }, [])
 
   return (
-    <MDBFormInline className=" purple-slight">
-      <div className="container my-5 ">
-        <section className="mb-5" style={{ marginTop: "12vmax" }}>
-          <MDBContainer>
-            <MDBRow >
-              <MDBCol className="row my-5">
-                <MDBCard className="offset-3 col-6">
-                  <MDBCardBody>
-                    <>
-                      <p className="h4 text-center py-4">Se Connecter</p>
-                      <div className="grey-text">
+    <MDBFormInline className="bgc-light">
+      <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
+        <MDBRow className="px-5">
+          <MDBCol className="row my-5 px-5">
+            <MDBCard className="offset-3 col-6">
+              <MDBCardBody>
+                <>
+                  <p className="h4 text-center py-4">Se Connecter</p>
+                  <div className="grey-text">
 
-                        <MDBInput label="Your email" icon="envelope" group type="email" validate error="wrong" success="right"
-                          onChange={(e) => setEmail(e.target.value)}
-                        />
+                    <MDBInput label="Your email" icon="envelope" group type="email" validate error="wrong" success="right"
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
 
-                        <MDBInput label="Your password" icon="lock" group type="password" validate
-                          onChange={(e) => setPassword(e.target.value)}
-                        />
-                      </div>
+                    <MDBInput label="Your password" icon="lock" group type="password" validate
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                  </div>
 
-                      <div className="text-center py-4 mt-3">
-
-
-                        <MDBBtn onClick={validLogin} outline color='purple' className="mb-5 btn-rounded " >
-                          <MDBIcon icon='user' className='mr-2 ' />
-                          <Link to="/logged/formulaire" className=" nav-link active b-Right ">Se connecter </Link>
-                        </MDBBtn>
-
-                      </div>
-                    </>
-                  </MDBCardBody>
-                </MDBCard>
-              </MDBCol>
-            </MDBRow>
-          </MDBContainer>
-        </section>
-      </div>
-    </MDBFormInline>
+                  <div className="text-center py-4 mt-3">
+                    <MDBBtn  href="/logged/formulaire" onClick={validLogin} outline color='amber' className="rounded-pill py-3 px-4">
+                      <MDBIcon icon='user' className='mr-2 ' /> Se connecter
+                    </MDBBtn>
+                  </div>
+                </>
+              </MDBCardBody>
+            </MDBCard>
+          </MDBCol>
+        </MDBRow>
+      </MDBContainer>
+    </MDBFormInline >
   );
 };
 

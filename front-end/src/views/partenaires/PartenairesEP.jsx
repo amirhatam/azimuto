@@ -82,7 +82,7 @@ const Partenaires = (props) => {
                             </h2>
                         </div>
                         <MDBRow >
-                            {partenaires.map(e => {
+                            {partenaires.map((e,index) => {
                                 return <>
                                     <MDBCol lg="4" md="12" className=" my-5 mx-0 px-0 align-self-center" style={{ textAlign: "-webkit-center" }}>
                                         <div style={{ width: "60%" }}>
@@ -92,7 +92,7 @@ const Partenaires = (props) => {
                                                     className="mx-0  mb-md-0 mb-4 rounded z-depth-1 img-fluid"
                                                     tag="img"
                                                     alt={`https://www.${e.url}`}
-
+                                                    key={index}
                                                 />
                                             </MDBBtn>
                                             <MDBRow center>

@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBRow, MDBCol,MDBMask, MDBView, MDBContainer, MDBBtn } from "mdbreact";
+import { MDBRow, MDBCol, MDBView, MDBContainer, MDBBtn } from "mdbreact";
 import axios from 'axios'
 import { useState, useEffect } from "react";
 
@@ -24,8 +24,7 @@ const Partenaires = () => {
 
 
     return (
-        <MDBView className=" ">
-            <MDBMask className=' ' />
+        <MDBView className="bgc-light ">
             <MDBContainer>
                 <MDBRow >
                     <MDBCol md='12' className='mb-4 text-center'>
@@ -35,21 +34,9 @@ const Partenaires = () => {
                     </MDBCol>
                 </MDBRow>
                 <MDBRow >
-                    {partenaires.map(elem => {
+                    {partenaires.map((elem,index) => {
                         return <>
-                            {/* <MDBCol lg="4" md="12" className=" mb-5 mx-0 px-0 align-self-center" style={{ textAlign: "-webkit-center" }}>
-                                <div style={{ width: "60%" }}>
-                                    <a href={`${elem.url}`} target="_blank">
-                                        <img
-                                            src={`http://localhost:8080/uploads/${elem.image}`}
-                                            className="mx-0  mb-md-0 mb-4 rounded z-depth-1 img-fluid"
-                                            tag="img"
-                                            alt={`https://www.${elem.url}`}
-                                        />
-                                    </a>
-                                </div>
-                            </MDBCol> */}
-
+                          
                             <MDBCol lg="4" md="12" className=" mb-5 mx-0 px-0 align-self-center" style={{ textAlign: "-webkit-center" }}>
                                 <div style={{ width: "60%" }} className="rounded-circle">
                                     <MDBBtn  href={`${elem.url}`}  target="_blank"  className="rounded-circle p-0">
@@ -58,6 +45,7 @@ const Partenaires = () => {
                                             className="mx-0  mb-md-0 mb-4 rounded z-depth-1 img-fluid rounded-circle"
                                             tag="img"
                                             alt={`https://www.${elem.url}`}
+                                            key={index}
                                         />
                                     </MDBBtn>
                                 </div>

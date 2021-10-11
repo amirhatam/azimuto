@@ -1,25 +1,29 @@
 import React from "react";
-import { MDBRow, MDBCol, MDBCard, MDBCardBody, MDBIcon, MDBBtn, MDBInput, MDBView } from "mdbreact";
+import { MDBRow, MDBCol, MDBCard, MDBCardBody, MDBIcon, MDBBtn, MDBInput, MDBView, MDBContainer } from "mdbreact";
+
+
 
 const ContactPage = () => {
+
   return (
-    <MDBView className="purple-slight">
+    <MDBView className="bgc-light">
 
-      <section className="mb-5 " style={{ marginTop: "15vmax" }}>
-
+      <MDBContainer
+        style={{ marginTop: "20vmax" }}
+      >
         <h2 className="h1-responsive font-weight-bold text-center mb-5">
           Contact
         </h2>
-        <MDBRow className="container offset-1" >
-          <MDBCol lg="5" className="lg-0 mb-4">
+        <MDBRow className="" >
+          <MDBCol lg="5" className="px-5 lg-0 mb-4">
             <MDBCard>
               <MDBCardBody>
-                <div className="form-header blue accent-1">
+                <div className="form-header orange accent-1">
                   <h3 className="mt-2">
                     <MDBIcon icon="envelope" /> Nous contacter:
                   </h3>
                 </div>
-                
+
                 <div className="md-form">
                   <MDBInput
                     icon="user"
@@ -57,12 +61,12 @@ const ContactPage = () => {
                   />
                 </div>
                 <div className="text-center">
-                  <MDBBtn color="light-blue">Envoyer</MDBBtn>
+                  <MDBBtn color="amber">Envoyer</MDBBtn>
                 </div>
               </MDBCardBody>
             </MDBCard>
           </MDBCol>
-          <MDBCol lg="7">
+          <MDBCol lg="7" className="mb-5">
             <div
               id="map-container"
               className="rounded z-depth-1-half map-container"
@@ -80,7 +84,7 @@ const ContactPage = () => {
             <br />
             <MDBRow className="text-center">
               <MDBCol md="4">
-                <MDBBtn tag="a" floating color="blue" className="accent-1">
+                <MDBBtn tag="a" floating color="amber" className="accent-1">
                   <MDBIcon icon="map-marker-alt" />
                 </MDBBtn>
                 <p className="m-0">
@@ -91,14 +95,14 @@ const ContactPage = () => {
                 </p>
               </MDBCol>
               <MDBCol md="4">
-                <MDBBtn tag="a" floating color="blue" className="accent-1">
+                <MDBBtn tag="a" floating color="amber" className="accent-1">
                   <MDBIcon icon="phone" />
                 </MDBBtn>
-                <p>+33 6 36 50 48 05</p>
-                <p className="mb-md-0">Lun - Vend, 8:00 H-17:00 H</p>
+                <p className="mb-0">+33 6 36 50 48 05</p>
+                <p className="mb-md-0">Lun - Vend, 9H30 - 17H00 </p>
               </MDBCol>
               <MDBCol md="4">
-                <MDBBtn tag="a" floating color="blue" className="accent-1">
+                <MDBBtn tag="a" floating color="amber" className="accent-1">
                   <MDBIcon icon="envelope" />
                 </MDBBtn>
                 <p className="mb-md-0">asso.azimuto@gmail.com</p>
@@ -106,7 +110,8 @@ const ContactPage = () => {
             </MDBRow>
           </MDBCol>
         </MDBRow>
-      </section>
+      </MDBContainer>
+
     </MDBView>
 
   );

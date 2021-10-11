@@ -1,6 +1,6 @@
 import React from 'react'
 import { MDBContainer, MDBView, MDBIcon, MDBBtn } from 'mdbreact';
-import { useState, useEffect } from 'react'
+import { useState} from 'react'
 import axios from 'axios'
 
 
@@ -34,6 +34,10 @@ const AddTeam = (props) => {
         }
     }
 
+    if(!userAdded){
+        console.error("userAdded err:",userAdded);
+    }
+    
     return (
         <MDBView className="purple-slight">
             <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>

@@ -39,6 +39,9 @@ const Parcour = () => {
     const editUrl = async () => {
         try {
             const response = await axios.patch(`http://localhost:8080/parcour/${editingId}/updateParcour`, { url: url })
+            if(!response){
+                console.error("response err:",response);
+            }
             setEditingId("")
 
             const responseData = await axios.get("http://localhost:8080/parcour")
@@ -77,7 +80,7 @@ const Parcour = () => {
                             <MDBCol md='12' className='mb-5 text-center '>
 
                                 <div>
-                                    <a target='_blank' href={parcour[0].url} >{parcour[0].url}</a>
+                                    <a  href={parcour[0].url} target='_blank' rel="noreferrer" >{parcour[0].url}</a>
                                 </div>
                                 <div>
                                     <input type="text" onChange={(event) => setUrl(event.target.value)} className="form-control my-5" name="name" placeholder="" />

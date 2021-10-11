@@ -12,6 +12,9 @@ function EditChiffreCles(props) {
     const editChiffre = async () => {
         try {
             const response = await axios.patch(`http://localhost:8080/chiffres-cles/${props.editingId}/updateChiffre`, { rapport: rapport, detail: detail })
+            if(!response){
+                console.error("response err:",response);
+            }
             props.setEditingId("")
 
             const responseData = await axios.get("http://localhost:8080/chiffres-cles")

@@ -1,6 +1,6 @@
 import React from 'react'
 import { MDBView, MDBBtn, MDBContainer, MDBIcon } from 'mdbreact';
-import { useState, useEffect } from 'react'
+import { useState} from 'react'
 import axios from 'axios'
 
 
@@ -15,6 +15,9 @@ function EditTeam(props) {
 
             const response = await axios.patch(`http://localhost:8080/teams/${props.editingId}/updateteam`, { name: nameUser, post: postUser, description: description })
             props.setEditingId("")
+            if(!response){
+                console.error("response err:",response);
+            }
 
             const responseData = await axios.get("http://localhost:8080/teams")
             props.setUsers(responseData.data.teamFound)

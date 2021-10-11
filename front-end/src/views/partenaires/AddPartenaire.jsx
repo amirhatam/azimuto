@@ -1,6 +1,6 @@
 import React from 'react'
-import { MDBContainer, MDBView, MDBBtn, MDBIcon } from 'mdbreact';
-import { useState, useEffect } from 'react'
+import { MDBContainer, MDBView, MDBIcon } from 'mdbreact';
+import { useState} from 'react'
 import axios from 'axios'
 
 
@@ -9,7 +9,9 @@ const AddPartenaire = (props) => {
     const [logo, setLogo] = useState("");
     const [url, setUrl] = useState("");
     const [partenairesAdded, setPartenairesAdded] = useState(false);
-
+    if(!partenairesAdded){
+        console.error("partenairesAdded err:",partenairesAdded);
+    }
     
     const send = async () => {
         try {

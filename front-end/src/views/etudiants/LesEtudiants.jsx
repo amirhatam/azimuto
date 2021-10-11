@@ -60,12 +60,12 @@ const LesEtudiants = () => {
                             </h2>
                         </div>
                         <MDBRow className="text-md-left ">
-                            {etudiants.map(elem => {
+                            {etudiants.map((elem,index) => {
                                 return (
                                     <>
                                         <MDBCol lg="3" md="12" className="px-0">
                                             <MDBCardBody className="text-center my-5">
-                                                <MDBBtn size="sm" outline color='purple' className="btn-rounded btn-1" onClick={(e) => { setUserHistory([elem._id, elem.firstName, elem.lastName]); setViews("History") }} >{elem.firstName} {elem.lastName}</MDBBtn >
+                                                <MDBBtn size="sm" outline color='purple' key={index} className="btn-rounded btn-1" onClick={(e) => { setUserHistory([elem._id, elem.firstName, elem.lastName]); setViews("History") }} >{elem.firstName} {elem.lastName}</MDBBtn >
                                             </MDBCardBody>
 
                                         </MDBCol>

@@ -12,8 +12,23 @@ const Modification = () => {
     const [deletId, setDeletId] = useState("")
 
 
-    useEffect(async () => {
-        try {
+    // useEffect(async () => {
+    //     try {
+    //         const responseData = await axios.get("http://localhost:8080/questions")
+
+    //         if (responseData.data.questionFound) {
+    //             setQuestions(responseData.data.questionFound)
+    //         } else {
+    //             alert("There was a problem")
+    //         }
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // }, [])
+
+    useEffect(() => {
+       (async () => {
+           try{
             const responseData = await axios.get("http://localhost:8080/questions")
 
             if (responseData.data.questionFound) {
@@ -21,15 +36,19 @@ const Modification = () => {
             } else {
                 alert("There was a problem")
             }
-        } catch (error) {
-            console.log(error)
-        }
+           }catch (err) {
+            console.error(err);
+           }
+       })();
     }, [])
 
 
     const deleteQuestion = async () => {
         try {
             const response = await axios.delete(`http://localhost:8080/questions/${deletId}`)
+            if(!response){
+                console.error("response err:",response);
+            }
             const responseData = await axios.get("http://localhost:8080/questions")
             setQuestions(responseData.data.questionFound)
             setViews("List")

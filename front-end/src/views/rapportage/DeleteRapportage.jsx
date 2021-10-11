@@ -7,6 +7,9 @@ const DeleteRapportage = (props) => {
     const deleteRapportage = async () => {
         try {
             const response = await axios.delete(`http://localhost:8080/rapportage/${props.deleteId}/deleteRapportage`)
+            if(!response){
+                console.error("response err:",response);
+            }
             const responseData = await axios.get("http://localhost:8080/rapportage")
             props.setRapportage(responseData.data.rapportage)
             props.setViews("List")

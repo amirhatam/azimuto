@@ -1,6 +1,6 @@
 import React from 'react'
-import { MDBContainer, MDBView, MDBBtn, MDBIcon } from 'mdbreact';
-import { useState, useEffect } from 'react'
+import { MDBContainer, MDBView, MDBIcon } from 'mdbreact';
+import { useState} from 'react'
 import axios from 'axios'
 
 
@@ -11,6 +11,9 @@ const AddRapportage = (props) => {
     const [description, setDescription] = useState("");
     const [rapportageAdded, setRapportageAdded] = useState(false);
 
+    if(!rapportageAdded){
+        console.error("rapportage add err:",rapportageAdded);
+    }
 
     const send = async () => {
 

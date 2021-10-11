@@ -69,19 +69,19 @@ const ChiffresCles = (props) => {
                     </div>
 
                     <MDBRow>
-                        {chiffre.map(e => {
+                        {chiffre.map((e,index) => {
                             return <>
                                 <MDBCol className="my-5" md='4' >
                                     <MDBCard testimonial style={{ height: "20vmax" }}>
                                         <MDBCardBody >
-                                            <h4 className='card-title '>{e.rapport}</h4>
+                                            <h4 className='card-title ' key={index}>{e.rapport}</h4>
                                             <hr />
                                             <p>
-                                                <MDBIcon icon='quote-left' /> {e.detail} <MDBIcon icon='quote-right' />
+                                                <MDBIcon icon='quote-left' key={index} /> {e.detail} <MDBIcon icon='quote-right' />
                                             </p>
                                         </MDBCardBody>
                                         <div className="text-center my-5">
-                                            <MDBBtn size="lg" outline color='purple' className="btn-rounded btn-1" onClick={(elem) => { setEditingId(e._id); setViews("Edit") }}>Editer</MDBBtn >
+                                            <MDBBtn size="lg" outline color='purple' key={index} className="btn-rounded btn-1" onClick={(elem) => { setEditingId(e._id); setViews("Edit") }}>Editer</MDBBtn >
                                         </div>
                                     </MDBCard>
                                 </MDBCol>

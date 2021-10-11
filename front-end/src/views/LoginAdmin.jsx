@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn, MDBCard, MDBCardBody, MDBView, MDBIcon, Link } from 'mdbreact';
 import { useHistory } from "react-router-dom";
 import axios from 'axios'

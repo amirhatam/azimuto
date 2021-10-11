@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBRow, MDBCol, MDBCardBody, MDBMask, MDBView } from "mdbreact";
+import { MDBRow, MDBCol, MDBCardBody, MDBView } from "mdbreact";
 import axios from 'axios'
 import { useState, useEffect } from "react";
 
@@ -37,18 +37,18 @@ const TeamPage = () => {
     console.log("response.data", users);
 
     return (
-        <MDBView className="purple-slight px-5 pb-1 text-center">
-            <MDBMask className='rgba-purple-slight ' />
+        <MDBView className="bgc-white px-5 pb-1 text-center">
             <MDBCardBody>
                 <h2 className="h1-responsive font-weight-bold my-5">
                     Notre Équipe
                 </h2>
-                <p className="h6 grey-text w-responsive mx-auto mb-5">
+                <p className="col-6 h6 grey-text w-responsive mx-auto mb-5 ">
                     Azimuto se base sur la force du collectif. Notre association fonctionne en gouvernance partagée. Découvrez ici les personnalités qui la compose :
                 </p>
 
+
                 <MDBRow className="text-md-left">
-                    {users.map(elem => {
+                    {users.map((elem,index) => {
                         return <>
                             <MDBCol lg="3" md="12" className="mb-5 px-0">
                                 <MDBView waves>
@@ -57,14 +57,16 @@ const TeamPage = () => {
                                         className="mx-auto  mb-md-0 mb-4 rounded z-depth-1 img-fluid"
                                         tag="img"
                                         alt="Sample avatar"
+                                        key={index}
                                     />
                                 </MDBView>
                             </MDBCol>
                             <MDBCol lg="3" md="12" className="mb-5">
-                                <h3 className=" font-weight-bold mb-3 text-danger">{elem.name} </h3>
-                                <h5 className="font-weight-bold grey-text mb-3">{elem.post}</h5>
-                                <p>{elem.description}</p>
+                                <h3 className=" font-weight-bold mb-3 text-danger" key={index}>{elem.name} </h3>
+                                <h5 className="font-weight-bold grey-text mb-3" key={index}>{elem.post}</h5>
+                                <p className="text-justify" key={index}>{elem.description}</p>
                             </MDBCol>
+
                         </>
                     })
                     }

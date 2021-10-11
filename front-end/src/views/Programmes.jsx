@@ -31,253 +31,249 @@ import NosChiffres from './chiffresCles/NosChiffres';
 
 const Programmes = () => {
     return (
-        <div>
-            <MDBView >
-                <MDBView className="purple-slight ">
-                    <section className="mb-5" style={{ marginTop: "15vmax" }}>
-                        <MDBMask />
-                        <h4 className='display-6 text-center font-weight-bold mb-0 pt-md-3 pt-3'>
-                            NOTRE PÉDAGOGIE EXPÉRIENTIELLE</h4>
-                        <MDBContainer className="py-5 my-5 ">
-                            <MDBRow>
-                                <MDBCol className="px-0" lg="7">
-                                    <p className="h4 mx-5 px-5 text-box font-weight-light">
-                                        Nous créons et faisons vivre des expériences de
-                                        coopération pour mieux se connaître.
-                                    </p>
-                                </MDBCol>
-                                <MDBCol className="px-0" lg="5">
-                                    <MDBView className="rounded mx-5 z-depth-2 mb-lg-0 mb-4 " hover waves>
-                                        <img
-                                            className="img-fluid"
-                                            src={Illustration}
-                                            alt=""
-                                        />
+        <div className="bgc-light">
+            <MDBView className="bgc-white">
+                <MDBContainer
+                    style={{ marginTop: "20vmax" }}
+                >
+                    <h4 className='display-6 text-center font-weight-bold mb-5 pb-5 pt-md-3 pt-3'>
+                        NOTRE PÉDAGOGIE EXPÉRIENTIELLE</h4>
 
-                                    </MDBView>
-                                </MDBCol>
-                            </MDBRow>
-                            <MDBRow className="my-5 pt-5">
-                                <p className="h4 text-box">
-                                    Une méthode alliant temps individuels et collectifs basée sur notre pédagogie active, coopérative et sur
-                                    l'intelligence collective, portée par nos facilitateurs et facilitatrices dont les maîtres mots sont :
+                    <MDBRow className="">
+                        <MDBCol className="d-flex align-items-center px-0" lg="7">
+                            <p className="h4  text-box font-weight-light">
+                                Nous créons et faisons vivre des expériences de
+                                coopération pour mieux se connaître.
+                            </p>
+                        </MDBCol>
+                        <MDBCol className="px-0" lg="5">
+                            <MDBView className="rounded mx-5 z-depth-2 mb-lg-0 mb-4 " hover waves>
+                                <img
+                                    className="img-fluid"
+                                    src={Illustration}
+                                    alt=""
+                                />
+
+                            </MDBView>
+                        </MDBCol>
+                    </MDBRow>
+                    <MDBRow className=" mt-5 pt-5">
+                        <MDBCol className="offset-1  col-10">
+                            <p className="h4 text-box">
+                                Une méthode alliant temps individuels et collectifs basée sur notre pédagogie active, coopérative et sur
+                                l'intelligence collective, portée par nos facilitateurs et facilitatrices dont les maîtres mots sont :
+                            </p>
+                        </MDBCol>
+                    </MDBRow>
+                    <MDBRow>
+                        <MDBCol md="4" className="my-5 px-0">
+                            <MDBView hover cascade waves className="">
+                                <img
+                                    src={CooperationLogo}
+                                    alt=""
+                                    className="img-fluid "
+                                />
+                                <MDBMask overlay="white-slight" className="waves-light" />
+                            </MDBView>
+                        </MDBCol>
+                        <MDBCol md="8" className="d-flex align-items-center ">
+                            <MDBCardBody cascade className=" px-0 ">
+                                <p className="text-start h4 font-weight-light ">
+                                    "Tout seul, on va plus vite, ensemble, on va plus loin." C'est aussi en coopérant que nous pouvons nous
+                                    rendre compte de la place que l'on prend et envisager la place que l'on souhaite dans la société.
                                 </p>
-                            </MDBRow>
-                            <MDBRow>
-                                <MDBCol md="12" className="my-5">
-                                    <MDBView hover cascade waves className="col-6">
-                                        <img
-                                            src={CooperationLogo}
-                                            alt=""
-                                            className="img-fluid "
-                                        />
-                                        <MDBMask overlay="white-slight" className="waves-light" />
-                                    </MDBView>
-                                    <MDBCardBody cascade className=" ">
+                            </MDBCardBody>
+                        </MDBCol>
+                    </MDBRow>
+                    <MDBRow>
+                        <MDBCol md="8" className="d-flex align-items-center ">
+                            <MDBCardBody cascade className="text-end pt-0">
+                                <p className="h4 font-weight-light">
+                                    Nous sommes convaincues de l'immense potentiel de chacun !
+                                </p>
+                            </MDBCardBody>
+                        </MDBCol>
+                        <MDBCol md="4" className="my-5 px-0">
+                            <MDBView hover cascade waves className="">
+                                <img
+                                    src={BienveillanceLogo}
+                                    alt=""
+                                    className="img-fluid "
+                                />
+                                <MDBMask overlay="white-slight" className="waves-light" />
+                            </MDBView>
+                        </MDBCol>
+                    </MDBRow>
+                    <MDBRow>
+                        <MDBCol md="4" className="my-5 px-0">
+                            <MDBView hover cascade waves className="">
+                                <img
+                                    src={OptimismeLogo}
+                                    alt=""
+                                    className="img-fluid "
+                                />
+                                <MDBMask overlay="white-slight" className="waves-light" />
+                            </MDBView>
+                        </MDBCol>
+                        <MDBCol md="8" className="d-flex align-items-center px-0">
+                            <MDBCardBody cascade className="px-0 ">
+                                <p className="h4 font-weight-light">
+                                    Avec notre perception positive du monde, nous souhaitons transmettre notre énergie.
+                                </p>
 
-                                        <p className="h4 font-weight-light px-5">
-                                            "Tout seul, on va plus vite, ensemble, on va plus loin." C'est aussi en coopérant que nous pouvons nous
-                                            rendre compte de la place que l'on prend et envisager la place que l'on souhaite dans la société.
-                                        </p>
-
-                                    </MDBCardBody>
-                                </MDBCol>
-                            </MDBRow>
-                            <MDBRow>
-                                <MDBCol md="12" className="my-5">
-                                    <MDBView hover cascade waves className="offset-6 col-6">
-                                        <img
-                                            src={BienveillanceLogo}
-                                            alt=""
-                                            className="img-fluid "
-                                        />
-                                        <MDBMask overlay="white-slight" className="waves-light" />
-                                    </MDBView>
-                                    <MDBCardBody cascade className="text-end pt-0">
-                                        <p className="h4 font-weight-light">
-                                            Nous sommes convaincues de l'immense potentiel de chacun !
-                                        </p>
-                                    </MDBCardBody>
-                                </MDBCol>
-                            </MDBRow>
-                            <MDBRow>
-                                <MDBCol md="12" className="my-5">
-                                    <MDBView hover cascade waves className="col-6">
-                                        <img
-                                            src={OptimismeLogo}
-                                            alt=""
-                                            className="img-fluid "
-                                        />
-                                        <MDBMask overlay="white-slight" className="waves-light" />
-                                    </MDBView>
-                                    <MDBCardBody cascade className=" ">
-
-                                        <p className="h4 font-weight-light">
-                                            Avec notre perception positive du monde, nous souhaitons transmettre notre énergie.
-                                        </p>
-
-                                    </MDBCardBody>
-                                </MDBCol>
-                            </MDBRow>
-                        </MDBContainer>
-                    </section>
-
-                </MDBView>
-
-                <MDBView className="purple-slight">
-                    <MDBMask className='rgba-purple-slight ' />
-                    <MDBContainer>
-
-                        <MDBCardBody className="my-5">
-                            <h4 className='display-6 text-center font-weight-bold my-5 pt-md-3 pt-3'> NOS PARCOURS</h4>
-
-                            <MDBCardGroup>
-                                <MDBCard className="text-center mx-2">
-                                    <MDBCardImage src={LogoBouee} alt="MDBCard image cap" top hover
-                                        overlay="white-slight" />
-                                    <MDBCardBody>
-                                        <MDBCardTitle className="my-5" tag="h5">
-                                            <span className="font-weight-light">
-                                                LE</span> PARCOURS
-                                            COLLÈGE/LYCÉE : <br />
-                                            <span className="font-weight-light">ATELIERS COLLECTIFS </span>
-                                        </MDBCardTitle>
-                                        <MDBCardText className="px-4 text-box">
-                                            Mieux se connaître pour faire
-                                            ses choix et avancer
-                                            sereinement dans son
-                                            orientation scolaire et
-                                            professionnelle.
-                                        </MDBCardText>
-                                    </MDBCardBody>
-                                </MDBCard>
-
-                                <MDBCard className="text-center mx-2">
-                                    <MDBCardImage src={LogoBoussole} alt="MDBCard image cap" top hover
-                                        overlay="white-slight" />
-                                    <MDBCardBody>
-                                        <MDBCardTitle className="my-5" tag="h5">
-                                            <span className="font-weight-light">
-                                                LE</span> PROGRAMME DE
-                                            REMOBILISATION
-                                            SCOLAIRE</MDBCardTitle>
-                                        <MDBCardText className="px-4 text-box">
-                                            Monter un projet en équipe de
-                                            A à Z pour se connaitre dans
-                                            l’action et développer de
-                                            nouvelles
-                                            compétences dans l’action
-                                            telles que la collaboration,
-                                            la créativité, la communication et
-                                            l’esprit critique !
-                                        </MDBCardText>
-                                    </MDBCardBody>
-                                </MDBCard>
-
-                                <MDBCard className="text-center mx-2">
-                                    <MDBCardImage src={LogoCardinaux} alt="MDBCard image cap" top hover
-                                        overlay="white-slight" />
-                                    <MDBCardBody>
-                                        <MDBCardTitle className="mt-5 mb-4" tag="h5"><span className="font-weight-light">
-                                            LE</span> PARCOURS
-                                            TOUS AZIMUTS :<span className="font-weight-light"> POUR LES 15-25 ANS DURANT LES
-                                                VACANCES SCOLAIRES</span>
-                                        </MDBCardTitle>
-                                        <MDBCardText className="px-4 text-box">
-                                            Some quick example text to build on the card title and make up
-                                            the bulk of the card's content.
-                                        </MDBCardText>
-                                    </MDBCardBody>
-                                </MDBCard>
-                            </MDBCardGroup>
-                        </MDBCardBody>
-
-                        <MDBView >
-                            <MDBMask className='' />
-                            <MDBContainer className="py-5 my-5">
-                                <MDBRow>
-                                    <MDBCol lg="7">
-                                        <p className="h4 text-box font-weight-light">
-                                            Nous passons toujours par une phase de diagnostic des besoins
-                                            des établissements et structures jeunesse pour transmettre des
-                                            clés et des outils adaptés.
-                                        </p>
-                                    </MDBCol>
-                                    <MDBCol lg="5">
-                                        <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
-                                            <img
-                                                className="img-fluid"
-                                                src={CarnetDeBord}
-                                                alt=""
-                                            />
-                                        </MDBView>
-                                    </MDBCol>
-                                </MDBRow>
-                            </MDBContainer>
-                        </MDBView>
-                    </MDBContainer>
-                </MDBView>
-
-
-
-                <MDBView className="purple-slight ">
-                    <MDBContainer className=" my-5 ">
-                        <MDBCardBody className="my-5">
-
-                            <h4 className='display-6 my-5  text-center font-weight-bold mb-0 pt-md-3 pt-3'>
-                                TÉMOIGNAGES</h4>
-                            <MDBRow className="my-5">
-                                <MDBCol lg="5" xl="4">
-                                    <MDBView hover className="rounded z-depth-1-half mb-lg-0 mb-4">
-                                        <img
-                                            className="img-fluid"
-                                            src={Lisa}
-                                            alt=""
-                                        />
-                                    </MDBView>
-                                </MDBCol>
-                                <MDBCol lg="7" xl="8">
-                                    <h3 className="font-weight-bold mb-3 p-0">
-                                    </h3>
-                                    <p className="h6 dark-grey-text text-box">
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque nostrum, illum autem maiores magnam corporis aliquid consequatur, non eveniet est accusantium quod minima error, vero ex laborum distinctio eum adipisci nesciunt recusandae illo minus. Eveniet debitis nulla voluptas, quae iure accusantium est enim eos architecto facilis perferendis corporis, nam corrupti iste voluptatibus quisquam molestiae. Voluptatibus velit maiores dolorem porro incidunt rem at accusantium, fuga perferendis?
-                                    </p>
-                                    <p className="h4 mt-4">
-                                        <span className="font-weight-bold">Lisa</span>
-                                        <span className="h5 dark-grey-text">, 17 ans, participante au parcours Tous Azimuts, 19/04/2018</span>
-                                    </p>
-                                </MDBCol>
-                            </MDBRow>
-
-                            <MDBRow className="my-5">
-                                <MDBCol lg="7" xl="8">
-                                    <h3 className="font-weight-bold mb-3 p-0">
-                                    </h3>
-                                    <p className="h6 dark-grey-text text-box">
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque nostrum, illum autem maiores magnam corporis aliquid consequatur, non eveniet est accusantium quod minima error, vero ex laborum distinctio eum adipisci nesciunt recusandae illo minus. Eveniet debitis nulla voluptas, quae iure accusantium est enim eos architecto facilis perferendis corporis, nam corrupti iste voluptatibus quisquam molestiae. Voluptatibus velit maiores dolorem porro incidunt rem at accusantium, fuga perferendis?
-                                    </p>
-                                    <p className="h4 mt-4">
-                                        <span className="font-weight-bold">Amane</span>
-                                        <span className="h5 dark-grey-text">, 17 ans, participante au parcours Tous Azimuts</span>
-                                    </p>
-                                </MDBCol>
-                                <MDBCol lg="5" xl="4">
-                                    <MDBView hover className="rounded z-depth-1-half mb-lg-0 mb-4">
-                                        <img
-                                            className="img-fluid"
-                                            src={Amane}
-                                            alt=""
-                                        />
-                                    </MDBView>
-                                </MDBCol>
-                            </MDBRow>
-                        </MDBCardBody>
-                    </MDBContainer>
-                </MDBView>
-
-                <NosChiffres />
-
+                            </MDBCardBody>
+                        </MDBCol>
+                    </MDBRow>
+                </MDBContainer>
             </MDBView>
+
+            <MDBView className="">
+                <MDBContainer>
+                    <MDBCardBody className="">
+                        <h4 className='display-6 text-center font-weight-bold my-5 pt-md-3 pt-3'> NOS PARCOURS</h4>
+                        <MDBCardGroup>
+                            <MDBCard className="text-center pt-5 pb-2 mx-2">
+                                <MDBCardImage src={LogoBouee} alt="MDBCard image cap" top hover
+                                    overlay="white-slight" className="col-6 m-auto " />
+                                <MDBCardBody>
+                                    <MDBCardTitle className="my-5" tag="h5">
+                                        <span className="font-weight-light">
+                                            LE</span> PARCOURS
+                                        COLLÈGE/LYCÉE : <br />
+                                        <span className="font-weight-light">ATELIERS COLLECTIFS </span>
+                                    </MDBCardTitle>
+                                    <MDBCardText className="px-4 text-box">
+                                        Mieux se connaître pour faire
+                                        ses choix et avancer
+                                        sereinement dans son
+                                        orientation scolaire et
+                                        professionnelle.
+                                    </MDBCardText>
+                                </MDBCardBody>
+                            </MDBCard>
+
+                            <MDBCard className="text-center pt-5 pb-2 mx-2">
+                                <MDBCardImage src={LogoBoussole} alt="MDBCard image cap" top hover
+                                    overlay="white-slight"  className="col-6 m-auto "/>
+                                <MDBCardBody>
+                                    <MDBCardTitle className="my-5" tag="h5">
+                                        <span className="font-weight-light">
+                                            LE</span> PROGRAMME DE
+                                        REMOBILISATION
+                                        SCOLAIRE</MDBCardTitle>
+                                    <MDBCardText className="px-4 text-box">
+                                        Monter un projet en équipe de
+                                        A à Z pour se connaitre dans
+                                        l’action et développer de
+                                        nouvelles
+                                        compétences dans l’action
+                                        telles que la collaboration,
+                                        la créativité, la communication et
+                                        l’esprit critique !
+                                    </MDBCardText>
+                                </MDBCardBody>
+                            </MDBCard>
+
+                            <MDBCard className="text-center pt-5 pb-2 mx-2">
+                                <MDBCardImage src={LogoCardinaux} alt="MDBCard image cap" top hover
+                                    overlay="white-slight" className="col-6 m-auto " />
+                                <MDBCardBody>
+                                    <MDBCardTitle className="mt-5 mb-4" tag="h5"><span className="font-weight-light">
+                                        LE</span> PARCOURS
+                                        TOUS AZIMUTS :<span className="font-weight-light"> POUR LES 15-25 ANS DURANT LES
+                                            VACANCES SCOLAIRES</span>
+                                    </MDBCardTitle>
+                                    <MDBCardText className="px-4 text-box">
+                                        Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.
+                                    </MDBCardText>
+                                </MDBCardBody>
+                            </MDBCard>
+                        </MDBCardGroup>
+                    </MDBCardBody>
+
+                    <MDBView className="my-5">
+                        <MDBRow>
+                            <MDBCol className="d-flex align-items-center" lg="7">
+                                <p className="h4 text-box font-weight-light">
+                                    Nous passons toujours par une phase de diagnostic des besoins
+                                    des établissements et structures jeunesse pour transmettre des
+                                    clés et des outils adaptés.
+                                </p>
+                            </MDBCol>
+                            <MDBCol lg="5">
+                                <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
+                                    <img
+                                        className="img-fluid"
+                                        src={CarnetDeBord}
+                                        alt=""
+                                    />
+                                </MDBView>
+                            </MDBCol>
+                        </MDBRow>
+
+                    </MDBView>
+                </MDBContainer>
+            </MDBView>
+
+
+
+            <MDBView className="bgc-white">
+                <MDBContainer>
+                    <MDBCardBody className="my-5">
+
+                        <h4 className='display-6 my-5  text-center font-weight-bold mb-0 pt-md-3 pt-3'>
+                            TÉMOIGNAGES</h4>
+                        <MDBRow className="my-5">
+                            <MDBCol lg="5" xl="4">
+                                <MDBView hover className="rounded z-depth-1-half mb-lg-0 mb-4">
+                                    <img
+                                        className="img-fluid"
+                                        src={Lisa}
+                                        alt=""
+                                    />
+                                </MDBView>
+                            </MDBCol>
+                            <MDBCol lg="7" xl="8">
+                                <h3 className="font-weight-bold mb-3 p-0">
+                                </h3>
+                                <p className="h6 dark-grey-text text-box">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque nostrum, illum autem maiores magnam corporis aliquid consequatur, non eveniet est accusantium quod minima error, vero ex laborum distinctio eum adipisci nesciunt recusandae illo minus. Eveniet debitis nulla voluptas, quae iure accusantium est enim eos architecto facilis perferendis corporis, nam corrupti iste voluptatibus quisquam molestiae. Voluptatibus velit maiores dolorem porro incidunt rem at accusantium, fuga perferendis?
+                                </p>
+                                <p className="h4 mt-4">
+                                    <span className="font-weight-bold">Lisa</span>
+                                    <span className="h5 dark-grey-text">, 17 ans, participante au parcours Tous Azimuts, 19/04/2018</span>
+                                </p>
+                            </MDBCol>
+                        </MDBRow>
+
+                        <MDBRow className="my-5">
+                            <MDBCol lg="7" xl="8">
+                                <h3 className="font-weight-bold mb-3 p-0">
+                                </h3>
+                                <p className="h6 dark-grey-text text-box">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque nostrum, illum autem maiores magnam corporis aliquid consequatur, non eveniet est accusantium quod minima error, vero ex laborum distinctio eum adipisci nesciunt recusandae illo minus. Eveniet debitis nulla voluptas, quae iure accusantium est enim eos architecto facilis perferendis corporis, nam corrupti iste voluptatibus quisquam molestiae. Voluptatibus velit maiores dolorem porro incidunt rem at accusantium, fuga perferendis?
+                                </p>
+                                <p className="h4 mt-4">
+                                    <span className="font-weight-bold">Amane</span>
+                                    <span className="h5 dark-grey-text">, 17 ans, participante au parcours Tous Azimuts</span>
+                                </p>
+                            </MDBCol>
+                            <MDBCol lg="5" xl="4">
+                                <MDBView hover className="rounded z-depth-1-half mb-lg-0 mb-4">
+                                    <img
+                                        className="img-fluid"
+                                        src={Amane}
+                                        alt=""
+                                    />
+                                </MDBView>
+                            </MDBCol>
+                        </MDBRow>
+                    </MDBCardBody>
+                </MDBContainer>
+            </MDBView>
+            <NosChiffres />
+
         </div >
 
     );

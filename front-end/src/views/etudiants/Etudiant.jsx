@@ -48,7 +48,7 @@ const Etudiant = (props) => {
                         </MDBCardBody>
                         <MDBRow className="  mx-5 mb-5">
 
-                            {answersData.map(elem => {
+                            {answersData.map((elem,index) => {
                                 if (elem.user === props.userHistory[0]) {
                                     // if (elem.valueNumber){
 
@@ -56,8 +56,8 @@ const Etudiant = (props) => {
                                         <>
                                             <MDBCol lg="12" md="12" className="block-example border border-dark mb-5 px-0 ">
                                                 <MDBCardBody className="">
-                                                    <h5 className="block-example border border-light p-2 my-5">{elem.question}</h5>
-                                                    <h5 className="px-2"> {elem.valueNumber} {elem.valueText}</h5>
+                                                    <h5 className="block-example border border-light p-2 my-5" key={index}>{elem.question}</h5>
+                                                    <h5 className="px-2" key={index}> {elem.valueNumber} {elem.valueText}</h5>
                                                 </MDBCardBody>
                                             </MDBCol>
                                         </>
