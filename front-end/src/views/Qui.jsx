@@ -27,12 +27,12 @@ import AudreyManon from "../assets/images/Team/AudreyManon.jpg"
 const Qui = () => {
 
     return (
-        <div>
-
-            <MDBView className="purple-slight">
-                <section className="mb-5" style={{ marginTop: "15vmax" }}>
-                    <MDBMask className='rgba-purple-slight ' />
-                    <MDBContainer>
+        <div className="bgc-light">
+            <MDBView className="bgc-white">
+                <MDBContainer
+                    style={{ marginTop: "20vmax" }}
+                    className='d-flex justify-content-center align-items-center pt-0 pb-5 '
+                >
                         <MDBRow >
                             <MDBCol md='12' className='mb-4 text-center '>
                                 <MDBCol md='12' className='mb-4 text-center'>
@@ -76,11 +76,10 @@ const Qui = () => {
                                                 className="img-fluid"
                                                 alt=""
                                             />
-                                            <p className="h5 mt-2"><mark className="bg-warning">
+                                            <p className="h5 mt-2">
                                                 1 jeune sur deux a déjà douté
                                                 de ses compétences pour
                                                 réussir son parcours
-                                            </mark>
                                             </p>
                                         </MDBView>
                                     </MDBCol>
@@ -88,11 +87,10 @@ const Qui = () => {
                             </MDBCol>
                         </MDBRow>
                     </MDBContainer>
-                </section>
+              
             </MDBView>
 
-            <MDBView>
-                <MDBMask className='rgba-purple-slight ' />
+            <MDBView className='bgc-blue' >
                 <MDBContainer>
                     <MDBRow className="text-center my-5 p-0 ">
                         <MDBCol md="6">
@@ -183,11 +181,11 @@ const Qui = () => {
             <TeamPage />
 
             <MDBView >
-                <MDBMask className='rgba-purple-slight ' />
+                <MDBMask className=' ' />
                 <MDBContainer className="py-5 my-5">
-                    <MDBRow>
-                        <MDBCol lg="7">
-                            <p className="h4 text-box font-weight-light">
+                    <MDBRow className="justify-content-around">
+                        <MDBCol lg="5">
+                            <p className="h6 text-box font-weight-light lh-lg">
                                 Azimuto est né de la rencontre d’Audrey et
                                 Manon. Nous étions chargées d’animation d’une
                                 Coopérative Éphémère de jeunesse auprès de
@@ -201,7 +199,7 @@ const Qui = () => {
                                 constat.
                             </p>
                         </MDBCol>
-                        <MDBCol lg="5">
+                        <MDBCol lg="4">
                             <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
                                 <img
                                     className="img-fluid"

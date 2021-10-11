@@ -10,23 +10,29 @@ button {
   font-size: 1.2rem;
 }
 
-.navbarFS{
-  font-size: 1.3rem;
-}
 
 .b-Right {
   display: contents !important;
   color: rebeccapurple !important;
 }
 
-.logo{
-  width: 12%;
-}
-
-.loco-con {
-  display: contents;
-}
 
 .purple-slight {
   background-color: #f3e5f5;
+}
+
+.bgc-light{
+  background-color: #fff5efff 
+}
+
+.bgc-darker {
+  background-color: #e8c7b7;
+}
+
+.bgc-white{
+  background-color: white;
+}
+
+.bgc-blue {
+  background-color:#b8e4f8;
 }

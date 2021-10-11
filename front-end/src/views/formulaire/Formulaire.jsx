@@ -16,6 +16,9 @@ const QuestionPage = (props) => {
 
     const [usersData, setusersData] = useState([]);
 
+    if ( setRadioBox && setTextBox && usersData){
+        console.log();
+    }
 
     const changeCollection = (data) => {
         const newFilterResponses = response.filter((elem) => {
@@ -27,7 +30,6 @@ const QuestionPage = (props) => {
             newResponses
         )
     }
-    // console.log("response", response)
 
     const Form = async (body) => {
         try {
@@ -97,7 +99,7 @@ const QuestionPage = (props) => {
                                             <MDBCol className="" md='1' >
                                             </MDBCol>
 
-                                            {radioBox.map((e) => {
+                                            {radioBox.map((e,i) => {
                                                 if (elem.type === "multiple") {
                                                     return (
                                                         <MDBCol className="my-5 px-0" md='1' >
@@ -107,8 +109,9 @@ const QuestionPage = (props) => {
                                                                     value={e}
                                                                     id={elem._id}
                                                                     description={elem.description}
+                                                                    key={i}
                                                                 />
-                                                                <span className="h5 mb-1">{e}</span>
+                                                                <span className="h5 mb-1" key={i}>{e}</span>
                                                             </MDBFormInline>
                                                         </MDBCol>
 
@@ -116,7 +119,7 @@ const QuestionPage = (props) => {
                                                 }
                                             })}
                                         </MDBRow>
-                                        {textBox.map((e) => {
+                                        {textBox.map((e,i) => {
                                             if (elem.type === "texte") {
                                                 return (
                                                     <MDBView className=" container justify-content-center mb-5 ">
@@ -126,6 +129,7 @@ const QuestionPage = (props) => {
                                                             id={elem._id}
                                                             changeAnswerText={changeCollection}
                                                             description={elem.description}
+                                                            key={i}
                                                         />
                                                     </MDBView>
                                                 )
@@ -138,7 +142,7 @@ const QuestionPage = (props) => {
                     })}
                 </MDBRow>
                 <MDBView className="col-12 text-center mt-5">
-                    <MDBBtn onClick={userReponse} className="col-2" color="purple">
+                    <MDBBtn onClick={userReponse}  className="col-2" color="purple">
                         Enregistrer
                     </MDBBtn>
                 </MDBView>

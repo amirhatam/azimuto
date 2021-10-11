@@ -8,6 +8,9 @@ const DeletePartenaire = (props) => {
     const deletePartenaire = async () => {
         try {
             const response = await axios.delete(`http://localhost:8080/partenaires/${props.deleteId}/deletePartenaire`)
+            if(!response){
+                console.error("response err:",response);
+            }
             const responseData = await axios.get("http://localhost:8080/partenaires")
             props.setPartenaires(responseData.data.partenaires)
             props.setViews("List")

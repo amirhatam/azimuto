@@ -3,7 +3,6 @@ import {
     MDBCol,
     MDBRow,
     MDBView,
-    MDBMask,
     MDBContainer,
     MDBCardBody,
     MDBCard,
@@ -37,10 +36,8 @@ const NosChiffres = () => {
         return <p>Loading ...</p>
     } else {
         return (
-            < MDBView className="purple-slight" >
-                <MDBMask className='rgba-purple-slight ' />
+            < MDBView  >
                 <MDBContainer>
-
                     <MDBCardBody className="mt-5 pb-0">
                         <h4 className='display-6 text-center font-weight-bold mt-5 pt-md-3 pt-3'>NOS CHIFFRES CLÉS</h4>
                     </MDBCardBody>

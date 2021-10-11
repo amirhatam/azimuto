@@ -84,17 +84,17 @@ const EditTeam = (props) => {
                             </h2>
                         </div>
                         <div className="row ">
-                            {users.map(elem => {
+                            {users.map((elem,index) => {
                                 return <>
                                     <div className="col-6">
-                                        <h3 className="my-5">{elem.name}</h3>
-                                        <h5 className="my-5 font-weight-bold grey-text">{elem.post}</h5>
-                                        <p className="my-5">{elem.description}</p>
-                                        <MDBBtn size="sm" outline color='purple' className="btn-rounded btn-1" onClick={(e) => { setEditingId(elem._id); setViews("Edit") }}>Editer</MDBBtn >
-                                        <MDBBtn size="sm" outline color='purple' className="btn-rounded btn-1" onClick={(e) => { setDeleteId(elem._id); setViews("Delete") }}>Effacer</MDBBtn >
+                                        <h3 className="my-5" key={index}>{elem.name}</h3>
+                                        <h5 className="my-5 font-weight-bold grey-text" key={index}>{elem.post}</h5>
+                                        <p className="my-5" key={index}>{elem.description}</p>
+                                        <MDBBtn size="sm" outline color='purple' className="btn-rounded btn-1" key={index} onClick={(e) => { setEditingId(elem._id); setViews("Edit") }}>Editer</MDBBtn >
+                                        <MDBBtn size="sm" outline color='purple' className="btn-rounded btn-1" key={index} onClick={(e) => { setDeleteId(elem._id); setViews("Delete") }}>Effacer</MDBBtn >
                                     </div>
                                     <div className="col-6">
-                                        <img class="img-fluid" src={`http://localhost:8080/uploads/${elem.image}`} alt="" />
+                                        <img class="img-fluid" key={index} src={`http://localhost:8080/uploads/${elem.image}`} alt="" />
                                     </div>
                                 </>
                             })}

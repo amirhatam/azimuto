@@ -1,6 +1,5 @@
 import React from 'react'
 import { MDBContainer, MDBView, MDBBtn,MDBIcon } from 'mdbreact';
-import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 
@@ -10,6 +9,9 @@ const DeleteTeam = (props) => {
     const deleteUser = async () => {
         try {
             const response = await axios.delete(`http://localhost:8080/teams/${props.deleteId}/deleteteam`)
+           if(!response){
+               console.error("response err:",response);
+           }
             const responseData = await axios.get("http://localhost:8080/teams")
             props.setUsers(responseData.data.teamFound)
             props.setViews("List")

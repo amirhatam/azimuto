@@ -77,15 +77,15 @@ const RapportageEP = () => {
                             </h2>
                         </div>
                         <MDBRow>
-                            {rapportage.map(e => {
+                            {rapportage.map((e,index) => {
                                 return <>
                                     <MDBCol lg="4" md="12" className=" my-5 mx-0 px-0" >
 
                                         <div className="text-center">
-                                            <a href={`http://localhost:8080/uploads/${e.pdf}`} target="_blank">
+                                            <a href={`http://localhost:8080/uploads/${e.pdf}`}  key={index} target="_blank" rel="noreferrer">
                                                 <i data-test="fa" className="fa fa-file-pdf pr-2 h1"></i>
                                             </a>
-                                            <h5 className="my-3 font-weight-bold">
+                                            <h5  key={index} className="my-3 font-weight-bold">
                                                 {e.description}
                                             </h5>
                                             <MDBRow center className="my-5">

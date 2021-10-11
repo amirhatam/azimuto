@@ -39,6 +39,9 @@ const EditMission = () => {
     const editUrl = async () => {
         try {
             const response = await axios.patch(`http://localhost:8080/civique/${editingId}/updateCivique`, { url: url })
+            if(!response){
+                console.error("response err:",response);
+            }
             setEditingId("")
 
             const responseData = await axios.get("http://localhost:8080/civique")
@@ -75,7 +78,7 @@ const EditMission = () => {
                             <MDBCol md='12' className='mb-5 text-center '>
 
                                 <div>
-                                <a href={civique[0].url} target="_blank">{civique[0].url}</a>
+                                <a href={civique[0].url} target="_blank" rel="noreferrer">{civique[0].url}</a>
                                 </div>
                                 <div>
                                     <input type="text" onChange={(event) => setUrl(event.target.value)} className="form-control my-5" name="name" placeholder="" />

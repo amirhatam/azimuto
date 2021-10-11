@@ -1,5 +1,5 @@
 import React from 'react'
-import { MDBRow, MDBCol, MDBCardBody, MDBBtn, MDBView, MDBContainer, MDBIcon, MDBCard } from "mdbreact";
+import { MDBRow, MDBCol, MDBBtn, MDBView, MDBContainer, MDBIcon, MDBCard } from "mdbreact";
 
 function ListQuestions(props) {
     return (
@@ -13,11 +13,11 @@ function ListQuestions(props) {
                     </div>
                 
                 <MDBRow className="d-flex justify-content-center">
-                    {props.questions.map((elem) => {
+                    {props.questions.map((elem,index) => {
                         return <>
                             <MDBCol className="my-5" md='4' >
                                 <MDBCard testimonial >
-                                <h4 className='card-title mt-5 px-5' style={{ height: "10vmax" }}>{elem.description}</h4>
+                                <h4 className='card-title mt-5 px-5' key={index} style={{ height: "10vmax" }}>{elem.description}</h4>
                                     <hr />
                                     <div className="text-center my-2">
                                         <MDBBtn size="sm" outline color='purple' className="btn-rounded btn-1" onClick={(e) => { props.setEditingId(elem._id); props.setViews("Edit") }}>Editer</MDBBtn >
