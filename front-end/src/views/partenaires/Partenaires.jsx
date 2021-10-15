@@ -24,17 +24,17 @@ const Partenaires = () => {
 
 
     return (
-        <MDBView className="bgc-light ">
-            <MDBContainer>
+        <MDBView className="bgc-white ">
+            <MDBContainer className="my-5">
                 <MDBRow >
                     <MDBCol md='12' className='mb-4 text-center'>
-                        <h4 className='display-6 font-weight-bold my-5 pt-md-3 pt-3'>
+                        <h4 className='display-6 fontW my-5'>
                             NOS PARTENAIRES </h4>
 
                     </MDBCol>
                 </MDBRow>
                 <MDBRow >
-                    {partenaires.map((elem,index) => {
+                    {partenaires.map((elem) => {
                         return <>
                           
                             <MDBCol lg="4" md="12" className=" mb-5 mx-0 px-0 align-self-center" style={{ textAlign: "-webkit-center" }}>
@@ -45,7 +45,7 @@ const Partenaires = () => {
                                             className="mx-0  mb-md-0 mb-4 rounded z-depth-1 img-fluid rounded-circle"
                                             tag="img"
                                             alt={`https://www.${elem.url}`}
-                                            key={index}
+                                            
                                         />
                                     </MDBBtn>
                                 </div>

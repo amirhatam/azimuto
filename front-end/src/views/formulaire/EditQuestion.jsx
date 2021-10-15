@@ -21,11 +21,11 @@ function EditQuestion(props) {
         }
     }
     return (
-        <MDBView className="purple-slight">
+        <MDBView className="bgc-light">
             <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
 
                 <div className="text-center my-5 ">
-                    <h2 className="h1-responsive font-weight-bold text-center  pr-5 mb-5">
+                    <h2 className="h1-responsive fontW text-center  pr-5 mb-5">
                         <a href="/modification" className="h2 px-2"><MDBIcon icon="angle-left" /> </a> Liste des questions
                     </h2>
                 </div>
@@ -33,7 +33,7 @@ function EditQuestion(props) {
 
                     <div>
                         <input type="text" id="example1" className="form-control form-control-lg" onChange={(e) => setDescription(e.target.value)} />
-                        <MDBBtn color="cyan" rounded onClick={modifQuestion}>Confirmer</MDBBtn>
+                        <MDBBtn color="amber" rounded onClick={modifQuestion}>Confirmer</MDBBtn>
                     </div>
 
                 </div>

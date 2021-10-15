@@ -35,7 +35,7 @@ const AddPartenaire = (props) => {
     }
 
     return (
-        <MDBView className="purple-slight">
+        <MDBView className="bgc-light">
             <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
                 <div className="row my-5">
                     {/* {props.userAdded
@@ -43,7 +43,7 @@ const AddPartenaire = (props) => {
                         : <> */}
                     
                     <div className="text-center my-5 ">
-                        <h2 className="h1-responsive font-weight-bold text-center  pr-5 mb-5">
+                        <h2 className="h1-responsive fontW text-center  pr-5 mb-5">
                             <a href="/partenaires" className="h2 px-2"><MDBIcon icon="angle-left" /> </a> NOS PARTENAIRES
                         </h2>
                     </div>

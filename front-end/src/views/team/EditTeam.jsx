@@ -45,10 +45,10 @@ const EditTeam = (props) => {
 
     if (!localStorage.tokenAdmin) {
         return (
-            <MDBView className="purple-slight ">
+            <MDBView className="bgc-light ">
                 <MDBContainer className="text-center mb-5" style={{ marginTop: "17vmax", height: "200px" }}>
                     <h1 className="h1 mb-0"><MDBIcon far icon="frown" /></h1>
-                    <h3 className="h1-responsive font-weight-bold mb-5">
+                    <h3 className="h1-responsive fontW mb-5">
                         Page Not Found !
                     </h3>
                 </MDBContainer>
@@ -76,31 +76,31 @@ const EditTeam = (props) => {
             />
         } else if (views === "List") {
             return (
-                <MDBView className="purple-slight">
+                <MDBView className="bgc-light">
                     <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
                         <div className="text-center my-5 ">
-                            <h2 className="h1-responsive font-weight-bold text-center  pr-5 mb-5">
+                            <h2 className="h1-responsive fontW text-center  pr-5 mb-5">
                                 <a href="/EP" className="h2 px-2"><MDBIcon icon="angle-left" /> </a> Liste de bénévoles
                             </h2>
                         </div>
                         <div className="row ">
-                            {users.map((elem,index) => {
+                            {users.map((elem) => {
                                 return <>
                                     <div className="col-6">
-                                        <h3 className="my-5" key={index}>{elem.name}</h3>
-                                        <h5 className="my-5 font-weight-bold grey-text" key={index}>{elem.post}</h5>
-                                        <p className="my-5" key={index}>{elem.description}</p>
-                                        <MDBBtn size="sm" outline color='purple' className="btn-rounded btn-1" key={index} onClick={(e) => { setEditingId(elem._id); setViews("Edit") }}>Editer</MDBBtn >
-                                        <MDBBtn size="sm" outline color='purple' className="btn-rounded btn-1" key={index} onClick={(e) => { setDeleteId(elem._id); setViews("Delete") }}>Effacer</MDBBtn >
+                                        <h3 className="my-5" >{elem.name}</h3>
+                                        <h5 className="my-5 fontW grey-text" >{elem.post}</h5>
+                                        <p className="my-5" >{elem.description}</p>
+                                        <MDBBtn size="sm"  color='amber' className="btn-rounded btn-1"  onClick={(e) => { setEditingId(elem._id); setViews("Edit") }}>Editer</MDBBtn >
+                                        <MDBBtn size="sm"  color='amber' className="btn-rounded btn-1"  onClick={(e) => { setDeleteId(elem._id); setViews("Delete") }}>Effacer</MDBBtn >
                                     </div>
                                     <div className="col-6">
-                                        <img class="img-fluid" key={index} src={`http://localhost:8080/uploads/${elem.image}`} alt="" />
+                                        <img class="img-fluid"  src={`http://localhost:8080/uploads/${elem.image}`} alt="" />
                                     </div>
                                 </>
                             })}
                         </div>
                         <div className="text-center my-5">
-                            <MDBBtn size="lg" color='cyan' rounded onClick={(e) => { setViews("Add") }}>Ajouter</MDBBtn >
+                            <MDBBtn size="lg" color='amber' rounded onClick={(e) => { setViews("Add") }}>Ajouter</MDBBtn >
                         </div>
 
                     </MDBContainer>

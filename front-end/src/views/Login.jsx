@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import {
   MDBContainer,
   MDBRow,
@@ -7,7 +7,6 @@ import {
   MDBBtn,
   MDBCard,
   MDBCardBody,
-  Link,
   MDBFormInline,
   MDBIcon
 } from 'mdbreact';
@@ -22,7 +21,10 @@ const Login = (props) => {
 
   const validLogin = async () => {
     try {
-      // console.log("je suis validLogin", validLogin)
+      console.log("je suis validLogin")
+      console.log("email", email)
+      console.log("password", password)
+
       const response = await axios.post("http://localhost:8080/user/login", { email: email, password: password })
       console.log("Login User response", response)
 
@@ -36,7 +38,7 @@ const Login = (props) => {
         const firstName = response.data.validUser.firstName
         const lastName = response.data.validUser.lastName
         const userId = response.data.validUser._id
-        // console.log("token", token)
+        console.log("token", token)
         // console.log("email :", email)
 
         localStorage.setItem("token", `${token}`)
@@ -59,9 +61,9 @@ const Login = (props) => {
     }
   }
 
-  useEffect(() => {
+  // useEffect(() => {
 
-  }, [])
+  // }, [])
 
   return (
     <MDBFormInline className="bgc-light">
@@ -74,17 +76,17 @@ const Login = (props) => {
                   <p className="h4 text-center py-4">Se Connecter</p>
                   <div className="grey-text">
 
-                    <MDBInput label="Your email" icon="envelope" group type="email" validate error="wrong" success="right"
+                    <MDBInput label="Votre email" icon="envelope" group type="email" validate error="wrong" success="right"
                       onChange={(e) => setEmail(e.target.value)}
                     />
 
-                    <MDBInput label="Your password" icon="lock" group type="password" validate
+                    <MDBInput label="Votre mot de passe" icon="lock" group type="password" validate
                       onChange={(e) => setPassword(e.target.value)}
                     />
                   </div>
 
                   <div className="text-center py-4 mt-3">
-                    <MDBBtn  href="/logged/formulaire" onClick={validLogin} outline color='amber' className="rounded-pill py-3 px-4">
+                    <MDBBtn onClick={validLogin} outline color='amber' className="rounded-pill py-3 px-4">
                       <MDBIcon icon='user' className='mr-2 ' /> Se connecter
                     </MDBBtn>
                   </div>

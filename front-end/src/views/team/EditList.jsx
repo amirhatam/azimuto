@@ -28,10 +28,10 @@ function EditTeam(props) {
         }
     }
     return (
-        <MDBView className="purple-slight">
+        <MDBView className="bgc-light">
             <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
                 <div className="text-center my-5 ">
-                    <h2 className="h1-responsive font-weight-bold text-center  pr-5 mb-5">
+                    <h2 className="h1-responsive fontW text-center  pr-5 mb-5">
                         <a href="/edit-team" className="h2 px-2"><MDBIcon icon="angle-left" /> </a> Liste de bénévoles
                     </h2>
                 </div>
@@ -51,7 +51,7 @@ function EditTeam(props) {
                     </div>
 
                     <div>
-                        <MDBBtn color="cyan" rounded onClick={modifTeam}>Confirmer</MDBBtn>
+                        <MDBBtn color="amber" rounded onClick={modifTeam}>Confirmer</MDBBtn>
                     </div>
                 </div>
             </MDBContainer>

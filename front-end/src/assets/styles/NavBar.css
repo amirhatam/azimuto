@@ -3,7 +3,7 @@
 }
 
 .logo {
-    width: 15%;
+    width: 11%;
 }
 
 .loco-con {
@@ -18,3 +18,8 @@
   .text-white{
       color: white;
   }
+
+
+.manuel-margin{
+    margin: -1px;
+}

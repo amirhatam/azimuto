@@ -20,17 +20,17 @@ const DeletePartenaire = (props) => {
     }
 
     return (
-        <MDBView className="purple-slight">
+        <MDBView className="bgc-light">
             <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
             <div className="text-center my-5 ">
-                        <h2 className="h1-responsive font-weight-bold text-center  pr-5 mb-5">
+                        <h2 className="h1-responsive fontW text-center  pr-5 mb-5">
                             <a href="/partenaires" className="h2 px-2"><MDBIcon icon="angle-left" /> </a> NOS PARTENAIRES
                         </h2>
                     </div>
 
                 <div >
                     <h2 className="my-5">Es que vous êtes sur de suprimmer la Partenaire ?</h2>
-                    <MDBBtn color="cyan" rounded onClick={deletePartenaire}>Confirmer</MDBBtn>
+                    <MDBBtn color="amber" rounded onClick={deletePartenaire}>Confirmer</MDBBtn>
                 </div>
             </MDBContainer>
         </MDBView>

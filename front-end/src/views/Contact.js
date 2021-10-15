@@ -6,12 +6,12 @@ import { MDBRow, MDBCol, MDBCard, MDBCardBody, MDBIcon, MDBBtn, MDBInput, MDBVie
 const ContactPage = () => {
 
   return (
-    <MDBView className="bgc-light">
+    <MDBView className="bgc-white">
 
       <MDBContainer
-        style={{ marginTop: "20vmax" }}
+        style={{ marginTop: "15vmax" }}
       >
-        <h2 className="h1-responsive font-weight-bold text-center mb-5">
+        <h2 className="h1-responsive fontW text-center mb-5">
           Contact
         </h2>
         <MDBRow className="" >
