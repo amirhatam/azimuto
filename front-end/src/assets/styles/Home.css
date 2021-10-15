@@ -11,15 +11,6 @@ button {
 }
 
 
-.b-Right {
-  display: contents !important;
-  color: rebeccapurple !important;
-}
-
-
-.purple-slight {
-  background-color: #f3e5f5;
-}
 
 .bgc-light{
   background-color: #fff5efff 
@@ -36,3 +27,14 @@ button {
 .bgc-blue {
   background-color:#b8e4f8;
 }
+.bgc-blueDark {
+  background-color:#4d6376;
+}
+.bgc-blueDarker {
+  background-color:#10374b;
+}
+
+.fontW {
+  font-weight: 400;
+}
+

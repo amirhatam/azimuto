@@ -34,9 +34,9 @@ const Programmes = () => {
         <div className="bgc-light">
             <MDBView className="bgc-white">
                 <MDBContainer
-                    style={{ marginTop: "20vmax" }}
+                    style={{ marginTop: "15vmax" }}
                 >
-                    <h4 className='display-6 text-center font-weight-bold mb-5 pb-5 pt-md-3 pt-3'>
+                    <h4 className='display-6 text-center fontW mb-5 pb-5 pt-md-3 pt-3'>
                         NOTRE PÉDAGOGIE EXPÉRIENTIELLE</h4>
 
                     <MDBRow className="">
@@ -78,6 +78,7 @@ const Programmes = () => {
                         </MDBCol>
                         <MDBCol md="8" className="d-flex align-items-center ">
                             <MDBCardBody cascade className=" px-0 ">
+                                <h1 className="" style={{ fontWeight: "400" }}>COOPÉRATION</h1>
                                 <p className="text-start h4 font-weight-light ">
                                     "Tout seul, on va plus vite, ensemble, on va plus loin." C'est aussi en coopérant que nous pouvons nous
                                     rendre compte de la place que l'on prend et envisager la place que l'on souhaite dans la société.
@@ -130,7 +131,7 @@ const Programmes = () => {
             <MDBView className="">
                 <MDBContainer>
                     <MDBCardBody className="">
-                        <h4 className='display-6 text-center font-weight-bold my-5 pt-md-3 pt-3'> NOS PARCOURS</h4>
+                        <h4 className='display-6 text-center fontW my-5 pt-md-3 pt-3'> NOS PARCOURS</h4>
                         <MDBCardGroup>
                             <MDBCard className="text-center pt-5 pb-2 mx-2">
                                 <MDBCardImage src={LogoBouee} alt="MDBCard image cap" top hover
@@ -154,7 +155,7 @@ const Programmes = () => {
 
                             <MDBCard className="text-center pt-5 pb-2 mx-2">
                                 <MDBCardImage src={LogoBoussole} alt="MDBCard image cap" top hover
-                                    overlay="white-slight"  className="col-6 m-auto "/>
+                                    overlay="white-slight" className="col-6 m-auto " />
                                 <MDBCardBody>
                                     <MDBCardTitle className="my-5" tag="h5">
                                         <span className="font-weight-light">
@@ -184,8 +185,14 @@ const Programmes = () => {
                                             VACANCES SCOLAIRES</span>
                                     </MDBCardTitle>
                                     <MDBCardText className="px-4 text-box">
-                                        Some quick example text to build on the card title and make up
-                                        the bulk of the card's content.
+                                        Un parcours de plusieurs jours
+                                        pour se découvrir soi-même
+                                        avec nos ateliers et découvrir
+                                        les opportunités
+                                        de l'Économie Sociale et
+                                        Solidaire au travers de
+                                        témoignages de
+                                        professionnels.
                                     </MDBCardText>
                                 </MDBCardBody>
                             </MDBCard>
@@ -216,13 +223,11 @@ const Programmes = () => {
                 </MDBContainer>
             </MDBView>
 
-
-
             <MDBView className="bgc-white">
                 <MDBContainer>
                     <MDBCardBody className="my-5">
 
-                        <h4 className='display-6 my-5  text-center font-weight-bold mb-0 pt-md-3 pt-3'>
+                        <h4 className='display-6 my-5  text-center fontW mb-0'>
                             TÉMOIGNAGES</h4>
                         <MDBRow className="my-5">
                             <MDBCol lg="5" xl="4">
@@ -235,27 +240,35 @@ const Programmes = () => {
                                 </MDBView>
                             </MDBCol>
                             <MDBCol lg="7" xl="8">
-                                <h3 className="font-weight-bold mb-3 p-0">
+                                <h3 className="fontW mb-3 p-0">
                                 </h3>
                                 <p className="h6 dark-grey-text text-box">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque nostrum, illum autem maiores magnam corporis aliquid consequatur, non eveniet est accusantium quod minima error, vero ex laborum distinctio eum adipisci nesciunt recusandae illo minus. Eveniet debitis nulla voluptas, quae iure accusantium est enim eos architecto facilis perferendis corporis, nam corrupti iste voluptatibus quisquam molestiae. Voluptatibus velit maiores dolorem porro incidunt rem at accusantium, fuga perferendis?
-                                </p>
+                                    "Ça m'a apporté du progrès et de la confiance en moi. J’ai plus réfléchi et ça m’a ouvert plus de
+                                    portes dans ma tête. Ce qui m’a le plus marqué, c’est le travail en groupe.”                                </p>
                                 <p className="h4 mt-4">
-                                    <span className="font-weight-bold">Lisa</span>
-                                    <span className="h5 dark-grey-text">, 17 ans, participante au parcours Tous Azimuts, 19/04/2018</span>
+                                    <span className="fontW">Lisa</span>
+                                    <span className="h5 dark-grey-text">, 17 ans, participante au parcours Tous Azimuts</span>
                                 </p>
                             </MDBCol>
                         </MDBRow>
 
                         <MDBRow className="my-5">
                             <MDBCol lg="7" xl="8">
-                                <h3 className="font-weight-bold mb-3 p-0">
+                                <h3 className="fontW mb-3 p-0">
                                 </h3>
                                 <p className="h6 dark-grey-text text-box">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque nostrum, illum autem maiores magnam corporis aliquid consequatur, non eveniet est accusantium quod minima error, vero ex laborum distinctio eum adipisci nesciunt recusandae illo minus. Eveniet debitis nulla voluptas, quae iure accusantium est enim eos architecto facilis perferendis corporis, nam corrupti iste voluptatibus quisquam molestiae. Voluptatibus velit maiores dolorem porro incidunt rem at accusantium, fuga perferendis?
+                                    "Le stage Tous Azimuts ça a vraiment été
+                                    l’impulsion, quand je compare entre le
+                                    stage et maintenant, là j’ai les idées
+                                    vraiment plus claires.
+                                    J’ai trouvé un chemin pour mon avenir. Le
+                                    stage ça a été un petit déclic : je sais ce
+                                    que je veux, ce que je veux pas.
+                                    Ça nous aide, on remet tout à zéro, on remet
+                                    tout au clair.”
                                 </p>
                                 <p className="h4 mt-4">
-                                    <span className="font-weight-bold">Amane</span>
+                                    <span className="fontW">Amane</span>
                                     <span className="h5 dark-grey-text">, 17 ans, participante au parcours Tous Azimuts</span>
                                 </p>
                             </MDBCol>

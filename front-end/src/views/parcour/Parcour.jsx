@@ -55,10 +55,10 @@ const Parcour = () => {
 
     if (!localStorage.tokenAdmin) {
         return (
-            <MDBView className="purple-slight ">
+            <MDBView className="bgc-light ">
                 <MDBContainer className="text-center mb-5" style={{ marginTop: "17vmax", height: "200px" }}>
                     <h1 className="h1 mb-0"><MDBIcon far icon="frown" /></h1>
-                    <h3 className="h1-responsive font-weight-bold mb-5">
+                    <h3 className="h1-responsive fontW mb-5">
                         Page Not Found !
                     </h3>
                 </MDBContainer>
@@ -69,10 +69,10 @@ const Parcour = () => {
             return <p>Loading ...</p>
         } else {
             return (
-                <MDBView className="purple-slight">
+                <MDBView className="bgc-light">
                     <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
                         <div className="text-center my-5 ">
-                            <h2 className="h1-responsive font-weight-bold text-center  pr-5 mb-5">
+                            <h2 className="h1-responsive fontW text-center  pr-5 mb-5">
                                 <a href="/EP" className="h2 px-2"><MDBIcon icon="angle-left" /> </a> Parcour
                             </h2>
                         </div>
@@ -86,7 +86,7 @@ const Parcour = () => {
                                     <input type="text" onChange={(event) => setUrl(event.target.value)} className="form-control my-5" name="name" placeholder="" />
                                 </div>
                                 <div>
-                                    <MDBBtn color="cyan" rounded onClick={editUrl}>Modifier</MDBBtn>
+                                    <MDBBtn color="amber" rounded onClick={editUrl}>Modifier</MDBBtn>
                                 </div>
                             </MDBCol>
                         </MDBRow>

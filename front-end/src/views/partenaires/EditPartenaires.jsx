@@ -35,11 +35,11 @@ const EditPartenaires = (props) => {
 
 
     return (
-        <MDBView className="purple-slight">
+        <MDBView className="bgc-light">
             <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
                 <div >
                     <div className="text-center my-5 ">
-                        <h2 className="h1-responsive font-weight-bold text-center  pr-5 mb-5">
+                        <h2 className="h1-responsive fontW text-center  pr-5 mb-5">
                             <a href="/partenaires" className="h2 px-2"><MDBIcon icon="angle-left" /> </a> NOS PARTENAIRES
                         </h2>
                     </div>
@@ -53,7 +53,7 @@ const EditPartenaires = (props) => {
                     </div>
 
                     <div>
-                        <MDBBtn color="cyan" rounded onClick={modifPartenaire}>Confirmer</MDBBtn>
+                        <MDBBtn color="amber" rounded onClick={modifPartenaire}>Confirmer</MDBBtn>
                     </div>
                 </div>
             </MDBContainer>

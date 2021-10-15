@@ -4,7 +4,7 @@ import {  MDBRow, MDBCol, MDBCardBody, MDBBtn, MDBView, MDBMask, Link } from "md
 const ConnexionAdminPage = () => {
   return (
     <section className="text-center my-5">
-        <h2 className="h1-responsive font-weight-bold my-5">
+        <h2 className="h1-responsive fontW my-5">
           Espace Professionnels
         </h2>
 
@@ -22,7 +22,7 @@ const ConnexionAdminPage = () => {
             </MDBView>
             <MDBCardBody className="pb-0">
               
-              <h4 className="font-weight-bold mb-3">Tu as déjà un compte ? Connecte-toi vite ici !</h4>
+              <h4 className="fontW mb-3">Tu as déjà un compte ? Connecte-toi vite ici !</h4>
               
               <MDBBtn color="cyan" rounded>
               
@@ -45,7 +45,7 @@ const ConnexionAdminPage = () => {
             </MDBView>
             <MDBCardBody className="pb-0">
               
-              <h4 className="font-weight-bold mb-3">C'est la première fois que tu viens ? Clique ici</h4>
+              <h4 className="fontW mb-3">C'est la première fois que tu viens ? Clique ici</h4>
               
               <MDBBtn color="cyan" rounded>
               <Link to="/connexion/signup-admin" className="text-white nav-link active ">Créer mon compte</Link>

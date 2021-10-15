@@ -25,12 +25,12 @@ function EditChiffreCles(props) {
         }
     }
     return (
-        <MDBView className="purple-slight">
+        <MDBView className="bgc-light">
             <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
                 <div>
                    
                     <div className="text-center my-5 ">
-                    <h2 className="h1-responsive font-weight-bold text-center  pr-5 mb-5">
+                    <h2 className="h1-responsive fontW text-center  pr-5 mb-5">
                         <a href="/chiffres-cles" className="h2 px-2"><MDBIcon icon="angle-left" /> </a> Nos Chiffres Clés
                     </h2>
                 </div>
@@ -44,7 +44,7 @@ function EditChiffreCles(props) {
                     </div>
                 </div>
                 <div>
-                    <MDBBtn color="cyan" rounded onClick={editChiffre}>Confirmer</MDBBtn>
+                    <MDBBtn color="amber" rounded onClick={editChiffre}>Confirmer</MDBBtn>
                 </div>
             </MDBContainer>
         </MDBView>

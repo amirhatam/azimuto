@@ -19,7 +19,7 @@ const addCivique = async () => {
         await civiqueModel.insertMany([
 
             {
-                url: "https://www.google.com/"
+                url: "https://www.service-civique.gouv.fr/missions/essteam-appui-au-developpement-dactions-dorientations-pour-les-jeunes-1"
             }
 
         ])

@@ -30,13 +30,13 @@ const Qui = () => {
         <div className="bgc-light">
             <MDBView className="bgc-white">
                 <MDBContainer
-                    style={{ marginTop: "20vmax" }}
+                    style={{ marginTop: "15vmax" }}
                     className='d-flex justify-content-center align-items-center pt-0 pb-5 '
                 >
                         <MDBRow >
                             <MDBCol md='12' className='mb-4 text-center '>
                                 <MDBCol md='12' className='mb-4 text-center'>
-                                    <h4 className='display-6 font-weight-bold mb-0 pt-md-3 pt-3'>
+                                    <h4 className='display-6 fontW mb-0 pt-md-3 pt-3'>
                                         NOTRE RAISON D'ÊTRE</h4>
                                     <h4 className=' font-weight-light AziPhrase pt-md-5 pt-sm-2 pt-5 pb-md-5 pb-sm-3 pb-5 '>
                                         Parce-que nous rêvons d'un monde où chaque jeune se sente libre de choisir son parcours
@@ -90,7 +90,7 @@ const Qui = () => {
               
             </MDBView>
 
-            <MDBView className='bgc-blue' >
+            <MDBView className='bgc-light' >
                 <MDBContainer>
                     <MDBRow className="text-center my-5 p-0 ">
                         <MDBCol md="6">
@@ -104,7 +104,7 @@ const Qui = () => {
                         </MDBCol>
                         <MDBCol className=" border border-left-0 border-dark  p-5" md="6">
                             <MDBView >
-                                <h4 className=' font-weight-bold px-4  mt-5  mb-5 pt-md-3 pt-3'>
+                                <h4 className=' fontW px-4  mt-5  mb-5 pt-md-3 pt-3'>
                                     NOTRE RAISON D'ÊTRE
                                     UN PROBLÈME DE SOCIÉTÉ URGENT ET
                                     IMPORTANT
@@ -121,7 +121,7 @@ const Qui = () => {
 
                         <MDBCol className="border border-right-0 border-dark  p-5" md="6">
                             <MDBView >
-                                <h4 className=' font-weight-bold my-5 mb-0 pt-md-3 pt-3'>
+                                <h4 className=' fontW my-5 mb-0 pt-md-3 pt-3'>
                                     NOTRE AMBITION
                                 </h4>
                                 <h4 className='text-box font-weight-light  pt-md-3 pt-sm-3 pt-2 px-5  '>
@@ -157,7 +157,7 @@ const Qui = () => {
                         </MDBCol>
                         <MDBCol className="border  border-left-0 border-dark mb-5 p-5 " md="6">
                             <MDBView  >
-                                <h4 className=' font-weight-bold py-5 mb-0 pt-md-3 mt-4'>
+                                <h4 className=' fontW py-5 mb-0 pt-md-3 mt-4'>
                                     NOTRE MISSION
                                 </h4>
 

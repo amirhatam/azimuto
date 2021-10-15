@@ -17,10 +17,10 @@ import HomeCarousel from '../components/HomeCarousel';
 const Home = () => {
 
     return (
-        <MDBView className="bgc-light">
+        <MDBView className="bgc-white">
             <MDBView className="pb-5">
                 <MDBContainer
-                    style={{ marginTop: "20vmax" }}
+                    style={{ marginTop: "15vmax" }}
                     className='d-flex justify-content-center align-items-center pt-0 pb-5 '
                 >
                     <MDBCol lg="7" >
@@ -29,7 +29,7 @@ const Home = () => {
                     <MDBCol lg="7">
                         <MDBRow>
                             <MDBCol md='12' className='mb-4 text-center'>
-                                <h4 className='display-6 text-start font-weight-bold mb-0 pt-md-3 pt-3'>
+                                <h4 className='display-6 text-start fontW mb-0 pt-md-3 pt-3'>
                                     Azimuto :</h4>
                                 <h5 className='text-start text-justify lh-base py-4'>
                                     Une pédagogie innovante pour accompagner les
@@ -45,11 +45,12 @@ const Home = () => {
                     </MDBCol>
                 </MDBContainer>
             </MDBView>
+        
 
-            <MDBView className="bgc-darker"  >
+            <MDBView className="bgc-light"  >
                 <MDBContainer>
                     <MDBCardBody className="text-center  "  >
-                        <h2 className="h1-responsive font-weight-bold my-5 ">
+                        <h2 className="h1-responsive fontW my-5 ">
                             POURQUOI AZIMUTO ?
                         </h2>
                         <p className="h5-responsive text-justify lh-lg dark-grey-text mx-auto mb-5 w-75 ">
@@ -65,7 +66,7 @@ const Home = () => {
                             convaincues que savoir choisir s’apprend.
                         </p>
 
-                        <MDBBtn href="/qui-sommes-nous" color='cyan' className=" rounded-pill mb-5 px-4" >
+                        <MDBBtn href="/qui-sommes-nous" color='amber' className=" rounded-pill mb-5 px-4" >
                             Notre mission
                         </MDBBtn>
 
@@ -76,10 +77,10 @@ const Home = () => {
             <MDBView>
                 <MDBContainer>
                     <MDBCardBody className="text-center pt-5" >
-                        <h2 className="h1-responsive font-weight-bold my-5 ">
+                        <h2 className="h1-responsive fontW my-5 ">
                             NOS PARCOURS :
                         </h2>
-                        <li className="h3-responsive font-weight-bold mb-1 ">
+                        <li className="h3-responsive fontW mb-1 ">
                             Professionnel.le.s de l'éducation et de la jeunesse ?
                         </li>
                         <p className="h5-responsive dark-grey-text mx-auto mb-5 w-75 ">
@@ -96,7 +97,7 @@ const Home = () => {
                                     style={{ width: "150px" }}
                                 />
 
-                                <h5 className="font-weight-bold  mb-3 p-0 text-center">
+                                <h5 className="fontW  mb-3 p-0 text-center">
                                     <h5 className="font-weight-light d-inline">LE </h5> PARCOURS
                                     COLLÈGE/LYCÉE :
                                     <h5 className="font-weight-light my-2">ATELIERS COLLECTIFS </h5>
@@ -110,7 +111,7 @@ const Home = () => {
                                     alt=""
                                     style={{ width: "150px" }}
                                 />
-                                <h5 className="font-weight-bold  mb-3 p-0 text-center">
+                                <h5 className="fontW  mb-3 p-0 text-center">
                                     <h5 className="font-weight-light d-inline">LE</h5> PROGRAMME DE
                                     REMOBILISATION
                                     <h5 className="font-weight-light my-2"> SCOLAIRE</h5>
@@ -123,7 +124,7 @@ const Home = () => {
                                     Nous faire intervenir
                                 </MDBBtn>
                             </MDBCol>
-                            <li className="h3-responsive font-weight-bold">
+                            <li className="h3-responsive fontW">
                                 Jeune de 15 à 25 ans en recherche d’inspiration  ?
                             </li>
 
@@ -138,7 +139,7 @@ const Home = () => {
                             <MDBCardBody className="text-center mb-5 " >
 
                                 <MDBView hover rounded className="mx-auto d-block col-6 mb-2">
-                                    <h4 className="h4-responsive font-weight-bold m-5 ">
+                                    <h4 className="h4-responsive fontW m-5 ">
                                         LE PARCOURS TOUS AZIMUTS
                                         <h4 className="font-weight-light my-3">DURANT LES VACANCES SCOLAIRES</h4>
                                     </h4>

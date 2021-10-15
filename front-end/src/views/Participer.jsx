@@ -19,34 +19,33 @@ const Participer = () => {
 
     return (
         <div>
-            <MDBView className="bgc-light">
+            <MDBView className="bgc-white">
             <MDBContainer
-                    style={{ marginTop: "20vmax" }}
+                    style={{ marginTop: "15vmax" }}
                 >
                         <MDBRow >
                             <MDBCol md='12' className='mb-4 text-center '>
                                 <MDBCol md='12' className='mb-4 text-center'>
                                     <p className='h3 col-9 m-auto font-weight-light mb-0 pt-md-3 pt-3'>
-                                        Azimuto, c’est un collectif de personnes engagées pour que les jeunes soient actrices et acteurs de
+                                        Azimuto, c’est un collectif de personnes engagées <br/> pour que les jeunes soient actrices et acteurs de
                                         leur parcours.
                                     </p>
-                                    <h4 className='display-6 font-weight-bold my-5 pt-md-3 pt-3'>
+                                    <h4 className='display-6 fontW my-5 pt-md-3 pt-3'>
                                         DEVENIR BÉNÉVOLE </h4>
-                                    <p className='h3 col-10 m-auto text-justify font-weight-light grey-text mb-5 pt-md-3 pt-3'>
+                                    <p className='h3 col-10 m-auto lh-base text-justify font-weight-light grey-text mb-5 pt-md-3 pt-3'>
                                         Que ce soit sur le terrain ou dans la gestion courante, tu peux intervenir avec nous sur des
                                         missions de facilitation des ateliers auprès des jeunes, après avoir été formé.e à nos méthodes et
                                         la vie associative. Envie de monter à bord ?
                                         Rejoins la communauté de bénévoles Azimuto !
                                     </p>
                                     <MDBBtn href="/Contact" color='amber' className="rounded-pill py-3 px-4 my-4"  >
-                                    Prendre un café (réel ou virtuel)
+                                    Prendre un café avec nous
                                     </MDBBtn>
                                 </MDBCol>
                             </MDBCol>
                         </MDBRow>
                     </MDBContainer>
             </MDBView>
-
             <MissionCivique />
             <Partenaires />
 

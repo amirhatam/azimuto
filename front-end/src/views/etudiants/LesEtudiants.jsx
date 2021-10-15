@@ -34,10 +34,10 @@ const LesEtudiants = () => {
 
     if (!localStorage.tokenAdmin) {
         return (
-            <MDBView className="purple-slight ">
+            <MDBView className="bgc-light ">
                 <MDBContainer className="text-center mb-5" style={{ marginTop: "17vmax", height: "200px" }}>
                     <h1 className="h1 mb-0"><MDBIcon far icon="frown" /></h1>
-                    <h3 className="h1-responsive font-weight-bold mb-5">
+                    <h3 className="h1-responsive fontW mb-5">
                         Page Not Found !
                     </h3>
                 </MDBContainer>
@@ -52,20 +52,20 @@ const LesEtudiants = () => {
             />
         } else if (views === "List") {
             return (
-                <MDBView className="purple-slight">
+                <MDBView className="bgc-light">
                     <MDBContainer className="mb-5" style={{ marginTop: "15vmax" }}>
                         <div className="text-center my-5 pr-5">
-                            <h2 className="h1-responsive font-weight-bold text-center mb-5">
+                            <h2 className="h1-responsive fontW text-center mb-5">
                                 <a href="/EP" className="h2 mr-2"><MDBIcon icon="angle-left" /> </a> Étudiants
                             </h2>
                         </div>
                         <MDBRow className="text-md-left ">
-                            {etudiants.map((elem,index) => {
+                            {etudiants.map((elem) => {
                                 return (
                                     <>
                                         <MDBCol lg="3" md="12" className="px-0">
                                             <MDBCardBody className="text-center my-5">
-                                                <MDBBtn size="sm" outline color='purple' key={index} className="btn-rounded btn-1" onClick={(e) => { setUserHistory([elem._id, elem.firstName, elem.lastName]); setViews("History") }} >{elem.firstName} {elem.lastName}</MDBBtn >
+                                                <MDBBtn size="sm"  color='amber' className="btn-rounded btn-1" onClick={(e) => { setUserHistory([elem._id, elem.firstName, elem.lastName]); setViews("History") }} >{elem.firstName} {elem.lastName}</MDBBtn >
                                             </MDBCardBody>
 
                                         </MDBCol>

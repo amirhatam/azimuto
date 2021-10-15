@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn, MDBCard, MDBCardBody, MDBView, MDBIcon, Link } from 'mdbreact';
+import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn, MDBCard, MDBCardBody, MDBView, MDBIcon} from 'mdbreact';
 import { useHistory } from "react-router-dom";
 import axios from 'axios'
 
@@ -50,20 +50,19 @@ const LoginAdmin = (props) => {
 
   return (
 
-    <MDBView className="purple-slight ">
+    <MDBView className="bgc-light">
       <div className="container my-5 ">
         <section className="mb-5" style={{ marginTop: "15vmax" }}>
           <MDBContainer>
-            <MDBRow >
-              <MDBCol className="row my-5">
+            <MDBRow  className=" px-5">
+              <MDBCol className="row my-5 px-5">
                 <MDBCard className="offset-3 col-6">
                   <MDBCardBody>
-                    <>
-                      <p className="h4 text-center py-4">LoginAdmin</p>
+                      <p className="h4 text-center py-4">Login Admin</p>
                       <div className="grey-text">
 
                         <MDBInput
-                          label="Your email"
+                          label="Votre email"
                           icon="envelope"
                           group
                           type="email"
@@ -74,7 +73,7 @@ const LoginAdmin = (props) => {
                         />
 
                         <MDBInput
-                          label="Your password"
+                          label="Votre mot de passe"
                           icon="lock"
                           group
                           type="password"
@@ -83,18 +82,15 @@ const LoginAdmin = (props) => {
                         />
                       </div>
                       <div className="text-center py-4 mt-3">
-
-                        <MDBBtn outline color='purple' className="mb-5 btn-rounded " >
-                          <MDBIcon icon='user' className='mr-2 ' />
-                          <Link /* to="/modification"  */ onClick={validLoginAdmin} className=" nav-link active b-Right ">Login Admin</Link>
-                          {/* <Link to="/EP"  onClick={validLoginAdmin} className=" nav-link active b-Right ">Login Admin</Link> */}
+                        <MDBBtn onClick={validLoginAdmin} color='amber' className="mb-5 py-3 btn-rounded " >
+                          <MDBIcon icon='user' className='mr-2 ' /> Login Admin
                         </MDBBtn>
 
-                        {/* <MDBBtn to="/modification" color="cyan" type="submit" onClick={validLoginAdmin}>
+                        {/* <MDBBtn to="/modification" color="amber" type="submit" onClick={validLoginAdmin}>
                           Login Admin
                         </MDBBtn> */}
                       </div>
-                    </>
+                 
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
