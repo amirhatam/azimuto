@@ -20,16 +20,12 @@ const Navbar = (props) => {
     return (
         <div  >
             <MDBNavbar
-                // color='blue-grey darken-2'
-                // color=' light-blue lighten-4'
-                // color='blue lighten-4'
                 color='bgc-light'
                 light
                 expand='md'
                 fixed='top'
                 scrolling
                 transparent
-              
             >
                 <MDBContainer>
                             <MDBNavbarBrand className="loco-con">
@@ -43,20 +39,20 @@ const Navbar = (props) => {
                    
                             <MDBCollapse navbar>
                                 <MDBNavbarNav left className="ml-5">
-                                    <MDBNavItem className="mx-1">
-                                        <MDBNavLink className="navbarFS   ml-3" to="/">Accueil</MDBNavLink>
+                                    <MDBNavItem className="mx-1 ">
+                                        <MDBNavLink className="navbarFS li-hover ml-3 " to="/">Accueil</MDBNavLink>
                                     </MDBNavItem>
                                     <MDBNavItem className="mx-1">
-                                        <MDBNavLink className="navbarFS  " to="/qui-sommes-nous">Qui sommes-nous ?</MDBNavLink>
+                                        <MDBNavLink className="navbarFS li-hover" to="/qui-sommes-nous">Qui sommes-nous ?</MDBNavLink>
                                     </MDBNavItem>
                                     <MDBNavItem className="mx-1">
-                                        <MDBNavLink className="navbarFS  " to="/nos-programmes">Nos Programmes</MDBNavLink>
+                                        <MDBNavLink className="navbarFS li-hover" to="/nos-programmes">Nos Programmes</MDBNavLink>
                                     </MDBNavItem>
                                     <MDBNavItem className="mx-1">
-                                        <MDBNavLink className="navbarFS  " to="/participer">Participer</MDBNavLink>
+                                        <MDBNavLink className="navbarFS li-hover" to="/participer">Participer</MDBNavLink>
                                     </MDBNavItem>
                                     <MDBNavItem className="mx-1">
-                                        <MDBNavLink className="navbarFS  " to="/Contact">Contact</MDBNavLink>
+                                        <MDBNavLink className="navbarFS li-hover" to="/Contact">Contact</MDBNavLink>
                                     </MDBNavItem>
                                 </MDBNavbarNav>
                                 <MDBNavbarNav right>
@@ -75,7 +71,6 @@ const Navbar = (props) => {
                             </MDBCollapse>
                 </MDBContainer>
             </MDBNavbar>
-
 
         </div>
     );

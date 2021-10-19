@@ -14,22 +14,25 @@ const HomeCarousel = () => {
       <MDBCarousel
         activeItem={1}
         length={5}
-        showControls={true}
-        showIndicators={true}
+        showControls={false}
+        showIndicators={false}
         className=""
+        style={{width:"550px",height:"500px"}}
+
       >
         <MDBCarouselInner>
-          <MDBCarouselItem itemId="1">
-            <MDBView  className="col-12 m-auto">
+          <MDBCarouselItem itemId="1" >
+            <MDBView  className="col-12 m-auto" >
               <img
                 className="d-block w-100 rounded "
                 src={Home1}
                 alt="First slide"
+                
               />
             </MDBView>
           </MDBCarouselItem>
-          <MDBCarouselItem itemId="2">
-            <MDBView  className="col-7 m-auto">
+          <MDBCarouselItem itemId="2" >
+            <MDBView  className="col-7 m-auto" >
               <img
                 className="d-block w-100 rounded "
                 src={Home2}
@@ -37,8 +40,8 @@ const HomeCarousel = () => {
               />
             </MDBView>
           </MDBCarouselItem>
-          <MDBCarouselItem itemId="3">
-            <MDBView  className="col-7 m-auto">
+          <MDBCarouselItem itemId="3" >
+            <MDBView  className="col-7 m-auto" >
               <img
                 className="d-block w-100 rounded "
                 src={Home3}
@@ -46,8 +49,8 @@ const HomeCarousel = () => {
               />
             </MDBView>
           </MDBCarouselItem>
-          <MDBCarouselItem itemId="4">
-            <MDBView  className="col-7 m-auto">
+          <MDBCarouselItem itemId="4" >
+            <MDBView  className="col-7 m-auto" >
               <img
                 className="d-block w-100 rounded "
                 src={Home4}
@@ -55,8 +58,8 @@ const HomeCarousel = () => {
               />
             </MDBView>
           </MDBCarouselItem>
-          <MDBCarouselItem itemId="5">
-            <MDBView  className="col-7 m-auto">
+          <MDBCarouselItem itemId="5" >
+            <MDBView  className="col-7 m-auto" >
               <img
                 className="d-block w-100 rounded "
                 src={Home5}

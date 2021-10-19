@@ -12,6 +12,7 @@ import LogoBouee from "../assets/images/Bouee.png"
 import LogoBoussole from "../assets/images/Boussole.png"
 import LogoCardinaux from "../assets/images/cardinaux.png"
 import HomeCarousel from '../components/HomeCarousel';
+import "../assets/styles/Wave.css"
 
 
 const Home = () => {
@@ -19,16 +20,17 @@ const Home = () => {
     return (
         <MDBView className="bgc-white">
             <MDBView className="pb-5">
+                
                 <MDBContainer
                     style={{ marginTop: "15vmax" }}
                     className='d-flex justify-content-center align-items-center pt-0 pb-5 '
                 >
                     <MDBCol lg="7" >
-                        <HomeCarousel/>
+                        <HomeCarousel />
                     </MDBCol>
                     <MDBCol lg="7">
                         <MDBRow>
-                            <MDBCol md='12' className='mb-4 text-center'>
+                            <MDBCol md='12' className='mb-4 text-center z-index'>
                                 <h4 className='display-6 text-start fontW mb-0 pt-md-3 pt-3'>
                                     Azimuto :</h4>
                                 <h5 className='text-start text-justify lh-base py-4'>
@@ -37,15 +39,17 @@ const Home = () => {
                                     nous tient à coeur, l'orientation des jeunes en
                                     développant leur capacité de choisir.
                                 </h5>
-                                <MDBBtn href="/nos-programmes" color='amber' className="rounded-pill py-3 px-4" >
+                                <MDBBtn href="/nos-programmes" color='amber' className="rounded-pill py-3 px-4 " >
                                     Découvrir nos ateliers
                                 </MDBBtn>
                             </MDBCol>
                         </MDBRow>
                     </MDBCol>
                 </MDBContainer>
+                <div className="ocean">
+                    <div className="wave"></div>
+                </div>
             </MDBView>
-        
 
             <MDBView className="bgc-light"  >
                 <MDBContainer>
@@ -74,7 +78,7 @@ const Home = () => {
                 </MDBContainer>
             </MDBView>
 
-            <MDBView>
+            <MDBView className="bg-white">
                 <MDBContainer>
                     <MDBCardBody className="text-center pt-5" >
                         <h2 className="h1-responsive fontW my-5 ">
@@ -160,7 +164,7 @@ const Home = () => {
                     </MDBCardBody>
                 </MDBContainer>
             </MDBView>
-            
+
             <Rapportage />
         </MDBView>
     );

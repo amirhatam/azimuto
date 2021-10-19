@@ -38,3 +38,10 @@ button {
   font-weight: 400;
 }
 
+.text-orange {
+  color: #ef8552;
+}
+
+.z-index {
+  z-index: 10;
+}

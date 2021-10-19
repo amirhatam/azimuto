@@ -40,7 +40,7 @@ const Programmes = () => {
                         NOTRE PÉDAGOGIE EXPÉRIENTIELLE</h4>
 
                     <MDBRow className="">
-                        <MDBCol className="d-flex align-items-center px-0" lg="7">
+                        <MDBCol className="d-flex align-items-center px-5" lg="7">
                             <p className="h4  text-box font-weight-light">
                                 Nous créons et faisons vivre des expériences de
                                 coopération pour mieux se connaître.

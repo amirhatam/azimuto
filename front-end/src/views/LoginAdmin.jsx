@@ -58,7 +58,7 @@ const LoginAdmin = (props) => {
               <MDBCol className="row my-5 px-5">
                 <MDBCard className="offset-3 col-6">
                   <MDBCardBody>
-                      <p className="h4 text-center py-4">Login Admin</p>
+                      <p className="h4 text-center py-5">Login</p>
                       <div className="grey-text">
 
                         <MDBInput

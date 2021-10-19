@@ -64,7 +64,7 @@ function App() {
         <Route path="/contact" exact component={ContactPage} />
         <Route path="/connexion" exact component={ConnexionPage} />
         <Route path="/connexion/signup" exact component={Signup} />
-        <Route path="/connexion/loginadmin">
+        <Route path="/epl">
           <LoginAdmin connectUser={() => setUserConnected(true)} />
         </Route>
         <Route path="/logged/formulaire" exact component={QuestionPage} />

@@ -38,7 +38,7 @@ const Rapportage = () => {
         <MDBView className="bgc-darker">
             <MDBContainer>
                 <MDBCardBody className="text-center my-5 " >
-                    <h2 className="h1-responsive fontW my-5 ">
+                    <h2 className="h1-responsive text-white fontW my-5 ">
                         AVEC AZIMUTO, ENVIE DE...
                     </h2>
                     <MDBRow>
@@ -52,11 +52,11 @@ const Rapportage = () => {
                                     return <>
                                         <MDBRow center >
                                             <MDBCol size="1" className="offset-2 d-flex my-2">
-                                                <a href={`http://localhost:8080/uploads/${e.pdf}`}   className="h2 " target="_blank" rel="noreferrer">
-                                                    <MDBIcon className="text-black" icon="caret-right" />
+                                                <a href={`http://localhost:8080/uploads/${e.pdf}`} className="h2 " target="_blank" rel="noreferrer">
+                                                    <MDBIcon className="txt-orange" icon="caret-right" />
                                                 </a>
                                             </MDBCol>
-                                            <MDBCol size="7"  className=" text-start pt-3 pl-0">
+                                            <MDBCol size="7" className=" text-start pt-3 pl-0">
                                                 <p className="fontW text-start mb-0 "  >
                                                     {e.description}
                                                 </p>
@@ -78,18 +78,33 @@ const Rapportage = () => {
                                     De contribuer à notre action ?
                                 </h4>
                                 <MDBRow center>
-                                    <MDBCol size="7" className=" text-start">
-                                        <h6 className="fontW my-3">
-                                            Devenir bénévole ou partenaire
-                                        </h6>
+                                    <MDBCol size="1" className="offset-2 d-flex my-2">
+                                        <h2>
+                                            <MDBIcon className="txt-orange" icon="caret-right" />
+                                        </h2>
                                     </MDBCol>
-                                    <MDBCol size="7" className=" text-start ">
-                                        <h6 className="fontW my-4">
+                                    <MDBCol size="9" className=" text-start pt-3 pl-0">
+                                        <p className="fontW mb-0">
+                                            Devenir bénévole ou partenaire
+                                        </p>
+                                    </MDBCol>
+                                    <MDBCol size="1" className="offset-2 d-flex my-2">
+                                        <h2>
+                                            <MDBIcon className="txt-orange" icon="caret-right" />
+                                        </h2>
+                                    </MDBCol>
+                                    <MDBCol size="9" className=" text-start pt-3 pl-0">
+                                        <h6 className="fontW mb-0">
                                             Faire un don
                                         </h6>
                                     </MDBCol>
-                                    <MDBCol size="7" className=" text-start ">
-                                        <h6 className="fontW my-4 ">
+                                    <MDBCol size="1" className="offset-2 d-flex my-2">
+                                        <h2>
+                                            <MDBIcon className="txt-orange" icon="caret-right" />
+                                        </h2>
+                                    </MDBCol>
+                                    <MDBCol size="9" className=" text-start pt-3 pl-0">
+                                        <h6 className="fontW mb-0 px-0">
                                             Rejoindre notre équipe
                                         </h6>
                                     </MDBCol>

@@ -114,12 +114,6 @@ const Signup = () => {
     }
 
 
-
-
-
-    // if (!(age < "13" || age > "25")) {
-    //   errors.push("Please enter your Age")
-    // }
     const errFName = "Please enter your First Name"
     const errLName = "Please enter your Last Name"
 
@@ -130,6 +124,8 @@ const Signup = () => {
         errors.push("")
         setFirstNameErr("")
       }
+    }else {
+      setFirstNameErr("")
     }
 
     if (lastName === "") {
@@ -139,6 +135,8 @@ const Signup = () => {
         errors.push("")
         setLastNameErr("")
       }
+    }else {
+      setLastNameErr("")
     }
 
 
@@ -150,29 +148,40 @@ const Signup = () => {
         errors.push("")
         setBirthdayErr("")
       }
+    }else {
+      setBirthdayErr("")
     }
 
     if (!sex) {
       errors.push("Please select your sex")
       setSexErr("Please select your sex")
+      if (sex){
+        errors.push("")
+        setSexErr("")
+      }
     } else {
-      errors.push("")
       setSexErr("")
     }
 
     if (!levelsSelect) {
       errors.push("Please select your level study")
       setLevelsErr("Please select your level study")
+      if (levelsSelect){
+        errors.push("")
+        setLevelsErr("")
+      }
     } else {
-      errors.push("")
       setLevelsErr("")
     }
 
     if (!parcourSelect) {
       errors.push("Please select your program")
       setParcourErr("Please select your program")
+      if (parcourSelect){
+        errors.push("")
+        setParcourErr("")
+      }
     } else {
-      errors.push("")
       setParcourErr("")
     }
 
